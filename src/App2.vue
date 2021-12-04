@@ -13,6 +13,7 @@
   >
   </div>
 </div>
+
 <div 
   class="drop-zone2-Insulating"
   @drop = "onDrop($event,2)"
@@ -26,6 +27,7 @@
   >
   </div>
 </div>
+
 <div 
   class="drop-zone-Pencil"
   @drop = "onDrop($event,3)"
@@ -196,7 +198,7 @@
   </div>
 
   <div
-      class="drop-zone-SaltWater"
+      class="drop-zone-GoldBar"
       @drop = "onDrop($event,10)"
       @dragenter.prevent
       @dragover.prevent
@@ -209,6 +211,54 @@
     >
       <img v-if="getItem(10).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(10).tag == 2" class="imageIcon" src = "assets/Cross.png">
+    </div>
+  </div>
+  <div
+      class="drop-zone-GlassBottle"
+      @drop = "onDrop($event,11)"
+      @dragenter.prevent
+      @dragover.prevent
+  >
+    <div
+        v-on="item in getItem(11)"
+        class="drag-el"
+        draggable="false"
+        @dragstart="startDrag($event, item)"
+    >
+      <img v-if="getItem(11).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(11).tag == 2" class="imageIcon" src = "assets/Cross.png">
+    </div>
+  </div>
+  <div
+      class="drop-zone-Diamond"
+      @drop = "onDrop($event,12)"
+      @dragenter.prevent
+      @dragover.prevent
+  >
+    <div
+        v-on="item in getItem(12)"
+        class="drag-el"
+        draggable="false"
+        @dragstart="startDrag($event, item)"
+    >
+      <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+    </div>
+  </div>
+
+  <div
+      class="drop-zone-LigthBulb"
+      @dragenter.prevent
+      @dragover.prevent
+  >
+    <div
+        v-on="item in getItem(12)"
+        class="drag-el-Bulb"
+        draggable="false"
+        @dragstart="startDrag($event, item)"
+    >
+      <img v-if="getItem(12).conductivity == 0" class="imageIcon" src = "assets/Lightbulb Off.png">
+      <img v-if="getItem(12).conductivity == 1" class="imageIcon" src = "assets/Lightbulb On -Strong.png">
     </div>
   </div>
 
@@ -241,8 +291,11 @@ export default {
       {id: 7, title: 'Log', conductivity: 0, tag: 0},
       {id: 8, title: 'Clip', conductivity: 1, tag: 0},
       {id: 9, title: 'Water', conductivity: 0, tag: 0},
-      {id: 10, title: 'SaltWater', conductivity: 1, tag: 0},
+      {id: 10, title: 'GoldBar', conductivity: 1, tag: 0},
+      {id: 11, title: 'GlassBottle', conductivity: 0, tag: 0},
+      {id: 12, title: 'Diamond', conductivity: 0, tag: 0},
     ])
+    
 
     const getItem = (id) => {
       return items.value.find((item) => item.id == id)
@@ -261,6 +314,11 @@ export default {
       item.tag = tagNumber
     }
 
+    const onDropBulb = (event, id) => {
+      const tagNumber = event.dataTransfer.getData('tagNumber')
+      const item = items.value.find((item) => item.id == id)
+      item.tag = tagNumber
+    }
     return {
       getItem,
       onDrop,
@@ -299,34 +357,18 @@ export default {
   width: 15%;
   margin-left: 15%;
 }
-.Conducting-Title {
-  position:absolute;
-  margin-top: 15%;
-  margin-left: 12.5%;
-  margin-right: 70%;
-  color: rgb(85, 186, 71);
-  z-index: 3;
-}
-
-.Insulating-Title {
-  position:absolute;
-  margin-top: 15%;
-  margin-left: 40%;
-  margin-right: 70%;
-  color: red;
-  z-index: 3;
-}
 .drop-zone1-Conducting {
   position:absolute;
-  margin-top: 3%;
-  margin-left: 18.5%;
-  width: 20%;
+  margin-top: 20%;
+  margin-left: 50%;
+  margin-right: 70%;
+  width: 10%;
   background-image: url('assets/Check.png');
-  #background-attachment: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 12% 15%;
-  background-size: 20%;
-  height: 20%;
+  background-position: 55.5% 46%;
+  background-size: 4%;
+  height: 10%;
   z-index: 4;
 }
 .drop-zone1 > div{
@@ -339,16 +381,16 @@ export default {
 }
 .drop-zone2-Insulating {
   position:absolute;
-  margin-top: 3%;
-  margin-left: 26.5%;
+  margin-top: 25%;
+  margin-left: 50%;
   margin-right: 70%;
-  width: 20%;
+  width: 10%;
   background-image: url('assets/Cross.png');
-  #background-attachment: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 42% 15%;
-  background-size: 19%;
-  height: 20%;
+  background-position: 55.5% 58%;
+  background-size: 4%;
+  height: 10%;
   z-index: 4;
 }
 .drop-zone2 > div{
@@ -364,7 +406,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 25%;
+  margin-top: 6%;
   margin-left: 7.5%;
   width: 14%;
   background-image: url('assets/Pencil.png');
@@ -390,12 +432,12 @@ export default {
   grid-gap:1em;
   position:absolute;
   margin-top: 25%;
-  margin-left: 19.5%;
+  margin-left: 7%;
   width: 14%;
   background-image: url('assets/Cork.png');
   #background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 50%;
   background-position: center;
   height: 8%;
   min-width: 5%;
@@ -407,13 +449,13 @@ export default {
   display:grid;
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
-  margin-top: 25%;
-  margin-left: 33%;
+  margin-top: 35%;
+  margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/Lego.png');
   #background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 60%;
+  background-size: 58%;
   background-position: center;
   height: 8%;
   min-width: 5%;
@@ -425,8 +467,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
-  margin-left: 33%;
+  margin-top: 35%;
+  margin-left: 30%;
   width: 10%;
   background-image: url('assets/Lemon.png');
   background-repeat: no-repeat;
@@ -442,8 +484,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
-  margin-left: 21.5%;
+  margin-top: 35%;
+  margin-left: 20%;
   width: 10%;
   background-image: url('assets/Potato.png');
   #background-attachment: fixed;
@@ -460,7 +502,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
+  margin-top: 15%;
   margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/RubberBand.png');
@@ -477,7 +519,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
+  margin-top: 20%;
   margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/5Euros.png');
@@ -494,10 +536,10 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 25%;
-  margin-left: 43%;
+  margin-top: 35%;
+  margin-left: 38%;
   width: 10%;
-  background-image: url('assets/Lemon.png');
+  background-image: url('assets/Log.png');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
@@ -511,10 +553,10 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
-  margin-left: 43%;
+  margin-top: 35%;
+  margin-left: 46%;
   width: 10%;
-  background-image: url('assets/5Euros.png');
+  background-image: url('assets/Paper Clip.png');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
@@ -528,10 +570,10 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
-  margin-left: 21.5%;
+  margin-top: 10%;
+  margin-left: 9.5%;
   width: 10%;
-  background-image: url('assets/Lego.png');
+  background-image: url('assets/Water.png');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
@@ -540,21 +582,78 @@ export default {
   z-index: 4;
 }
 
-.drop-zone-SaltWater {
+.drop-zone-GoldBar {
   display:grid;
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
-  margin-left: 33%;
+  margin-top: 30%;
+  margin-left: 20%;
   width: 10%;
-  background-image: url('assets/Potato.png');
+  background-image: url('assets/Gold Bar.png');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
   height: 8%;
   min-width: 5%;
   z-index: 4;
+}
+
+.drop-zone-GlassBottle {
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 30%;
+  margin-left: 30%;
+  width: 10%;
+  background-image: url('assets/Glass Bottle.png');
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  height: 8%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drop-zone-Diamond {
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 30%;
+  margin-left: 9.5%;
+  width: 10%;
+  background-image: url('assets/Diamond.png');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 8%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drop-zone-LigthBulb {
+
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 6%;
+  margin-left: 35%;
+  width: 10%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 12%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drag-el-Bulb {
+  position: relative;
+  width: 220%;
+  min-height: 30%;
+  min-width:  30%;
+  z-index: 8;
 }
 
 .drag-el {
