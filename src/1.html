@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel="icon" href="/public/favicon.ico" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Chat</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+        <link rel="stylesheet" href="./1.css">
+    </head>
+
+    <body>
+       
+        <style>
+            .rw-widget-embedded {
+                position: relative;
+              
+                border: 2px solid #333;
+              
+                background:rgba(50,107,128,.2);
+            }
+            .rw-widget-embedded .rw-messages-container{
+                background:rgba(50,107,128,.4);
+            }
+        </style>
+                <script>!(function () {
+                    let e = document.createElement("script"),
+                    t = document.head || document.getElementsByTagName("head")[0];
+                    (e.src =
+                    "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+                    (e.async = !0),
+                    (e.onload = () => {
+                        window.WebChat.default(
+                        {
+                            initPayload: '/part1',
+                            customData: { language: "en" },
+                            socketUrl: "http://localhost:5005",
+                            socketPath: "/socket.io/",
+                            title: "RASA ChatBot",
+                            embedded: true,
+                            params: {"storage": "session"}
+                        },
+                        null
+                        );
+                    }),
+                    t.insertBefore(e, t.firstChild);
+                })();
+                </script>
+                <form>
+                    
+                <button class="Button" formaction="../index.html" onclick="sessionStorage.clear()">
+                    <img class="ButtonImg" src="assets/Arrow.png"></button>
+                </form>
+
+            <div class = "Game">
+                
+                <script type="module" src="/src/main1.js"></script>
+            </div>
+           
+            <div class = "Title">
+                <img class ="Owl" src="assets/Owl.png"/>
+                <h1 class ="Name"> NIELS BOHT</h1>
+            </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"
+        integrity="sha512-PU5S6BA03fRv1Q5fpwXjg5nlRrgdoguZ74urFInkbABMCENyx5oP3hrDzYMMPh3qdLdknIvrGj3yqZ4JuU7Nag=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script> const socket = io("http://localhost:5005", {
+                    pathname: '/socket.io',
+                    transports: ['websocket'],
+        });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+    </body>
+    
+  </html>

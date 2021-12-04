@@ -1,0 +1,84 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - my_name:
+      use_entities:
+        - name
+  - part1
+
+entities:
+  - name
+
+forms:
+  name_form:
+    required_slots:
+      first_name:
+      - type: from_entity
+        entity: name
+  
+slots:
+  first_name:
+    type: text
+
+actions:
+  - action_ask_name
+  - utter_slots_values
+  - action_submit
+  - validate_name_form
+
+e2e_actions: []
+
+responses:
+  utter_greet:
+  - text: "Hi!"
+
+  utter_thank:
+  - text: "Perfect! {name} I will not forget it"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_quicktour:
+  - text: "Let's do a quick tour!"
+
+  utter_canihelp:
+  - text: "Can I help you with something?"
+
+  utter_slots_values:
+  - text: "Nice to meet you {name}! I am your guide today. Are you ready to get started?"
+
+  utter_ask_first_name:
+  - text: "Hello there! I’m Owly, what is your name?"
+
+  utter_wellcometopart1:
+  - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
+
+  utter_interfaceexplain:
+  - text: "This interface works like... Do you understand?"
+
+  utter_readytolvl1:
+  - text: "Are you ready to start with level 1?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

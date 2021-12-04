@@ -1,0 +1,22 @@
+version: "2.0"
+
+stories:
+
+- story: Part1
+  steps:
+  - intent: part1
+  - action: utter_wellcometopart1
+
+- story: path1
+  steps:
+  - intent: greet
+  - action: name_form
+  - active_loop: name_form
+  - slot_was_set:
+    - requested_slot: first_name
+  - slot_was_set:
+    - first_name: Dani
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_submit
