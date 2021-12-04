@@ -28,6 +28,8 @@ rules:
     - requested_slot: null
     
   - action: action_submit
+  - intent: deny
+  - action: utter_answerNo
 
 - rule: Say wellcome to part1 at change
   steps:

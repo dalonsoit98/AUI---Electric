@@ -31,7 +31,6 @@ actions:
   - action_ask_name
   - utter_slots_values
   - action_submit
-  - validate_name_form
 
 e2e_actions: []
 
@@ -78,6 +77,9 @@ responses:
 
   utter_readytolvl1:
   - text: "Are you ready to start with level 1?"
+    
+  utter_answerNo:
+    - text: "Can I help you with something?"
 
 session_config:
   session_expiration_time: 60

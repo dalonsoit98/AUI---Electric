@@ -20,3 +20,5 @@ stories:
     - requested_slot: null
   - active_loop: null
   - action: action_submit
+  - intent: deny
+  - action: utter_answerNo
