@@ -213,6 +213,38 @@
       <img v-if="getItem(10).tag == 2" class="imageIcon" src = "assets/Cross.png">
     </div>
   </div>
+  <div
+      class="drop-zone-GlassBottle"
+      @drop = "onDrop($event,11)"
+      @dragenter.prevent
+      @dragover.prevent
+  >
+    <div
+        v-on="item in getItem(11)"
+        class="drag-el"
+        draggable="false"
+        @dragstart="startDrag($event, item)"
+    >
+      <img v-if="getItem(11).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(11).tag == 2" class="imageIcon" src = "assets/Cross.png">
+    </div>
+  </div>
+  <div
+      class="drop-zone-Diamond"
+      @drop = "onDrop($event,12)"
+      @dragenter.prevent
+      @dragover.prevent
+  >
+    <div
+        v-on="item in getItem(12)"
+        class="drag-el"
+        draggable="false"
+        @dragstart="startDrag($event, item)"
+    >
+      <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+    </div>
+  </div>
 
 
 <img class ="imagen" src="assets/Tabletop.png" alt=""/>
@@ -244,6 +276,8 @@ export default {
       {id: 8, title: 'Clip', conductivity: 1, tag: 0},
       {id: 9, title: 'Water', conductivity: 0, tag: 0},
       {id: 10, title: 'GoldBar', conductivity: 1, tag: 0},
+      {id: 11, title: 'GlassBottle', conductivity: 0, tag: 0},
+      {id: 12, title: 'Diamond', conductivity: 0, tag: 0},
     ])
 
     const getItem = (id) => {
@@ -552,6 +586,40 @@ export default {
   margin-left: 33%;
   width: 10%;
   background-image: url('assets/Gold Bar.png');
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 8%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drop-zone-GlassBottle {
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 40%;
+  margin-left: 43%;
+  width: 10%;
+  background-image: url('assets/Glass Bottle.png');
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  height: 8%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drop-zone-Diamond {
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 19%;
+  margin-left: 27%;
+  width: 10%;
+  background-image: url('assets/Diamond.png');
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;
