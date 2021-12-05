@@ -21,4 +21,4 @@ stories:
   - active_loop: null
   - action: action_submit
   - intent: deny
-  - action: utter_answerNo
+  - action: utter_readyYes

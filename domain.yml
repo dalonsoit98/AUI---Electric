@@ -78,9 +78,12 @@ responses:
   utter_readytolvl1:
   - text: "Are you ready to start with level 1?"
     
-  utter_answerNo:
+  utter_readyNo:
     - text: "Can I help you with something?"
-
+      
+  utter_readyYes:
+    - text: "Let's do a quick tour!"
+      
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false
