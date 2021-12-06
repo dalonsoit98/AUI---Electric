@@ -306,7 +306,8 @@ export default {
       {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
       {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
       {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
-      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
+      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
+      {id: 14, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
     ])
     var material = {id: null, title: 'assets/Lego.png', conductivity: 0, tag: null} 
 
@@ -323,6 +324,7 @@ export default {
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('tagNumber', tag)
+      event.dataTransfer.setData('id', 14)
     }
 
     const startDragBulb = (event,id) => {
@@ -344,7 +346,7 @@ export default {
       const mat = items.value.find((mat) => mat.id == idmat)
       mat.title = item.title
       mat.conductivity = item.conductivity
-      console.log(mat)
+      console.log(id)
     }
 
     return {
