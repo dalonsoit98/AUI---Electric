@@ -61,11 +61,19 @@ html, body {
     z-index: 5;
 }
 
-.Button {
+.ButtonDone {
     position: absolute;
-    background-color: transparent;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    margin-left: 55%;
+    margin-top: 42%;
     width: 4%;
     height: 5%;
+    z-index: 12;
+}
+.ButtonDone:hover{
+    background-color: #008CBA;
+    color: white;
 }
 .ButtonImg{
     object-fit: fill;

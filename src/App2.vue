@@ -16,7 +16,6 @@
 
 <div 
   class="drop-zone2-Insulating"
-  @drop = "onDrop($event,2)"
   @dragenter.prevent
   @dragover.prevent
 >
@@ -37,8 +36,8 @@
   <div 
   v-on="item in getItem(3)" 
   class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
+  draggable="true"
+  @dragstart="startDragBulb($event, 3)"
   >
     <img v-if="getItem(3).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(3).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -54,8 +53,8 @@
   <div 
   v-on="item in getItem(2)" 
   class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
+  draggable="true"
+  @dragstart="startDragBulb($event, 2)"
   >
     <img v-if="getItem(2).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(2).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -71,8 +70,8 @@
   <div 
   v-on="item in getItem(4)"  
   class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
+  draggable="true"
+  @dragstart="startDragBulb($event, 4)"
   >
     <img v-if="getItem(4).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(4).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -88,8 +87,8 @@
   <div 
   v-on="item in getItem(1)" 
   class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
+  draggable="true"
+  @dragstart="startDragBulb($event, 1)"
   >
     <img v-if="getItem(1).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(1).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -105,8 +104,8 @@
   <div 
   v-on="item in getItem(0)" 
   class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
+  draggable="true"
+  @dragstart="startDragBulb($event, 0)"
   >
     <img v-if="getItem(0).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(0).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -122,7 +121,8 @@
   <div 
   v-on="item in getItem(5)" 
   class="drag-el"
-  draggable="false"
+  draggable="true"
+  @dragstart="startDragBulb($event, 5)"
   >
     <img v-if="getItem(5).tag == 1" class="imageIcon" src = "assets/Check.png">
     <img v-if="getItem(5).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -138,7 +138,8 @@
     <div
         v-on="item in getItem(6)"
         class="drag-el"
-        draggable="false"
+        draggable="true"
+        @dragstart="startDragBulb($event, 6)"
     >
       <img v-if="getItem(6).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(6).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -155,8 +156,8 @@
     <div
         v-on="item in getItem(7)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 7)"
     >
       <img v-if="getItem(7).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(7).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -172,8 +173,8 @@
     <div
         v-on="item in getItem(8)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 8)"
     >
       <img v-if="getItem(8).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(8).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -189,8 +190,8 @@
     <div
         v-on="item in getItem(9)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 9)"
     >
       <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -206,8 +207,8 @@
     <div
         v-on="item in getItem(10)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 10)"
     >
       <img v-if="getItem(10).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(10).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -222,8 +223,8 @@
     <div
         v-on="item in getItem(11)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 11)"
     >
       <img v-if="getItem(11).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(11).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -238,8 +239,8 @@
     <div
         v-on="item in getItem(12)"
         class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
+        draggable="true"
+        @dragstart="startDragBulb($event, 12)"
     >
       <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
       <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
@@ -248,20 +249,33 @@
 
   <div
       class="drop-zone-LigthBulb"
-      @dragenter.prevent
-      @dragover.prevent
+      @drop = "onDrop($event,12)"
   >
     <div
-        v-on="item in getItem(12)"
         class="drag-el-Bulb"
         draggable="false"
-        @dragstart="startDrag($event, item)"
+        @dragstart="startDragBulb($event, 12)"
+        @change="update"
     >
-      <img v-if="getItem(12).conductivity == 0" class="imageIcon" src = "assets/Lightbulb Off.png">
-      <img v-if="getItem(12).conductivity == 1" class="imageIcon" src = "assets/Lightbulb On -Strong.png">
+      <img v-if="getItem(13).conductivity == 0" class="imageIconBulb" src = "assets/Lightbulb Off.png">
+      <img v-if="getItem(13).conductivity == 1" class="imageIconBulb" src = "assets/Lightbulb On - Strong.png">
     </div>
   </div>
 
+   <div
+      class="drop-zone-Material"
+      @drop = "onDropBulb($event, 13)"
+      @dragover.prevent
+  >
+  <div
+        class="drag-el-Material"
+        draggable="false"
+    >
+  <img draggable="false" class="materialIcon" :src= getItem(13).title>
+  </div>
+  </div>
+
+<img class ="Circuit" src="assets/Circuit.png"/>
 
 <img class ="imagen" src="assets/Tabletop.png" alt=""/>
 </template>
@@ -273,32 +287,35 @@ import { ref } from 'vue'
             var Socket = new io('http://localhost:5005/', {
                     pathname: '/socket.io',
                     transports: ['websocket'],
-        });
-        
-            
+        });  
 
 export default {
   setup() {
 
     const items = ref([
-      {id: 0, title: 'Potato', conductivity: 1, tag: 0},
-      {id: 1, title: 'Lemon', conductivity: 1, tag: 0},
-      {id: 2, title: 'Cork', conductivity: 0, tag: 0},
-      {id: 3, title: 'Pencil', conductivity: 1, tag: 0},
-      {id: 4, title: 'Lego', conductivity: 0, tag: 0},
-      {id: 5, title: 'RubberBand', conductivity: 0, tag: 0},
-      {id: 6, title: '5Euros', conductivity: 0, tag: 0},
-      {id: 7, title: 'Log', conductivity: 0, tag: 0},
-      {id: 8, title: 'Clip', conductivity: 1, tag: 0},
-      {id: 9, title: 'Water', conductivity: 0, tag: 0},
-      {id: 10, title: 'GoldBar', conductivity: 1, tag: 0},
-      {id: 11, title: 'GlassBottle', conductivity: 0, tag: 0},
-      {id: 12, title: 'Diamond', conductivity: 0, tag: 0},
+      {id: 0, title: 'assets/Potato.png', conductivity: 1, tag: 0},
+      {id: 1, title: 'assets/Lemon.png', conductivity: 1, tag: 0},
+      {id: 2, title: 'assets/Cork.png', conductivity: 0, tag: 0},
+      {id: 3, title: 'assets/Pencil.png', conductivity: 1, tag: 0},
+      {id: 4, title: 'assets/Lego.png', conductivity: 0, tag: 0},
+      {id: 5, title: 'assets/RubberBand.png', conductivity: 0, tag: 0},
+      {id: 6, title: 'assets/5Euros.png', conductivity: 0, tag: 0},
+      {id: 7, title: 'assets/Log.png', conductivity: 0, tag: 0},
+      {id: 8, title: 'assets/Paper Clip.png', conductivity: 1, tag: 0},
+      {id: 9, title: 'assets/Water.png', conductivity: 0, tag: 0},
+      {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
+      {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
+      {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
+      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
     ])
-    
+    var material = {id: null, title: 'assets/Lego.png', conductivity: 0, tag: null} 
 
     const getItem = (id) => {
       return items.value.find((item) => item.id == id)
+    }
+
+    const getMat = () => {
+      return material
     }
 
     const startDrag = (event,tag) => {
@@ -308,21 +325,36 @@ export default {
       event.dataTransfer.setData('tagNumber', tag)
     }
 
+    const startDragBulb = (event,id) => {
+      console.log(id)
+      event.dataTransfer.dropEffect = 'move'
+      event.dataTransfer.effectAllowed = 'move'
+      event.dataTransfer.setData('id', id)
+    }
+
     const onDrop = (event, id) => {
       const tagNumber = event.dataTransfer.getData('tagNumber')
       const item = items.value.find((item) => item.id == id)
       item.tag = tagNumber
     }
 
-    const onDropBulb = (event, id) => {
-      const tagNumber = event.dataTransfer.getData('tagNumber')
+    const onDropBulb = (event, idmat) => {
+      const id = event.dataTransfer.getData('id')
       const item = items.value.find((item) => item.id == id)
-      item.tag = tagNumber
+      const mat = items.value.find((mat) => mat.id == idmat)
+      mat.title = item.title
+      mat.conductivity = item.conductivity
+      console.log(mat)
     }
+
     return {
       getItem,
       onDrop,
-      startDrag
+      startDrag,
+      material,
+      onDropBulb,
+      startDragBulb,
+      getMat
     }
   },
       name: 'send',
@@ -340,22 +372,41 @@ export default {
 <style>
 .Game {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-   float: left;
-    width: 60%;
-    height: 100%;
-    z-index: 5;
+  float: left;
+  width: 60%;
+  height: 100%;
+  z-index: 5;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+
 }
 .imagen {
   width: 60%;
   position: fixed;
   z-index: 1;
   object-fit: fill;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .imageIcon {
   object-fit: cover;
   width: 15%;
   margin-left: 15%;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .drop-zone1-Conducting {
   position:absolute;
@@ -388,7 +439,7 @@ export default {
   background-image: url('assets/Cross.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 55.5% 58%;
+  background-position: 55.5% 59%;
   background-size: 4%;
   height: 10%;
   z-index: 4;
@@ -435,7 +486,6 @@ export default {
   margin-left: 7%;
   width: 14%;
   background-image: url('assets/Cork.png');
-  #background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: center;
@@ -453,7 +503,6 @@ export default {
   margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/Lego.png');
-  #background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 58%;
   background-position: center;
@@ -488,9 +537,8 @@ export default {
   margin-left: 20%;
   width: 10%;
   background-image: url('assets/Potato.png');
-  #background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 50%;
   background-position: center;
   height: 8%;
   min-width: 5%;
@@ -637,7 +685,7 @@ export default {
 
   grid-gap:1em;
   position:absolute;
-  margin-top: 6%;
+  margin-top: 1.5%;
   margin-left: 35%;
   width: 10%;
   background-repeat: no-repeat;
@@ -646,6 +694,12 @@ export default {
   height: 12%;
   min-width: 5%;
   z-index: 4;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .drag-el-Bulb {
@@ -706,5 +760,63 @@ padding-left: 46%;
   background-repeat: no-repeat;
   height: 100%;
   z-index: 8;
+}
+
+.Circuit {
+  position: absolute !important;
+  z-index: 3;
+  width: 30%;
+  height: 50%;
+  margin-left: 23.5%;
+  margin-top: 6%;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.drop-zone-Material {
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 20.5%;
+  margin-left: 35%;
+  width: 10%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 12%;
+  min-width: 5%;
+  z-index: 4;
+}
+
+.drag-el-Material {
+  position: relative;
+  width: auto;
+  min-height: 30%;
+  min-width:  30%;
+  object-fit: contain;
+  object-position: center;
+  z-index: 8;
+}
+
+.imageIconBulb {
+  object-fit: cover;
+  width: 30%;
+  margin-left: 8%;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.materialIcon {
+  width: 100%;
+  margin-left: -4%;
+  margin-top: 0%;
+  object-position: center;
 }
 </style>
