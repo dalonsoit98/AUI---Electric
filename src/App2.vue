@@ -276,7 +276,7 @@
   </div>
 
 <img class ="Circuit" src="assets/Circuit.png"/>
-
+<button id="ButtonDone" v-on:click=datasendFinal(getItems())>Done</button>
 <img class ="imagen" src="assets/Tabletop.png" alt=""/>
 </template>
 
@@ -301,6 +301,10 @@ export default {
 
     const getItem = (id) => {
       return items.value.find((item) => item.id == id)
+    }
+
+    const getItems = () => {
+      return items.value
     }
 
     const getMat = () => {
@@ -344,7 +348,8 @@ export default {
       material,
       onDropBulb,
       startDragBulb,
-      getMat
+      getMat,
+      getItems
     }
   },
       name: 'send',
@@ -355,7 +360,15 @@ export default {
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
                 Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
-            }
+            },
+        datasendFinal(items){
+                console.log(items);
+                var sessionString = sessionStorage.getItem('ArrayItems');
+                var Page2Array = JSON.parse(sessionString);
+                sessionStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
+                sessionStorage.setItem('ArrayItems2', JSON.stringify(items));
+                window.location.href="http://localhost:3000/src/2.html?";
+        }
       }
 }
 </script>

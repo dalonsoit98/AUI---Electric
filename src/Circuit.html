@@ -6,7 +6,6 @@
         <title>Game Chat</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
         <link rel="stylesheet" href="./1.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
@@ -48,19 +47,19 @@
                     t.insertBefore(e, t.firstChild);
                 })();
                 </script>
-               <form>
+                <form>
                     
                 <button class="Button" formaction="../index.html" onclick="sessionStorage.clear()">
                     <img class="ButtonImg" src="assets/Arrow.png"></button>
                 </form>
 
                 <form>
-                    <button class="ButtonDone" formaction="Circuit.html">Done</button>
+                    <button class="ButtonDone" formaction="1.html">Done</button>
                 </form>
 
             <div class = "Game">
                 
-                <script type="module" src="/src/mainAtom.js"></script>
+                <script type="module" src="/src/mainCircuit.js"></script>
             </div>
            
             <div class = "Title">
@@ -75,8 +74,21 @@
                     pathname: '/socket.io',
                     transports: ['websocket'],
         });
-        </script>
 
+        function changeImage() {
+            var src = document.getElementById("CircuitImage").src; 
+            console.log(src);  
+            var imgsrc = src.substring(src.lastIndexOf("/")+1);
+            console.log(imgsrc);
+            if  (imgsrc == "SimpleCircuit-open.png"){
+                document.getElementById("CircuitImage").src = "assets/SimpleCircuit-closed.png";
+                console.log('if'+document.getElementById("CircuitImage").src);
+            } else  {
+                document.getElementById("CircuitImage").src = "assets/SimpleCircuit-open.png";
+                console.log('if'+document.getElementById("CircuitImage").src);
+            }
+         }
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
     </body>
     

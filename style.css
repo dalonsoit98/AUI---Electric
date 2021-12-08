@@ -31,10 +31,10 @@ html, body {
 .Name {
     float: rigth;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 210%;
+    font-size: 140%;
     color: aliceblue;
     padding-top: 4%;
-    padding-left: 30%;
+    padding-left: 35%;
     
 }
 .chatbot{
