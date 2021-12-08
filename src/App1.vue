@@ -248,6 +248,7 @@
 
 
 <img class ="imagen" src="assets/Tabletop.png" alt=""/>
+<button id="ButtonDone" v-on:click=datasend(getItems())>Done</button>
 </template>
 
 <script>
@@ -257,33 +258,36 @@ import { ref } from 'vue'
             var Socket = new io('http://localhost:5005/', {
                     pathname: '/socket.io',
                     transports: ['websocket'],
-        });
-        
-            
+        });      
 
 export default {
   setup() {
 
     const items = ref([
-      {id: 0, title: 'Potato', conductivity: 1, tag: 0},
-      {id: 1, title: 'Lemon', conductivity: 1, tag: 0},
-      {id: 2, title: 'Cork', conductivity: 0, tag: 0},
-      {id: 3, title: 'Pencil', conductivity: 1, tag: 0},
-      {id: 4, title: 'Lego', conductivity: 0, tag: 0},
-      {id: 5, title: 'RubberBand', conductivity: 0, tag: 0},
-      {id: 6, title: '5Euros', conductivity: 0, tag: 0},
-      {id: 7, title: 'Log', conductivity: 0, tag: 0},
-      {id: 8, title: 'Clip', conductivity: 1, tag: 0},
-      {id: 9, title: 'Water', conductivity: 0, tag: 0},
-      {id: 10, title: 'GoldBar', conductivity: 1, tag: 0},
-      {id: 11, title: 'GlassBottle', conductivity: 0, tag: 0},
-      {id: 12, title: 'Diamond', conductivity: 0, tag: 0},
+      {id: 0, title: 'assets/Potato.png', conductivity: 1, tag: 0},
+      {id: 1, title: 'assets/Lemon.png', conductivity: 1, tag: 0},
+      {id: 2, title: 'assets/Cork.png', conductivity: 0, tag: 0},
+      {id: 3, title: 'assets/Pencil.png', conductivity: 1, tag: 0},
+      {id: 4, title: 'assets/Lego.png', conductivity: 0, tag: 0},
+      {id: 5, title: 'assets/RubberBand.png', conductivity: 0, tag: 0},
+      {id: 6, title: 'assets/5Euros.png', conductivity: 0, tag: 0},
+      {id: 7, title: 'assets/Log.png', conductivity: 0, tag: 0},
+      {id: 8, title: 'assets/Paper Clip.png', conductivity: 1, tag: 0},
+      {id: 9, title: 'assets/Water.png', conductivity: 0, tag: 0},
+      {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
+      {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
+      {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
+      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
+      {id: 14, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
     ])
-
+    console.log(items);
     const getItem = (id) => {
       return items.value.find((item) => item.id == id)
     }
 
+    const getItems = () => {
+      return items.value
+    }
     const startDrag = (event,tag) => {
       console.log(tag)
       event.dataTransfer.dropEffect = 'move'
@@ -296,9 +300,10 @@ export default {
       const item = items.value.find((item) => item.id == id)
       item.tag = tagNumber
     }
-
+   
     return {
       getItem,
+      getItems,
       onDrop,
       startDrag
     }
@@ -311,7 +316,12 @@ export default {
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
                 Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
-            }
+            },
+        datasend(items){
+                console.log(items);
+                sessionStorage.setItem('ArrayItems', JSON.stringify(items));
+                window.location.href="http://localhost:3000/src/2.html?";
+        }
       }
 }
 </script>
