@@ -1,24 +1,25 @@
 version: "2.0"
 
 stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_welcome_start
+  - intent: affirm
+  - action: utter_readyYes
+
+- story: bot dilemma
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: help menu
+  steps:
+  - intent: help
+  - action: utter_help_response
 
 - story: Part1
   steps:
   - intent: part1
-  - action: utter_wellcometopart1
+  - action: utter_welcometopart1
 
-- story: path1
-  steps:
-  - intent: greet
-  - action: name_form
-  - active_loop: name_form
-  - slot_was_set:
-    - requested_slot: first_name
-  - slot_was_set:
-    - first_name: Dani
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: action_submit
-  - intent: deny
-  - action: utter_readyYes

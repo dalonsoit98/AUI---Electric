@@ -93,6 +93,24 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    
+- intent: help
+  examples: |
+    - can you please help me?
+    - I need help
+    - please help me
+    - I am having trouble with something
+    - help
+    - I'm having trouble
+    
+- intent: game_explain
+  examples: |
+    - what is going on?
+    - what is this?
+    - is this a game?
+    - what are we going to learn?
+    
+- intent: call_professor
 
 - intent: my_name
   examples: |
@@ -113,6 +131,14 @@ nlu:
     - People call me [Pietro]{"entity":"name","value":"Pietro"}
     - People call me [Viola]{"entity":"name","value":"Viola"}
     - People call me [Luca]{"entity":"name","value":"Luca"}
+    - I'm [Giorgio]{"entity":"name","value":"Giorgio"}
+    - Hi! My name is [Alex]{"entity":"name","value":"Alex"}
+    - Hi! I'm [Giovanni]{"entity":"name","value":"Giovanni"}
+    - Nice to meet you! My name is [Finn]{"entity":"name","value":"Finn"}
+    - Hey! I'm [Laura]{"entity":"name","value":"Laura"}
+    - They call me [Elsa]{"entity":"name","value":"Elsa"}
+    - [Hector], nice to meet you{"entity":"name","value":"Hector"}
+    - My name is [Fabio], Owly{"entity":"name","value":"Fabio"}
 
 - intent: part1
   examples: |

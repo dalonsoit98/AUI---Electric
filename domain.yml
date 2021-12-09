@@ -8,29 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
-  - my_name:
-      use_entities:
-        - name
+  - help
+  - game_explain
+  - call_professor
   - part1
-
-entities:
-  - name
-
-forms:
-  name_form:
-    required_slots:
-      first_name:
-      - type: from_entity
-        entity: name
-  
-slots:
-  first_name:
-    type: text
-
-actions:
-  - action_ask_name
-  - utter_slots_values
-  - action_submit
 
 e2e_actions: []
 
@@ -52,7 +33,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye! Hope to see you soon"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -63,13 +44,10 @@ responses:
   utter_canihelp:
   - text: "Can I help you with something?"
 
-  utter_slots_values:
-  - text: "Nice to meet you {name}! I am your guide today. Are you ready to get started?"
+  utter_welcome_start:
+  - text: "Hello there! I’m Owly and I will be your guide today. Are you ready to get started?"
 
-  utter_ask_first_name:
-  - text: "Hello there! I’m Owly, what is your name?"
-
-  utter_wellcometopart1:
+  utter_welcometopart1:
   - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
 
   utter_interfaceexplain:
@@ -79,10 +57,26 @@ responses:
   - text: "Are you ready to start with level 1?"
     
   utter_readyNo:
-    - text: "Can I help you with something?"
+  - text: "Can I help you with something?"
       
   utter_readyYes:
-    - text: "Let's do a quick tour!"
+  - text: "Let's do a quick tour!"
+
+  utter_help_response:
+    - text: "What i can help you with?"
+      buttons:
+        - title: "What is this?"
+          payload: "/game_explain"
+        - title: "Something is not working"
+          payload: "/call_professor"
+        - title: "Other issue"
+          payload: "/call_professor"
+          
+  utter_game_explain:
+  - text: "This is an educational game! Today I am going to teach you about cool concepts regarding electricity! I'm excited! It's going to be so fun!"
+      
+  utter_call_professor:
+  - text: "To fix this you should call your teacher"
       
 session_config:
   session_expiration_time: 60

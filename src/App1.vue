@@ -347,19 +347,19 @@ export default {
 }
 .Conducting-Title {
   position:absolute;
-  margin-top: 15%;
-  margin-left: 12.5%;
+  margin-top: 10%;
+  margin-left: 12%;
   margin-right: 70%;
-  color: rgb(85, 186, 71);
+  color: yellow;
   z-index: 3;
 }
 
 .Insulating-Title {
   position:absolute;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 40%;
   margin-right: 70%;
-  color: red;
+  color: black;
   z-index: 3;
 }
 .drop-zone1-Conducting {
@@ -371,8 +371,8 @@ export default {
   background-image: url('assets/Check.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 12% 15%;
-  background-size: 10%;
+  background-position: 12% 9%;
+  background-size: 6%;
   height: 20%;
   z-index: 4;
 }
@@ -393,8 +393,8 @@ export default {
   background-image: url('assets/Cross.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 42% 15%;
-  background-size: 9%;
+  background-position: 42% 9%;
+  background-size: 6%;
   height: 20%;
   z-index: 4;
 }
@@ -495,7 +495,7 @@ export default {
   background-image: url('assets/Potato.png');
   #background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 50%;
   background-position: center;
   height: 8%;
   min-width: 5%;
