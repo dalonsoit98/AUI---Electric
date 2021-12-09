@@ -247,7 +247,7 @@
   </div>
 
 
-<img class ="imagen" src="assets/Tabletop.png" alt=""/>
+<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 <button id="ButtonDone" v-on:click=datasend(getItems())>Done</button>
 </template>
 
@@ -364,7 +364,7 @@ export default {
 }
 .drop-zone1-Conducting {
   position:absolute;
-  margin-top: 7%;
+  margin-top: 2%;
   margin-left: 5.5%;
   margin-right: 70%;
   width: 20%;
@@ -386,7 +386,7 @@ export default {
 }
 .drop-zone2-Insulating {
   position:absolute;
-  margin-top: 7%;
+  margin-top: 2%;
   margin-left: 32.5%;
   margin-right: 70%;
   width: 20%;
@@ -411,7 +411,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 7.5%;
   width: 14%;
   background-image: url('assets/Pencil.png');
@@ -436,7 +436,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 19.5%;
   width: 14%;
   background-image: url('assets/Cork.png');
@@ -454,7 +454,7 @@ export default {
   display:grid;
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 33%;
   width: 10%;
   background-image: url('assets/Lego.png');
@@ -472,7 +472,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
+  margin-top: 28%;
   margin-left: 33%;
   width: 10%;
   background-image: url('assets/Lemon.png');
@@ -489,7 +489,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
+  margin-top: 28%;
   margin-left: 21.5%;
   width: 10%;
   background-image: url('assets/Potato.png');
@@ -507,7 +507,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
+  margin-top: 28%;
   margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/RubberBand.png');
@@ -524,7 +524,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
+  margin-top: 35%;
   margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/5Euros.png');
@@ -541,7 +541,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 25%;
+  margin-top: 20%;
   margin-left: 43%;
   width: 10%;
   background-image: url('assets/Log.png');
@@ -558,7 +558,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33%;
+  margin-top: 28%;
   margin-left: 43%;
   width: 10%;
   background-image: url('assets/Paper Clip.png');
@@ -575,7 +575,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
+  margin-top: 35%;
   margin-left: 21.5%;
   width: 10%;
   background-image: url('assets/Water.png');
@@ -592,7 +592,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
+  margin-top: 35%;
   margin-left: 33%;
   width: 10%;
   background-image: url('assets/Gold Bar.png');
@@ -609,7 +609,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 40%;
+  margin-top: 35%;
   margin-left: 43%;
   width: 10%;
   background-image: url('assets/Glass Bottle.png');
@@ -626,7 +626,7 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 19%;
+  margin-top: 14%;
   margin-left: 27%;
   width: 10%;
   background-image: url('assets/Diamond.png');

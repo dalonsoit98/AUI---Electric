@@ -4,7 +4,7 @@
 <img class ="CircuitImage" id ="CircuitImage"  src =  "assets/SimpleCircuit-open.png">
 <div class= "ChangeImage"  onclick = changeImage()></div>
 
-<img class ="imagen" src="assets/Tabletop.png" alt=""/>
+<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 </template>
 
 <script>

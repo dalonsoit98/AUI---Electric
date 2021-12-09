@@ -199,13 +199,15 @@ export default {
 .drop-zone1-Nucleus {
    text-align:center;
   position:absolute;
-  margin-top: 18%;
-  margin-left: 25%;
+  margin-top: 19%;
+  margin-left: 26%;
   margin-right: 70%;
-  width: 10%;
+  width: 8%;
   background-color: transparent;
-  height: 20%;
+  height: 16.5%;
   z-index: 4;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
@@ -224,12 +226,14 @@ export default {
 .drop-zone2-Electron {
    text-align:center;
   position:absolute;
-  margin-top: 12.5%;
-  margin-left: 35.5%;
+  margin-top: 13%;
+  margin-left: 36.5%;
   margin-right: 70%;
   width: 5%;
   background-color: transparent;
   height: 10%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
   z-index: 4;
   user-drag: none;
   -webkit-user-drag: none;
@@ -252,10 +256,11 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 18%;
-  margin-left: 15%;
+  margin-top: 19%;
+  margin-left: 16.5%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
   width: 5%;
-  background-color: transparent;
   height: 10%;
   min-width: 5%;
   z-index: 4;
@@ -281,11 +286,13 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 30%;
-  margin-left: 32%;
+  margin-top: 31.25%;
+  margin-left: 31.25%;
   background-color: transparent;
   width: 5%;
   height: 10%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
   min-width: 5%;
   z-index: 4;
   user-drag: none;

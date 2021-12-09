@@ -277,7 +277,7 @@
 
 <img class ="Circuit" src="assets/Circuit.png"/>
 <button id="ButtonDone" v-on:click=datasendFinal(getItems())>Done</button>
-<img class ="imagen" src="assets/Tabletop.png" alt=""/>
+<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 </template>
 
 <script>
