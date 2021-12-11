@@ -11,7 +11,10 @@ intents:
   - help
   - game_explain
   - call_professor
+  - partAtom
+  - partCircuit
   - part1
+  - part2
   - ready
 
 e2e_actions: []

@@ -33,7 +33,7 @@
                     (e.onload = () => {
                         window.WebChat.default(
                         {
-                            initPayload: '/part1',
+                            initPayload: '/partCircuit',
                             customData: { language: "en" },
                             socketUrl: "http://localhost:5005",
                             socketPath: "/socket.io/",
@@ -54,7 +54,7 @@
                 </form>
 
                 <form>
-                    <button class="ButtonDone" formaction="1.html">Done</button>
+                    <button class="ButtonDone" formaction="1.html" onclick="sessionStorage.clear()">Done</button>
                 </form>
 
             <div class = "Game">
