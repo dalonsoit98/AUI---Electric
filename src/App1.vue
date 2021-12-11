@@ -319,7 +319,8 @@ export default {
             },
         datasend(items){
                 console.log(items);
-                sessionStorage.setItem('ArrayItems', JSON.stringify(items));
+                localStorage.setItem('ArrayItems', JSON.stringify(items));
+                sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/2.html?";
         }
       }

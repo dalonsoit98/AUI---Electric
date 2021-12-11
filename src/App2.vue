@@ -291,11 +291,26 @@ import { ref } from 'vue'
 
 export default {
   setup() {
-  var sessionString = sessionStorage.getItem('ArrayItems');
+  var sessionString = localStorage.getItem('ArrayItems');
   var Page2Array = JSON.parse(sessionString);
 
-    const items = ref(Page2Array);
-    console.log(items);
+    const items = ref([
+      {id: 0, title: 'assets/Potato.png', conductivity: 1, tag: 0},
+      {id: 1, title: 'assets/Lemon.png', conductivity: 1, tag: 0},
+      {id: 2, title: 'assets/Cork.png', conductivity: 0, tag: 0},
+      {id: 3, title: 'assets/Pencil.png', conductivity: 1, tag: 0},
+      {id: 4, title: 'assets/Lego.png', conductivity: 0, tag: 0},
+      {id: 5, title: 'assets/RubberBand.png', conductivity: 0, tag: 0},
+      {id: 6, title: 'assets/5Euros.png', conductivity: 0, tag: 0},
+      {id: 7, title: 'assets/Log.png', conductivity: 0, tag: 0},
+      {id: 8, title: 'assets/Paper Clip.png', conductivity: 1, tag: 0},
+      {id: 9, title: 'assets/Water.png', conductivity: 0, tag: 0},
+      {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
+      {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
+      {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
+      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
+      {id: 14, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
+    ])
     
     var material = {id: null, title: 'assets/Lego.png', conductivity: 0, tag: null} 
 
@@ -363,10 +378,11 @@ export default {
             },
         datasendFinal(items){
                 console.log(items);
-                var sessionString = sessionStorage.getItem('ArrayItems');
+                var sessionString = localStorage.getItem('ArrayItems');
                 var Page2Array = JSON.parse(sessionString);
-                sessionStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
-                sessionStorage.setItem('ArrayItems2', JSON.stringify(items));
+                localStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
+                localStorage.setItem('ArrayItems2', JSON.stringify(items));
+                sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/2.html?";
         }
       }
