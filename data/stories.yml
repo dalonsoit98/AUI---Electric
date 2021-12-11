@@ -7,7 +7,28 @@ stories:
   - action: utter_welcome_start
   - intent: affirm
   - action: utter_readyYes
-
+  - action: utter_interface_explanation
+  - checkpoint: tutorial_start
+- story: issue path
+  steps:
+  - intent: greet
+  - action: utter_welcome_start
+  - intent: deny
+  - action: utter_help_response
+  - intent: ready
+  - action: utter_start
+  - intent: affirm
+  - action: utter_readyYes
+  - action: utter_interface_explanation
+  - checkpoint: tutorial_start
+      
+      
+- story: happy path 1
+  steps:
+  - checkpoint: tutorial_start
+  - intent: ready
+  - action: utter_tutorial_start
+    
 - story: bot dilemma
   steps:
   - intent: bot_challenge
@@ -18,7 +39,7 @@ stories:
   - intent: help
   - action: utter_help_response
 
-- story: Part1
+- story: restart
   steps:
   - intent: part1
   - action: utter_welcometopart1

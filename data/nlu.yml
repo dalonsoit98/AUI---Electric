@@ -112,6 +112,16 @@ nlu:
     
 - intent: call_professor
 
+- intent: ready
+  examples: |
+    - okay!
+    - I'm ready
+    - ready!
+    - ok it's solved!
+    - okay thanks
+    - thanks
+    - all good
+
 - intent: my_name
   examples: |
     - [Franca]{"entity":"name","value":"Franca"}

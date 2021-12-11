@@ -12,6 +12,7 @@ intents:
   - game_explain
   - call_professor
   - part1
+  - ready
 
 e2e_actions: []
 
@@ -77,6 +78,18 @@ responses:
       
   utter_call_professor:
   - text: "To fix this you should call your teacher"
+    
+  utter_start:
+  - text: "Are you ready now?"
+    
+  utter_interface_explanation:
+  - text: "I will remain here, at the right side of your screen. You can ask me anything at anytime. Press done whenever you're ready!"
+    
+  utter_tutorial_start:
+  - text: "Are you ready to start with the tutorial?"
+
+  utter_press_done:
+    - text: "Press the Done button when you're ready!"
       
 session_config:
   session_expiration_time: 60
