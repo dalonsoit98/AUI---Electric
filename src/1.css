@@ -14,10 +14,23 @@ html, body {
     width: 60%;
     object-fit: cover;
     background-color: transparent;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
     }
+
 .imagen {
     height: 100%;
     object-fit: cover;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .Owl {
     float: left;
@@ -27,6 +40,12 @@ html, body {
     height: 100%;
     width: auto;
     object-fit: fill;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .Name {
     float: rigth;
@@ -36,7 +55,12 @@ html, body {
     color: aliceblue;
     padding-top: 4%;
     padding-left: 35%;
-    
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .chatbot{
     float: right;
@@ -52,6 +76,12 @@ html, body {
     border-bottom:0px;
     background: #47445f !important;
     z-index: 5;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   
 } 
 #rasaWebchatPro {
@@ -59,10 +89,22 @@ html, body {
     height: 85%;
     width: 40%;
     z-index: 5;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .rw-messages-container {
     background: #d5e0ff !important;
+    user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .Button {

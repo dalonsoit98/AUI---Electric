@@ -25,12 +25,12 @@
                 background:#d0d9f9;
             }
             .rw-conversation-container .rw-client {
-                background: #272544;
+                background: #46445f;
             }
 
             .rw-conversation-container .rw-reply {
-                background:#272544;
-                border: 1px solid #272544;
+                background:#46445f;
+                border: 1px solid #46445f;
             }
         </style>
                 <script>!(function () {
@@ -63,7 +63,7 @@
                 </form>
 
                 <form>
-                    <button class="ButtonDone" formaction="Circuit.html" onclick="sessionStorage.clear()">Done</button>
+                    <button class="ButtonDone" formaction="Circuit.html">Done</button>
                 </form>
 
             <div class = "Game">
@@ -83,6 +83,7 @@
                     pathname: '/socket.io',
                     transports: ['websocket'],
         });
+
         window.onload = () => {
         var session_info = sessionStorage.getItem('chat_session');
         var index = session_info.indexOf("session_id");

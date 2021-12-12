@@ -382,7 +382,6 @@ export default {
                 var Page2Array = JSON.parse(sessionString);
                 localStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
                 localStorage.setItem('ArrayItems2', JSON.stringify(items));
-                sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/Final.html?";
         }
       }
@@ -460,7 +459,7 @@ export default {
   background-repeat: no-repeat;
   background-position: 55.5% 59%;
   background-size: 4%;
-  height: 10%;
+  height: 12%;
   z-index: 4;
 }
 .drop-zone2 > div{

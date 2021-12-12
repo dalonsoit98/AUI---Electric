@@ -170,3 +170,8 @@ nlu:
     - =&[gZ<xw_M>3hb6-
     - ]!X^hA^h]h7^Ca3e
 
+- intent: partFinal
+  examples: |
+    - R#7asM{'9"#hb%pd
+    - cDj2N^J5]CD.H8ap
+
