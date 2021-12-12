@@ -154,7 +154,7 @@ export default {
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
-                Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
+                Socket.emit("user_uttered",{"message":"/partAtom","customData":{"language":"en"},"session_id":session_id});
             }
       }
 }

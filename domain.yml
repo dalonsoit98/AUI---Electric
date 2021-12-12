@@ -51,9 +51,6 @@ responses:
   utter_welcome_start:
   - text: "Hello there! I’m Owly and I will be your guide today. Are you ready to get started?"
 
-  utter_welcometopart1:
-  - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
-
   utter_interfaceexplain:
   - text: "This interface works like... Do you understand?"
 
@@ -93,7 +90,19 @@ responses:
 
   utter_press_done:
     - text: "Press the Done button when you're ready!"
+
+  utter_t10:
+    - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
       
+  utter_t11:
+    - text: "Alright, let's see what I can further teach you."
+      
+  utter_t12:
+    - text: "Do you know what this is? Can you label the particles correctly?"
+
+  utter_t20:
+    - text: "The simplest circuit can be created with a battery, wires and a lightbulb. Can you manage to make it work?"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: false

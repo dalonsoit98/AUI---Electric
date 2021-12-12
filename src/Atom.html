@@ -83,6 +83,13 @@
                     pathname: '/socket.io',
                     transports: ['websocket'],
         });
+        window.onload = () => {
+        var session_info = sessionStorage.getItem('chat_session');
+        var index = session_info.indexOf("session_id");
+        let session_id = session_info.substr(index+13, 32);
+        socket.emit("user_uttered",{"message":"/partAtom","customData":{"language":"en"},"session_id":session_id});
+        console.log("done");
+        }
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>  

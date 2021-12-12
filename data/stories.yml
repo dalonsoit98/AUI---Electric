@@ -15,6 +15,8 @@ stories:
   - action: utter_welcome_start
   - intent: deny
   - action: utter_help_response
+  - intent: game_explain
+  - action: utter_game_explain
   - intent: ready
   - action: utter_start
   - intent: affirm
@@ -22,25 +24,21 @@ stories:
   - action: utter_interface_explanation
   - checkpoint: tutorial_start
       
-      
 - story: happy path 1
   steps:
   - checkpoint: tutorial_start
-  - intent: ready
-  - action: utter_tutorial_start
+  - intent: partAtom
+  - action: utter_t10
+  - intent: deny
+  - action: utter_t11
+  - action: utter_t12
+  - checkpoint: tutorial_2
     
-- story: bot dilemma
+- story: happy path 2
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - checkpoint: tutorial_2
+  - intent: partCircuit
+  - action: utter_t20 
 
-- story: help menu
-  steps:
-  - intent: help
-  - action: utter_help_response
 
-- story: restart
-  steps:
-  - intent: part1
-  - action: utter_welcometopart1
 

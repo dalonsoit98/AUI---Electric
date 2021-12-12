@@ -12,11 +12,6 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
       
-- rule: Help options
-  steps:
-  - intent: help
-  - action: utter_help_response
-      
 - rule: Game explain
   steps:
   - intent: game_explain
@@ -26,8 +21,3 @@ rules:
   steps:
   - intent: call_professor
   - action: utter_call_professor
-
-- rule: Say welcome to part1 at change
-  steps:
-  - intent: part1
-  - action: utter_welcometopart1
