@@ -196,8 +196,10 @@ export default {
   color: transparent;
   z-index: 3;
 }
+
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone1-Nucleus {
-   text-align:center;
+  text-align:center;
   position:absolute;
   margin-top: 19%;
   margin-left: 26%;
@@ -215,6 +217,30 @@ export default {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+}
+
+@media (min-width: 1367px){
+.drop-zone1-Nucleus {
+  text-align:center;
+  position:absolute;
+  margin-top: 20%;
+  margin-left: 25.5%;
+  margin-right: 70%;
+  width: 9%;
+  background-color: transparent;
+  height: 17%;
+  z-index: 4;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+}
+
 .drop-zone1 > div{
   background-color: transparent;
   padding:1em;
@@ -223,6 +249,7 @@ export default {
 .drop-zone1 > div:nth-child(odd){
   background-color: transparent;
 }
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone2-Electron {
    text-align:center;
   position:absolute;
@@ -242,6 +269,30 @@ export default {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+}
+
+@media (min-width: 1367px){
+.drop-zone2-Electron {
+   text-align:center;
+  position:absolute;
+  margin-top: 13.75%;
+  margin-left: 36.5%;
+  margin-right: 70%;
+  width: 5%;
+  background-color: transparent;
+  height: 10%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
+  z-index: 4;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+}
+
 .drop-zone2 > div{
   background-color: transparent;
   padding:1em;
@@ -250,6 +301,8 @@ export default {
 .drop-zone2 > div:nth-child(odd){
   background-color: transparent;
 }
+
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone-Electron2 {
   text-align:center;
   display:grid;
@@ -271,6 +324,33 @@ export default {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+}
+
+@media (min-width: 1367px){
+.drop-zone-Electron2 {
+  text-align:center;
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 20.25%;
+  margin-left: 16.5%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
+  width: 5%;
+  height: 10%;
+  min-width: 5%;
+  z-index: 4;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+}
+
+
 .drop-zone3 > div{
   background-color: transparent;
   padding:1em;
@@ -280,6 +360,7 @@ export default {
   background-color: transparent;
 }
 
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone-Electron3 {
    text-align:center;
   display:grid;
@@ -302,7 +383,34 @@ export default {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+}
 
+@media (min-width: 1367px){
+.drop-zone-Electron3 {
+   text-align:center;
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 33.25%;
+  margin-left: 31.25%;
+  background-color: transparent;
+  width: 5%;
+  height: 10%;
+  background-color: rgb(255,255,255,0.3);
+  border-radius: 20px;
+  min-width: 5%;
+  z-index: 4;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+}
+
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone-TitleNucleus {
    text-align:center;
   position:absolute;
@@ -319,7 +427,28 @@ export default {
   z-index: 4;
   text-align:center;
 }
+}
 
+@media (min-width: 1367px){
+.drop-zone-TitleNucleus {
+   text-align:center;
+  position:absolute;
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  margin-top: 40%;
+  margin-left: 15%;
+  width: 5%;
+  background-color: #fb91af;
+  border-radius: 20px;
+  height: 6%;
+  min-width: 5%;
+  z-index: 4;
+  text-align:center;
+}
+}
+
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone-TitleElectron {
   position:absolute;
   text-align:center;
@@ -334,6 +463,25 @@ export default {
   height: 8%;
   min-width: 5%;
   z-index: 4;
+}
+}
+
+@media (min-width: 1367px){
+.drop-zone-TitleElectron {
+  position:absolute;
+  text-align:center;
+  display:grid;
+  grid-template-columns:33% 33% 33%;
+  grid-gap:1em;
+  margin-top: 40%;
+  margin-left: 40%;
+  width: 5%;
+  background-color: #fb91af;
+  border-radius: 20px;
+  height: 6%;
+  min-width: 5%;
+  z-index: 4;
+}
 }
 
 .nucelustitle {
