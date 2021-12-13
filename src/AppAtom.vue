@@ -1,6 +1,5 @@
 <template>
 
-<button class="botonsend" v-on:click="send('/atom_correct')"></button>
 <div 
   class="drop-zone1-Nucleus"
   @drop = "onDrop($event,0)"
