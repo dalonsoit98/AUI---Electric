@@ -1,6 +1,6 @@
 <template>
 
-<button class="botonsend" v-on:click="send"></button>
+<button class="botonsend" v-on:click="send('/atom_correct')"></button>
 <div 
   class="drop-zone1-Nucleus"
   @drop = "onDrop($event,0)"
@@ -14,7 +14,8 @@
   >
   <h1 v-if="getItem(0).tag == 2" class="nucelustitle"></h1>
   <h1 v-if="getItem(0).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="getItem(0).tag == 1" class="electrontitle">Electron</h1>
+  <h1 v-if="((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1))" v-on="send('/atom_correct')"></h1>
+  <h1 v-if="getItem(0).tag == 1" class="electrontitle" v-on="send('/atom_incorrect')">Electron</h1>
   </div>
 </div>
 <div 
@@ -28,8 +29,8 @@
   draggable="false"
   @dragstart="startDrag($event, 2)"
   >
-  <h1 v-if="getItem(1).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="getItem(1).tag == 1" class="electrontitle">Electron</h1>
+  <h1 v-if="getItem(1).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
+  <h1 v-if="getItem(1).tag == 1" class="electrontitle" >Electron</h1>
   </div>
 </div>
 <div 
@@ -44,7 +45,7 @@
   draggable="false"
   @dragstart="startDrag($event, item)"
   >
-  <h1 v-if="getItem(2).tag == 0" class="nucelustitle">Nucleus</h1>
+  <h1 v-if="getItem(2).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
   <h1 v-if="getItem(2).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
@@ -61,7 +62,7 @@
   draggable="false"
   @dragstart="startDrag($event, item)"
   >
-  <h1 v-if="getItem(3).tag == 0" class="nucelustitle">Nucleus</h1>
+  <h1 v-if="getItem(3).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
   <h1 v-if="getItem(3).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
@@ -154,7 +155,7 @@ export default {
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
-                Socket.emit("user_uttered",{"message":"/partAtom","customData":{"language":"en"},"session_id":session_id});
+                Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
             }
       }
 }

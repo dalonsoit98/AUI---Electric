@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="InitialSend('/partFinal');">
        
         <style>
             .rw-widget-embedded {
@@ -87,11 +87,12 @@
             transports: ['websocket'],
             });
 
-        window.onload = () => {
+        function InitialSend (message) {
         var session_info = sessionStorage.getItem('chat_session');
         var index = session_info.indexOf("session_id");
         let session_id = session_info.substr(index+13, 32);
-        socket.emit("user_uttered",{"message":"/partFinal","customData":{"language":"en"},"session_id":session_id});
+        socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
+        console.log(session_id);
         console.log("done");
         }
         </script>

@@ -246,7 +246,6 @@
     </div>
   </div>
 
-
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 <button id="ButtonDone" v-on:click=datasend(getItems())>Done</button>
 </template>
