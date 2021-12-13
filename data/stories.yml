@@ -8,8 +8,9 @@ stories:
   - intent: affirm
   - action: utter_readyYes
   - action: utter_interface_explanation
-  - checkpoint: tutorial_start
-  
+  - intent: partAtom
+  - action: utter_t10
+  - checkpoint: atom
 - story: issue path
   steps:
   - intent: greet
@@ -23,21 +24,50 @@ stories:
   - intent: affirm
   - action: utter_readyYes
   - action: utter_interface_explanation
-  - checkpoint: tutorial_start
-      
-- story: happy path 1
-  steps:
-  - checkpoint: tutorial_start
   - intent: partAtom
   - action: utter_t10
+  - checkpoint: atom
+- story: start path
+  steps:
+  - intent: greet
+  - action: utter_welcome_start
+  - intent: partAtom
+  - action: utter_t10
+  - checkpoint: atom
+      
+- story: happy path atom
+  steps:
+    - checkpoint: atom
+    - intent: affirm
+    - action: utter_t11
+    - action: utter_t12
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: circuit
+- story: atom deny
+  steps:
+  - checkpoint: atom
   - intent: deny
   - action: utter_t11
   - action: utter_t12
-  - checkpoint: tutorial_2
+  - intent: atom_correct
+  - action: utter_t13
+  - checkpoint: circuit
+- story: atom mistake
+  steps:
+    - checkpoint: atom
+    - intent: affirm
+    - action: utter_t11
+    - action: utter_t12
+    - intent: atom_incorrect
+    - action: utter_t131
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: circuit
     
 - story: happy path 2
   steps:
-  - checkpoint: tutorial_2
+  - checkpoint: circuit
   - intent: partCircuit
   - action: utter_t20 
 

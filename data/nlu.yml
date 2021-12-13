@@ -175,3 +175,5 @@ nlu:
     - R#7asM{'9"#hb%pd
     - cDj2N^J5]CD.H8ap
 
+- intent: atom_correct
+- intent: atom_incorrect

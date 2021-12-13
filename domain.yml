@@ -16,6 +16,8 @@ intents:
   - part1
   - part2
   - ready
+  - atom_correct
+  - atom_incorrect
 
 e2e_actions: []
 
@@ -83,7 +85,7 @@ responses:
   - text: "Are you ready now?"
     
   utter_interface_explanation:
-  - text: "I will remain here, at the right side of your screen. You can ask me anything at anytime. Press done whenever you're ready!"
+  - text: "I will remain here, at the right side of your screen. You can ask me anything at anytime. Press Start whenever you're ready!"
     
   utter_tutorial_start:
   - text: "Are you ready to start with the tutorial?"
@@ -99,7 +101,16 @@ responses:
       
   utter_t12:
     - text: "Do you know what this is? Can you label the particles correctly?"
+      
+  utter_t13:
+    - text: "Good job! The nucleus sits in the center, while the negative electrons are free to move around it. When these electrons move from atom to atom in a certain direction, they create an electric current. Understood?"
 
+  utter_t131:
+    - text: "Almost there! Try again."
+
+  utter_t14:
+    - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current"
+      
   utter_t20:
     - text: "The simplest circuit can be created with a battery, wires and a lightbulb. Can you manage to make it work?"
 
