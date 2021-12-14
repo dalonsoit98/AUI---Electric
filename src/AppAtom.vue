@@ -14,7 +14,8 @@
   <h1 v-if="getItem(0).tag == 2" class="nucelustitle"></h1>
   <h1 v-if="getItem(0).tag == 0" class="nucelustitle">Nucleus</h1>
   <h1 v-if="((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1))" v-on="send('/atom_correct')"></h1>
-  <h1 v-if="getItem(0).tag == 1" class="electrontitle" v-on="send('/atom_incorrect')">Electron</h1>
+  <h1 v-if="((getItem(0).tag != 2) && (getItem(1).tag != 2) && (getItem(2).tag != 2) && (getItem(3).tag != 2) && ((getItem(0).tag == 1) || (getItem(1).tag == 0) || (getItem(2).tag == 0) || (getItem(3).tag == 0)))" v-on="send('/atom_incorrect')"></h1>
+  <h1 v-if="getItem(0).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
 <div 
@@ -28,7 +29,7 @@
   draggable="false"
   @dragstart="startDrag($event, 2)"
   >
-  <h1 v-if="getItem(1).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
+  <h1 v-if="getItem(1).tag == 0" class="nucelustitle">Nucleus</h1>
   <h1 v-if="getItem(1).tag == 1" class="electrontitle" >Electron</h1>
   </div>
 </div>
@@ -44,7 +45,7 @@
   draggable="false"
   @dragstart="startDrag($event, item)"
   >
-  <h1 v-if="getItem(2).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
+  <h1 v-if="getItem(2).tag == 0" class="nucelustitle">Nucleus</h1>
   <h1 v-if="getItem(2).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
@@ -61,7 +62,7 @@
   draggable="false"
   @dragstart="startDrag($event, item)"
   >
-  <h1 v-if="getItem(3).tag == 0" class="nucelustitle" v-on="send('/atom_incorrect')">Nucleus</h1>
+  <h1 v-if="getItem(3).tag == 0" class="nucelustitle">Nucleus</h1>
   <h1 v-if="getItem(3).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
@@ -104,6 +105,8 @@
 </template>
 
 <script>
+let atomCorrectFlag = 0;
+let atomInCorrectFlag = 0;
 
 import { ref } from 'vue' 
  
@@ -150,12 +153,23 @@ export default {
       name: 'send',
       methods:{
         send(message){
-                
+                if ((message == '/atom_correct') && (atomCorrectFlag == 0)){
+                  atomCorrectFlag += 1;
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
-                console.log(session_id);
+                console.log(atomCorrectFlag);
                 Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
+                }
+
+                if ((message == '/atom_incorrect') && (atomInCorrectFlag == 0)){
+                  atomInCorrectFlag +=1;
+                var session_info = sessionStorage.getItem('chat_session');
+                var index = session_info.indexOf("session_id");
+                let session_id = session_info.substr(index+13, 32);
+                console.log(message);
+                Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
+                }
             }
       }
 }
