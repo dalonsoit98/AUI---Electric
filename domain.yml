@@ -85,10 +85,12 @@ responses:
   - text: "Are you ready now?"
     
   utter_interface_explanation:
-  - text: "I will remain here, at the right side of your screen. You can ask me anything at anytime. Press Start whenever you're ready!"
+  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress!. Press Start whenever you're ready"
     
-  utter_tutorial_start:
+  utter_press_start:
   - text: "Are you ready to start with the tutorial?"
+  - text: "Press Start to begin the tutorial"
+  - text: "Press Start when you are ready!"
 
   utter_press_done:
     - text: "Press the Done button when you're ready!"
@@ -112,7 +114,7 @@ responses:
     - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current"
       
   utter_t20:
-    - text: "The simplest circuit can be created with a battery, wires and a lightbulb. Can you manage to make it work?"
+    - text: "The simplest circuit can be created with a battery, wires and a light bulb. Can you manage to make it work?"
 
 session_config:
   session_expiration_time: 60

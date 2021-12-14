@@ -39,9 +39,8 @@ nlu:
     - of course
     - that sounds good
     - correct
-    - okey
     - perfect
-    - Sure!
+    - sure!
 
 - intent: deny
   examples: |
@@ -121,6 +120,9 @@ nlu:
     - okay thanks
     - thanks
     - all good
+    - got it
+    - start
+    - done
 
 - intent: my_name
   examples: |

@@ -1,7 +1,7 @@
 version: "2.0"
 
 stories:
-- story: happy path
+- story: happy path # affirm -> Start button
   steps:
   - intent: greet
   - action: utter_welcome_start
@@ -11,8 +11,72 @@ stories:
   - intent: partAtom
   - action: utter_t10
   - checkpoint: atom
-
-- story: issue path
+- story: start path # Start button
+  steps:
+    - intent: greet
+    - action: utter_welcome_start
+    - intent: partAtom
+    - action: utter_t10
+    - checkpoint: atom
+- story: okay path # affirm -> ready -> Start button
+  steps:
+    - intent: greet
+    - action: utter_welcome_start
+    - intent: affirm
+    - action: utter_readyYes
+    - action: utter_interface_explanation
+    - intent: ready
+    - action: utter_press_start
+    - intent: partAtom
+    - action: utter_t10
+    - checkpoint: atom
+- story: okay path # affirm -> ready x2 -> Start button
+  steps:
+    - intent: greet
+    - action: utter_welcome_start
+    - intent: affirm
+    - action: utter_readyYes
+    - action: utter_interface_explanation
+    - intent: ready
+    - action: utter_press_start
+    - intent: ready
+    - action: utter_press_start
+    - intent: partAtom
+    - action: utter_t10
+    - checkpoint: atom
+- story: issue path 2 # deny -> call_professor -> ready -> affirm -> Start button
+  steps:
+  - intent: greet
+  - action: utter_welcome_start
+  - intent: deny
+  - action: utter_help_response
+  - intent: call_professor
+  - action: utter_call_professor
+  - intent: ready
+  - action: utter_start
+  - intent: affirm
+  - action: utter_readyYes
+  - action: utter_interface_explanation
+  - intent: partAtom
+  - action: utter_t10
+  - checkpoint: atom
+- story: issue path 2 # deny -> call_professor -> ready -> ready -> Start button
+  steps:
+  - intent: greet
+  - action: utter_welcome_start
+  - intent: deny
+  - action: utter_help_response
+  - intent: call_professor
+  - action: utter_call_professor
+  - intent: ready
+  - action: utter_start
+  - intent: ready
+  - action: utter_readyYes
+  - action: utter_interface_explanation
+  - intent: partAtom
+  - action: utter_t10
+  - checkpoint: atom
+- story: issue path # deny -> game_explain -> ready -> affirm -> Start button
   steps:
   - intent: greet
   - action: utter_welcome_start
@@ -28,24 +92,32 @@ stories:
   - intent: partAtom
   - action: utter_t10
   - checkpoint: atom
-  
-- story: start path
+- story: issue path # deny -> game_explain -> ready -> ready -> Start button
   steps:
   - intent: greet
   - action: utter_welcome_start
+  - intent: deny
+  - action: utter_help_response
+  - intent: game_explain
+  - action: utter_game_explain
+  - intent: ready
+  - action: utter_start
+  - intent: ready
+  - action: utter_readyYes
+  - action: utter_interface_explanation
   - intent: partAtom
   - action: utter_t10
   - checkpoint: atom
-      
+
 - story: happy path atom
   steps:
-    - checkpoint: atom
-    - intent: affirm
-    - action: utter_t11
-    - action: utter_t12
-    - intent: atom_correct
-    - action: utter_t13
-    - checkpoint: circuit
+  - checkpoint: atom
+  - intent: affirm
+  - action: utter_t11
+  - action: utter_t12
+  - intent: atom_correct
+  - action: utter_t13
+  - checkpoint: circuit
 
 - story: atom deny
   steps:
@@ -59,15 +131,15 @@ stories:
 
 - story: atom mistake
   steps:
-    - checkpoint: atom
-    - intent: affirm
-    - action: utter_t11
-    - action: utter_t12
-    - intent: atom_incorrect
-    - action: utter_t131
-    - intent: atom_correct
-    - action: utter_t13
-    - checkpoint: circuit
+  - checkpoint: atom
+  - intent: affirm
+  - action: utter_t11
+  - action: utter_t12
+  - intent: atom_incorrect
+  - action: utter_t131
+  - intent: atom_correct
+  - action: utter_t13
+  - checkpoint: circuit
     
 - story: happy path 2
   steps:
