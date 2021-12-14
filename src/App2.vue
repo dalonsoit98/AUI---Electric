@@ -428,16 +428,16 @@ export default {
 }
 .drop-zone1-Conducting {
   position:absolute;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-left: 50%;
   margin-right: 70%;
   width: 10%;
   background-image: url('assets/Check.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 55.5% 46%;
+  background-position: 54.25% 38%;
   background-size: 4%;
-  height: 10%;
+  height: 16%;
   z-index: 4;
 }
 .drop-zone1 > div{
@@ -448,6 +448,7 @@ export default {
 .drop-zone1 > div:nth-child(odd){
   background-color: transparent;
 }
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone2-Insulating {
   position:absolute;
   margin-top: 25%;
@@ -457,11 +458,30 @@ export default {
   background-image: url('assets/Cross.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 55.5% 59%;
+  background-position: 54.25% 62%;
+  background-size: 4%;
+  height: 16%;
+  z-index: 4;
+}
+}
+
+@media (min-width: 1367px){
+.drop-zone2-Insulating {
+  position:absolute;
+  margin-top: 25%;
+  margin-left: 50%;
+  margin-right: 70%;
+  width: 8%;
+  background-image: url('assets/Cross.png');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 54% 57%;
   background-size: 4%;
   height: 12%;
   z-index: 4;
 }
+}
+
 .drop-zone2 > div{
   background-color: transparent;
   padding:1em;
@@ -704,7 +724,7 @@ export default {
   grid-gap:1em;
   position:absolute;
   margin-top: 1.5%;
-  margin-left: 35%;
+  margin-left: 34%;
   width: 10%;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -785,7 +805,7 @@ padding-left: 46%;
   z-index: 3;
   width: 30%;
   height: 50%;
-  margin-left: 23.5%;
+  margin-left: 22%;
   margin-top: 6%;
   user-drag: none;
   -webkit-user-drag: none;
@@ -795,11 +815,12 @@ padding-left: 46%;
   -ms-user-select: none;
 }
 
+@media (min-width: 0px) and (max-width: 1366px){
 .drop-zone-Material {
   grid-gap:1em;
   position:absolute;
   margin-top: 20.5%;
-  margin-left: 35%;
+  margin-left: 33.5%;
   width: 10%;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -807,6 +828,23 @@ padding-left: 46%;
   height: 12%;
   min-width: 5%;
   z-index: 4;
+}
+}
+
+@media (min-width: 1367px){
+.drop-zone-Material {
+  grid-gap:1em;
+  position:absolute;
+  margin-top: 21.75%;
+  margin-left: 33.5%;
+  width: 10%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  height: 12%;
+  min-width: 5%;
+  z-index: 4;
+}
 }
 
 .drag-el-Material {
