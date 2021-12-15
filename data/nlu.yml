@@ -101,6 +101,10 @@ nlu:
     - I am having trouble with something
     - help
     - I'm having trouble
+    - I don't know how to do this
+    - I'm lost
+    - can you give me a hint?
+    - i need a hint
     
 - intent: game_explain
   examples: |
@@ -123,6 +127,14 @@ nlu:
     - got it
     - start
     - done
+    
+- intent: why
+  examples: |
+    - why?
+    - but why?
+    - i don't understand
+    - why is it this way?
+    - can you explain?
 
 - intent: my_name
   examples: |

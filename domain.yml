@@ -15,9 +15,11 @@ intents:
   - partCircuit
   - part1
   - part2
+  - partFinal
   - ready
   - atom_correct
   - atom_incorrect
+  - why
 
 e2e_actions: []
 
@@ -85,16 +87,19 @@ responses:
   - text: "Are you ready now?"
     
   utter_interface_explanation:
-  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress!. Press Start whenever you're ready"
+  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress! Press 'Start' whenever you're ready"
     
   utter_press_start:
-  - text: "Are you ready to start with the tutorial?"
-  - text: "Press Start to begin the tutorial"
-  - text: "Press Start when you are ready!"
+  - text: "Are you ready to 'start' with the tutorial?"
+  - text: "Press 'Start' to begin the tutorial"
+  - text: "Press 'Start' when you are ready!"
 
   utter_press_done:
-    - text: "Press the Done button when you're ready!"
-
+    - text: "Press the 'Done' button when you're ready!"
+    - text: "Are you ready to go on to the next step?"
+    - text: "Press 'Done' in order to continue"
+    - text: "Press 'Done' when you are ready!"
+      
   utter_t10:
     - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
       
@@ -102,7 +107,7 @@ responses:
     - text: "Alright, let's see what I can further teach you."
       
   utter_t12:
-    - text: "Do you know what this is? Can you label the particles correctly?"
+    - text: "This is a model of an atom. Drag and drop the tags into the different parts of the atom. Try to label the particles correctly!"
       
   utter_t13:
     - text: "Good job! The nucleus sits in the center, while the negative electrons are free to move around it. When these electrons move from atom to atom in a certain direction, they create an electric current. Understood?"
@@ -113,8 +118,24 @@ responses:
   utter_t14:
     - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current"
       
+  utter_t15:
+    - text: "The positive (protons) and neutral (neutrons) charges stay in the center, while the negative charges (electrons) are more free to move. Same charges repel each other, different charges attract each other. When these charged particles move into a certain direction, they create an electric current"
+      
   utter_t20:
-    - text: "The simplest circuit can be created with a battery, wires and a light bulb. Can you manage to make it work?"
+    - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
+      
+  utter_t21:
+    - text: "There is a gap in the circuit. Try to close it with the mouse"
+      
+      
+  utter_l11:
+    - text: "Now that you know some of the basics, would you like to make a first guess which could be conducting or insulating? Try to drag the conducting/not conducting tags into the different objects!"
+      
+  utter_l12:
+    - text: "Now try to use the objects to complete the circuit! Drag and drop them into the gap to see if theres any changes"
+      
+  utter_l13:
+    -  text: "You did a great job! Congratulations"
 
 session_config:
   session_expiration_time: 60
