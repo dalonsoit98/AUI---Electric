@@ -78,14 +78,6 @@
                     pathname: '/socket.io',
                     transports: ['websocket'],
         });
-        </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
-
-        <script> const socket = io("http://localhost:5005", {
-            pathname: '/socket.io',
-            transports: ['websocket'],
-            });
 
         function InitialSend (message) {
         var session_info = sessionStorage.getItem('chat_session');
@@ -96,6 +88,8 @@
         console.log("done");
         }
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
 
     </body>
     
