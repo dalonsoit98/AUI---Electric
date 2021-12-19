@@ -3,44 +3,58 @@
   <h1 class="FirstAttemp">First Guess</h1>
   <h1 class="SecondAttemp">Second Guess</h1>
 
-  <div v-if="getItem(3).tag != 1" class="backIconPencil"></div>
-  <div v-if="getItem2(3).tag != 1" class="backIconPencil2"></div>
+  <div v-if="getItem(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.5)" class="backIconPencil"></div>
+  <div v-if="getItem2(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.5)" class="backIconPencil2"></div>
+  <div v-if="((getItem2(3).tag == 1) && getItem(3).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconPencil2"></div>
 
   <div v-if="getItem(2).tag != 2" class="backIconCork"></div>
   <div v-if="getItem2(2).tag != 2" class="backIconCork2"></div>
+  <div v-if="((getItem2(2).tag == 2) && getItem(2).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconCork2"></div>
 
   <div v-if="getItem(0).tag != 1" class="backIconPotato"></div>
   <div v-if="getItem2(0).tag != 1" class="backIconPotato2"></div>
+  <div v-if="((getItem2(0).tag == 1) && getItem(0).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconPotato2"></div>
 
   <div v-if="getItem(1).tag != 1" class="backIconLemon"></div>
   <div v-if="getItem2(1).tag != 1" class="backIconLemon2"></div>
+  <div v-if="((getItem2(1).tag == 1) && getItem(1).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLemon2"></div>
 
   <div v-if="getItem(4).tag != 2" class="backIconLego"></div>
   <div v-if="getItem2(4).tag != 2" class="backIconLego2"></div>
+  <div v-if="((getItem2(4).tag == 2) && getItem(4).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLego2"></div>
 
   <div v-if="getItem(5).tag != 2" class="backIconRubberBand"></div>
   <div v-if="getItem2(5).tag != 2" class="backIconRubberBand2"></div>
+  <div v-if="((getItem2(5).tag == 2) && getItem(5).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconRubberBand2"></div>
 
   <div v-if="getItem(6).tag != 2" class="backIcon5Euros"></div>
   <div v-if="getItem2(6).tag != 2" class="backIcon5Euros2"></div>
+  <div v-if="((getItem2(6).tag == 2) && getItem(6).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIcon5Euros2"></div>
 
   <div v-if="getItem(7).tag != 2" class="backIconLog"></div>
   <div v-if="getItem2(7).tag != 2" class="backIconLog2"></div>
+  <div v-if="((getItem2(7).tag == 2) && getItem(7).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLog2"></div>
 
   <div v-if="getItem(8).tag != 1" class="backIconClip"></div>
   <div v-if="getItem2(8).tag != 1" class="backIconClip2"></div>
+  <div  v-if="((getItem2(8).tag == 1) && getItem(8).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconClip2"></div>
 
   <div v-if="getItem(9).tag != 2" class="backIconWater"></div>
   <div v-if="getItem2(9).tag != 2" class="backIconWater2"></div>
+  <div  v-if="((getItem2(9).tag == 2) && getItem(9).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconWater2"></div>
 
   <div v-if="getItem(10).tag != 1" class="backIconGold"></div>
   <div v-if="getItem2(10).tag != 1" class="backIconGold2"></div>
+  <div  v-if="((getItem2(10).tag == 1) && getItem(10).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconGold2"></div>
 
   <div v-if="getItem(11).tag != 2" class="backIconGlassBottle"></div>
   <div v-if="getItem2(11).tag != 2" class="backIconGlassBottle2"></div>
+  <div  v-if="((getItem2(11).tag == 2) && getItem(11).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconGlassBottle2"></div>
 
   <div v-if="getItem(12).tag != 2" class="backIconDiamond"></div>
   <div v-if="getItem2(12).tag != 2" class="backIconDiamond2"></div>
+  <div  v-if="((getItem2(12).tag == 2) && getItem(12).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconDiamond2"></div>
+
 
 <div 
   class="drop-zone-Pencil"
@@ -484,7 +498,7 @@
 
 
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
-<button id="ButtonDone" v-on:click=datasend(getItems())>Done</button>
+<button id="ButtonReTry" v-on:click=datasend(getItems())>Try Again</button>
 </template>
 
 <script>
@@ -556,7 +570,7 @@ export default {
                 console.log(items);
                 localStorage.setItem('ArrayItems', JSON.stringify(items));
                 sessionStorage.clear();
-                window.location.href="http://localhost:3000/src/Final.html?";
+                window.location.href="http://localhost:3000/src/1.html?";
         }
       }
 }

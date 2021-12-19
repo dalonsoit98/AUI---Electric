@@ -1,5 +1,7 @@
 <template>
 
+<div class="Delay" style="display: none">
+
 <div 
   class="drop-zone1-Nucleus"
   @drop = "onDrop($event,0)"
@@ -98,15 +100,26 @@
 </div>
 
 
+</div>
+<img class ="Atom" style="display: none" src="assets/Atom.png" alt=""/>
 
+<button id="ButtonDone" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
 
-
-<img class ="imagen" src="assets/TabletopAtomWhite.png" alt=""/>
+<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 </template>
 
 <script>
+let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
+
+$(document).ready(function() {
+  $('.Atom').delay(5000).fadeIn(2000); 
+});
+
+$(document).ready(function() {
+  $('.Delay').delay(7500).fadeIn(0); 
+});
 
 import { ref } from 'vue' 
  
@@ -147,7 +160,7 @@ export default {
     return {
       getItem,
       onDrop,
-      startDrag
+      startDrag,
     }
   },
       name: 'send',
@@ -170,6 +183,16 @@ export default {
                 console.log(message);
                 Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
                 }
+            },
+            nextPage() {
+              sessionStorage.clear();
+              window.location.href="http://localhost:3000/src/Circuit.html?";
+            },
+            flagStayM(){
+              flagStay = 1;
+            },
+            flagCheck(){
+              return (flagStay==1)
             }
       }
 }
@@ -185,7 +208,23 @@ export default {
 .imagen {
   width: 60%;
   position: fixed;
+  z-index: 0;
+  object-fit: fill;
+}
+
+.Atom {
+  width: 32.8%;
+  height: 72.35%;
+  margin-left: 14.6%;
+  margin-top: 7.2%;
+  position: fixed;
   z-index: 1;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   object-fit: fill;
 }
 
@@ -216,12 +255,12 @@ export default {
 .drop-zone1-Nucleus {
   text-align:center;
   position:absolute;
-  margin-top: 19%;
-  margin-left: 26%;
+  margin-top: 19.23%;
+  margin-left: 26.25%;
   margin-right: 70%;
   width: 8%;
   background-color: transparent;
-  height: 16.5%;
+  height: 16.75%;
   z-index: 4;
   background-color: rgb(255,255,255,0.3);
   border-radius: 20px;
@@ -268,8 +307,8 @@ export default {
 .drop-zone2-Electron {
    text-align:center;
   position:absolute;
-  margin-top: 13%;
-  margin-left: 36.5%;
+  margin-top: 13.15%;
+  margin-left: 36.35%;
   margin-right: 70%;
   width: 5%;
   background-color: transparent;
@@ -290,8 +329,8 @@ export default {
 .drop-zone2-Electron {
    text-align:center;
   position:absolute;
-  margin-top: 13.75%;
-  margin-left: 36.5%;
+  margin-top: 13.55%;
+  margin-left: 36.3%;
   margin-right: 70%;
   width: 5%;
   background-color: transparent;
@@ -324,8 +363,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 19%;
-  margin-left: 16.5%;
+  margin-top: 19.25%;
+  margin-left: 16.85%;
   background-color: rgb(255,255,255,0.3);
   border-radius: 20px;
   width: 5%;
@@ -348,8 +387,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 20.25%;
-  margin-left: 16.5%;
+  margin-top: 20.2%;
+  margin-left: 16.8%;
   background-color: rgb(255,255,255,0.3);
   border-radius: 20px;
   width: 5%;
@@ -382,8 +421,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 31.25%;
-  margin-left: 31.25%;
+  margin-top: 31.78%;
+  margin-left: 31.35%;
   background-color: transparent;
   width: 5%;
   height: 10%;
@@ -407,8 +446,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 33.25%;
-  margin-left: 31.25%;
+  margin-top: 33.55%;
+  margin-left: 31.35%;
   background-color: transparent;
   width: 5%;
   height: 10%;

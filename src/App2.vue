@@ -294,23 +294,7 @@ export default {
   var sessionString = localStorage.getItem('ArrayItems');
   var Page2Array = JSON.parse(sessionString);
 
-    const items = ref([
-      {id: 0, title: 'assets/Potato.png', conductivity: 1, tag: 0},
-      {id: 1, title: 'assets/Lemon.png', conductivity: 1, tag: 0},
-      {id: 2, title: 'assets/Cork.png', conductivity: 0, tag: 0},
-      {id: 3, title: 'assets/Pencil.png', conductivity: 1, tag: 0},
-      {id: 4, title: 'assets/Lego.png', conductivity: 0, tag: 0},
-      {id: 5, title: 'assets/RubberBand.png', conductivity: 0, tag: 0},
-      {id: 6, title: 'assets/5Euros.png', conductivity: 0, tag: 0},
-      {id: 7, title: 'assets/Log.png', conductivity: 0, tag: 0},
-      {id: 8, title: 'assets/Paper Clip.png', conductivity: 1, tag: 0},
-      {id: 9, title: 'assets/Water.png', conductivity: 0, tag: 0},
-      {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
-      {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
-      {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
-      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
-      {id: 14, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
-    ])
+    const items = ref(Page2Array)
     
     var material = {id: null, title: 'assets/Lego.png', conductivity: 0, tag: null} 
 
@@ -382,6 +366,7 @@ export default {
                 var Page2Array = JSON.parse(sessionString);
                 localStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
                 localStorage.setItem('ArrayItems2', JSON.stringify(items));
+                sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/Final.html?";
         }
       }
@@ -819,9 +804,9 @@ padding-left: 46%;
 .drop-zone-Material {
   grid-gap:1em;
   position:absolute;
-  margin-top: 20.5%;
-  margin-left: 33.5%;
-  width: 10%;
+  margin-top: 20%;
+  margin-left: 33%;
+  width: 11%;
   background-repeat: no-repeat;
   background-size: 60%;
   background-position: center;

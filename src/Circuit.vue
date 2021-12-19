@@ -1,8 +1,8 @@
 <template>
 
 <button class="botonsend" v-on:click="send"></button>
-<img class ="CircuitImage" id ="CircuitImage"  src =  "assets/SimpleCircuit-open.png">
-<div class= "ChangeImage"  onclick = changeImage()></div>
+<img class ="CircuitImage" style="display: none" id ="CircuitImage"  src =  "assets/SimpleCircuit-open.png">
+<div class= "ChangeImage" style="display: none" onclick = changeImage()></div>
 
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 </template>

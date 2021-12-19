@@ -16,7 +16,6 @@
 <h1 class="Conducting-Title">CONDUCTING</h1>
 <div 
   class="drop-zone2-Insulating"
-  @drop = "onDrop($event,2)"
   @dragenter.prevent
   @dragover.prevent
 >
@@ -247,7 +246,7 @@
   </div>
 
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
-<button id="ButtonDone" v-on:click=datasend(getItems())>Done</button>
+<button id="ButtonDone" v-if="getItem(0).tag!=0 && getItem(1).tag!=0 && getItem(2).tag!=0 && getItem(3).tag!=0 && getItem(4).tag!=0 && getItem(5).tag!=0 && getItem(6).tag!=0 && getItem(7).tag!=0 && getItem(8).tag!=0 && getItem(9).tag!=0 && getItem(10).tag!=0 && getItem(11).tag!=0 && getItem(12).tag!=0" v-on:click=datasend(getItems())>Done</button>
 </template>
 
 <script>
@@ -287,8 +286,23 @@ export default {
     const getItems = () => {
       return items.value
     }
+
+    const imgCon = new Image();
+    imgCon.src="assets/CheckDrag.png";
+
+    const imgIso = new Image();
+    imgIso.src="assets/CrossDrag.png";
+
     const startDrag = (event,tag) => {
       console.log(tag)
+      if(tag==1){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgCon,0,0)
+      }
+      if(tag==2){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgIso,0,0)
+      }
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('tagNumber', tag)
@@ -319,6 +333,7 @@ export default {
         datasend(items){
                 console.log(items);
                 localStorage.setItem('ArrayItems', JSON.stringify(items));
+                sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/2.html?";
         }
       }
@@ -343,6 +358,12 @@ export default {
   object-fit: cover;
   width: 15%;
   margin-left: 15%;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .Conducting-Title {
   position:absolute;
@@ -419,6 +440,12 @@ export default {
   background-size: 70%;
   height: 8%;
   min-width: 5%;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   z-index: 4;
 }
 .drop-zone3 > div{
@@ -644,6 +671,12 @@ export default {
   min-height: 30%;
   min-width:  30%;
   z-index: 8;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .drag.el:nth-last-of-type(1){
