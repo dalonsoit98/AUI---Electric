@@ -127,6 +127,7 @@ nlu:
     - got it
     - start
     - done
+    - great
     
 - intent: why
   examples: |
@@ -163,6 +164,11 @@ nlu:
     - They call me [Elsa]{"entity":"name","value":"Elsa"}
     - [Hector], nice to meet you{"entity":"name","value":"Hector"}
     - My name is [Fabio], Owly{"entity":"name","value":"Fabio"}
+    
+- intent: partStart
+  examples: |
+    - N^2-:p~4TG]Wu^hb
+    - ?sLA)$d6p)z^*H8S
 
 - intent: partAtom
   examples: |
@@ -191,3 +197,4 @@ nlu:
 
 - intent: atom_correct
 - intent: atom_incorrect
+- intent: circuit_close

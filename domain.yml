@@ -11,6 +11,7 @@ intents:
   - help
   - game_explain
   - call_professor
+  - partStart
   - partAtom
   - partCircuit
   - part1
@@ -19,6 +20,7 @@ intents:
   - ready
   - atom_correct
   - atom_incorrect
+  - circuit_close
   - why
 
 e2e_actions: []
@@ -83,14 +85,12 @@ responses:
   utter_call_professor:
   - text: "To fix this you should call your teacher"
     
-  utter_start:
-  - text: "Are you ready now?"
-    
   utter_interface_explanation:
-  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress! Press 'Start' whenever you're ready"
+  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress! Press 'Start' whenever you're ready!"
     
   utter_press_start:
-  - text: "Are you ready to 'start' with the tutorial?"
+  - text: "Press the 'Start' button when you're ready!"
+  - text: "Press 'Start' to begin the introduction"
   - text: "Press 'Start' to begin the tutorial"
   - text: "Press 'Start' when you are ready!"
 
@@ -105,6 +105,9 @@ responses:
       
   utter_t11:
     - text: "Alright, let's see what I can further teach you."
+      
+  utter_t110:
+    - text: "No problem, let's see what I can teach you!"
       
   utter_t12:
     - text: "This is a model of an atom. Drag and drop the tags into the different parts of the atom. Try to label the particles correctly!"
@@ -125,7 +128,7 @@ responses:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
   utter_t21:
-    - text: "There is a gap in the circuit. Try to close it with the mouse"
+    - text: "For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables.Understood?"
       
       
   utter_l11:
