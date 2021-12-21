@@ -182,23 +182,6 @@
   </div>
 
   <div
-      class="drop-zone-Water"
-      @drop = "onDrop($event,9)"
-      @dragenter.prevent
-      @dragover.prevent
-  >
-    <div
-        v-on="item in getItem(9)"
-        class="drag-el"
-        draggable="true"
-        @dragstart="startDragBulb($event, 9)"
-    >
-      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
-    </div>
-  </div>
-
-  <div
       class="drop-zone-GoldBar"
       @drop = "onDrop($event,10)"
       @dragenter.prevent
@@ -232,18 +215,18 @@
   </div>
   <div
       class="drop-zone-Diamond"
-      @drop = "onDrop($event,12)"
+      @drop = "onDrop($event,9)"
       @dragenter.prevent
       @dragover.prevent
   >
     <div
-        v-on="item in getItem(12)"
+        v-on="item in getItem(9)"
         class="drag-el"
         draggable="true"
-        @dragstart="startDragBulb($event, 12)"
+        @dragstart="startDragBulb($event, 9)"
     >
-      <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
     </div>
   </div>
 
@@ -257,21 +240,21 @@
         @dragstart="startDragBulb($event, 12)"
         @change="update"
     >
-      <img v-if="getItem(13).conductivity == 0" class="imageIconBulb" src = "assets/Lightbulb Off.png">
-      <img v-if="getItem(13).conductivity == 1" class="imageIconBulb" src = "assets/Lightbulb On - Strong.png">
+      <img v-if="getItem(12).conductivity == 0" class="imageIconBulb" src = "assets/Lightbulb Off.png">
+      <img v-if="getItem(12).conductivity == 1" class="imageIconBulb" src = "assets/Lightbulb On - Strong.png">
     </div>
   </div>
 
    <div
       class="drop-zone-Material"
-      @drop = "onDropBulb($event, 13)"
+      @drop = "onDropBulb($event, 12)"
       @dragover.prevent
   >
   <div
         class="drag-el-Material"
         draggable="false"
     >
-  <img draggable="false" class="materialIcon" :src= getItem(13).title>
+  <img draggable="false" class="materialIcon" :src= getItem(12).title>
   </div>
   </div>
 
@@ -315,7 +298,7 @@ export default {
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('tagNumber', tag)
-      event.dataTransfer.setData('id', 14)
+      event.dataTransfer.setData('id', 13)
     }
 
     const startDragBulb = (event,id) => {
@@ -675,8 +658,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 30%;
-  margin-left: 30%;
+  margin-top: 10%;
+  margin-left: 9.5%;
   width: 10%;
   background-image: url('assets/Glass Bottle.png');
   background-repeat: no-repeat;

@@ -180,23 +180,6 @@
   </div>
 
   <div
-      class="drop-zone-Water"
-      @drop = "onDrop($event,9)"
-      @dragenter.prevent
-      @dragover.prevent
-  >
-    <div
-        v-on="item in getItem(9)"
-        class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
-    >
-      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
-    </div>
-  </div>
-
-  <div
       class="drop-zone-GoldBar"
       @drop = "onDrop($event,10)"
       @dragenter.prevent
@@ -230,23 +213,23 @@
   </div>
   <div
       class="drop-zone-Diamond"
-      @drop = "onDrop($event,12)"
+      @drop = "onDrop($event,9)"
       @dragenter.prevent
       @dragover.prevent
   >
     <div
-        v-on="item in getItem(12)"
+        v-on="item in getItem(9)"
         class="drag-el"
         draggable="false"
         @dragstart="startDrag($event, item)"
     >
-      <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
     </div>
   </div>
 
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
-<button id="ButtonDone" v-if="getItem(0).tag!=0 && getItem(1).tag!=0 && getItem(2).tag!=0 && getItem(3).tag!=0 && getItem(4).tag!=0 && getItem(5).tag!=0 && getItem(6).tag!=0 && getItem(7).tag!=0 && getItem(8).tag!=0 && getItem(9).tag!=0 && getItem(10).tag!=0 && getItem(11).tag!=0 && getItem(12).tag!=0" v-on:click=datasend(getItems())>Done</button>
+<button id="ButtonDone" v-if="getItem(0).tag!=0 && getItem(1).tag!=0 && getItem(2).tag!=0 && getItem(3).tag!=0 && getItem(4).tag!=0 && getItem(5).tag!=0 && getItem(6).tag!=0 && getItem(7).tag!=0 && getItem(8).tag!=0 && getItem(9).tag!=0 && getItem(10).tag!=0 && getItem(11).tag!=0" v-on:click=datasend(getItems())>Done</button>
 </template>
 
 <script>
@@ -271,12 +254,11 @@ export default {
       {id: 6, title: 'assets/5Euros.png', conductivity: 0, tag: 0},
       {id: 7, title: 'assets/Log.png', conductivity: 0, tag: 0},
       {id: 8, title: 'assets/Paper Clip.png', conductivity: 1, tag: 0},
-      {id: 9, title: 'assets/Water.png', conductivity: 0, tag: 0},
+      {id: 9, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
       {id: 10, title: 'assets/Gold Bar.png', conductivity: 1, tag: 0},
       {id: 11, title: 'assets/Glass Bottle.png', conductivity: 0, tag: 0},
-      {id: 12, title: 'assets/Diamond.png', conductivity: 0, tag: 0},
-      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
-      {id: 14, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
+      {id: 12, title: 'assets/Transparent.png', conductivity: 0, tag: 0},
+      {id: 13, title: 'assets/Transparent.png', conductivity: 0, tag: 0}
     ])
     console.log(items);
     const getItem = (id) => {
@@ -652,8 +634,8 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 14%;
-  margin-left: 27%;
+  margin-top: 35%;
+  margin-left: 21.5%;
   width: 10%;
   background-image: url('assets/Diamond.png');
   background-repeat: no-repeat;

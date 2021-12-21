@@ -39,9 +39,9 @@
   <div v-if="getItem2(8).tag != 1" class="backIconClip2"></div>
   <div  v-if="((getItem2(8).tag == 1) && getItem(8).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconClip2"></div>
 
-  <div v-if="getItem(9).tag != 2" class="backIconWater"></div>
-  <div v-if="getItem2(9).tag != 2" class="backIconWater2"></div>
-  <div  v-if="((getItem2(9).tag == 2) && getItem(9).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconWater2"></div>
+  <div v-if="getItem(9).tag != 2" class="backIconDiamond"></div>
+  <div v-if="getItem2(9).tag != 2" class="backIconDiamond2"></div>
+  <div  v-if="((getItem2(9).tag == 2) && getItem(9).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconDiamond2"></div>
 
   <div v-if="getItem(10).tag != 1" class="backIconGold"></div>
   <div v-if="getItem2(10).tag != 1" class="backIconGold2"></div>
@@ -50,10 +50,6 @@
   <div v-if="getItem(11).tag != 2" class="backIconGlassBottle"></div>
   <div v-if="getItem2(11).tag != 2" class="backIconGlassBottle2"></div>
   <div  v-if="((getItem2(11).tag == 2) && getItem(11).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconGlassBottle2"></div>
-
-  <div v-if="getItem(12).tag != 2" class="backIconDiamond"></div>
-  <div v-if="getItem2(12).tag != 2" class="backIconDiamond2"></div>
-  <div  v-if="((getItem2(12).tag == 2) && getItem(12).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconDiamond2"></div>
 
 
 <div 
@@ -210,23 +206,6 @@
   </div>
 
   <div
-      class="drop-zone-Water"
-      @drop = "onDrop($event,9)"
-      @dragenter.prevent
-      @dragover.prevent
-  >
-    <div
-        v-on="item in getItem(9)"
-        class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
-    >
-      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
-    </div>
-  </div>
-
-  <div
       class="drop-zone-GoldBar"
       @drop = "onDrop($event,10)"
       @dragenter.prevent
@@ -260,18 +239,18 @@
   </div>
   <div
       class="drop-zone-Diamond"
-      @drop = "onDrop($event,12)"
+      @drop = "onDrop($event,9)"
       @dragenter.prevent
       @dragover.prevent
   >
     <div
-        v-on="item in getItem(12)"
+        v-on="item in getItem(9)"
         class="drag-el"
         draggable="false"
         @dragstart="startDrag($event, item)"
     >
-      <img v-if="getItem(12).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+      <img v-if="getItem(9).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
     </div>
   </div>
 
@@ -431,23 +410,6 @@
   </div>
 
   <div
-      class="drop-zone-Water2"
-      @drop = "onDrop($event,9)"
-      @dragenter.prevent
-      @dragover.prevent
-  >
-    <div
-        v-on="item in getItem(9)"
-        class="drag-el"
-        draggable="false"
-        @dragstart="startDrag($event, item)"
-    >
-      <img v-if="getItem2(9).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem2(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
-    </div>
-  </div>
-
-  <div
       class="drop-zone-GoldBar2"
       @drop = "onDrop($event,10)"
       @dragenter.prevent
@@ -481,18 +443,18 @@
   </div>
   <div
       class="drop-zone-Diamond2"
-      @drop = "onDrop($event,12)"
+      @drop = "onDrop($event,9)"
       @dragenter.prevent
       @dragover.prevent
   >
     <div
-        v-on="item in getItem(12)"
+        v-on="item in getItem(9)"
         class="drag-el"
         draggable="false"
         @dragstart="startDrag($event, item)"
     >
-      <img v-if="getItem2(12).tag == 1" class="imageIcon" src = "assets/Check.png">
-      <img v-if="getItem2(12).tag == 2" class="imageIcon" src = "assets/Cross.png">
+      <img v-if="getItem2(9).tag == 1" class="imageIcon" src = "assets/Check.png">
+      <img v-if="getItem2(9).tag == 2" class="imageIcon" src = "assets/Cross.png">
     </div>
   </div>
 
@@ -1055,13 +1017,13 @@ export default {
 }
 
 .backIconDiamond {
-  position: absolute;
+position: absolute;
   background-color: rgba(255, 0, 0, 0.5);
-  width: 5%;
+  width: 8%;
   height: 6%;
   border-radius: 20px;
-  margin-top: 4%;
-  margin-left: 30%;
+  margin-top: 18.5%;
+  margin-left: 22.5%;
   z-index: 2;
   user-drag: none;
   -webkit-user-drag: none;
@@ -1076,10 +1038,10 @@ export default {
   object-fit: cover;
   background-color: rgba(255, 0, 0, 0.5);
   border-radius: 20px;
-  width: 5%;
+  width: 8%;
   height: 6%;
-  margin-top: 24%;
-  margin-left: 30%;
+  margin-top: 38.5%;
+  margin-left: 22.5%;
   z-index: 2;
   user-drag: none;
   -webkit-user-drag: none;
@@ -1442,14 +1404,14 @@ export default {
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 4%;
-  margin-left: 28.5%;
-  width: 8%;
+  margin-top: 18%;
+  margin-left: 21.5%;
+  width: 10%;
   background-image: url('assets/Diamond.png');
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: center;
-  height: 6%;
+  height: 8%;
   min-width: 5%;
   z-index: 4;
   user-drag: none;
@@ -1802,14 +1764,14 @@ padding-left: 46%;
   grid-template-columns:33% 33% 33%;
   grid-gap:1em;
   position:absolute;
-  margin-top: 24%;
-  margin-left: 28.5%;
-  width: 8%;
+  margin-top: 38%;
+  margin-left: 21.5%;
+  width: 10%;
   background-image: url('assets/Diamond.png');
   background-repeat: no-repeat;
   background-size: 40%;
   background-position: center;
-  height: 6%;
+  height: 8%;
   min-width: 5%;
   z-index: 4;
   user-drag: none;

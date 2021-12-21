@@ -123,15 +123,16 @@ html, body {
 }
 
 .ButtonDone {
-    position: absolute;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 12px;
-    transition-duration: 0.4s;
-    margin-left: 55%;
-    margin-top: 42%;
-    width: 4%;
-    height: 5%;
-    z-index: 12;
+  position: absolute;
+  font-family: 'Roboto', sans-serif;
+  font-size: 210%;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  margin-left: 49%;
+  margin-top: 3.75%;
+  width: 7%;
+  height: 9%;
+  z-index: 12;
 }
 
 #ButtonDone {

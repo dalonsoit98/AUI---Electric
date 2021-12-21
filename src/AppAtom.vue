@@ -16,7 +16,7 @@
   <h1 v-if="getItem(0).tag == 2" class="nucelustitle"></h1>
   <h1 v-if="getItem(0).tag == 0" class="nucelustitle">Nucleus</h1>
   <h1 v-if="((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1))" v-on="send('/atom_correct')"></h1>
-  <h1 v-if="((getItem(0).tag != 2) && (getItem(1).tag != 2) && (getItem(2).tag != 2) && (getItem(3).tag != 2) && ((getItem(0).tag == 1) || (getItem(1).tag == 0) || (getItem(2).tag == 0) || (getItem(3).tag == 0)))" v-on="send('/atom_incorrect')"></h1>
+  <h1 v-if="(!flagCheck() && ((getItem(0).tag != 2) && (getItem(1).tag != 2) && (getItem(2).tag != 2) && (getItem(3).tag != 2) && ((getItem(0).tag == 1) || (getItem(1).tag == 0) || (getItem(2).tag == 0) || (getItem(3).tag == 0))))" v-on="send('/atom_incorrect')"></h1>
   <h1 v-if="getItem(0).tag == 1" class="electrontitle">Electron</h1>
   </div>
 </div>
