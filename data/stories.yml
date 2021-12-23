@@ -220,6 +220,17 @@ stories:
   - checkpoint: circuit
   - intent: circuit_close
   - action: utter_t21
+  - intent: affirm
+  - action: utter_t22
+- story: circuit deny
+  steps:
+  - checkpoint: circuit
+  - intent: circuit_close
+  - action: utter_t21
+  - intent: deny
+  - action: utter_t23
+  - intent: ready
+  - action: utter_t22
 
 - story: start level 1 sort
   steps:
@@ -230,11 +241,20 @@ stories:
 - story: happy path level 1 sort
   steps:
   - checkpoint: l_sort
+  - intent: affirm
+  - action: utter_l13
+- story: level 1 sort deny
+  steps:
+  - checkpoint: l_sort
+  - intent: deny
+  - action: utter_l12
+  - intent: ready
+  - action: utter_l13
       
 - story: start level 1 circuit
   steps:
     - intent: part2
-    - action: utter_l12
+    - action: utter_l21
     - checkpoint: l_circuit
 
 - story: happy path level 1 circuit
@@ -244,7 +264,7 @@ stories:
 - story: start level 1 final
   steps:
   - intent: partFinal
-  - action: utter_l13
+  - action: utter_l31
   - checkpoint: l_final
     
 - story: happy path level 1 final

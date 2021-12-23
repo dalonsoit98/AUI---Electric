@@ -96,7 +96,6 @@ responses:
 
   utter_press_done:
     - text: "Press the 'Done' button when you're ready!"
-    - text: "Are you ready to go on to the next step?"
     - text: "Press 'Done' in order to continue"
     - text: "Press 'Done' when you are ready!"
       
@@ -128,16 +127,27 @@ responses:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
   utter_t21:
-    - text: "For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables.Understood?"
+    - text: "Good job! For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables. Understood?"
       
+  utter_t22:
+    - text: "You saw that only 3 components are enough to create an electric current. Can you tell me what each component is and what is their function?"
+      
+  utter_t23:
+    - text : "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
       
   utter_l11:
-    - text: "Now that you know some of the basics, would you like to make a first guess which could be conducting or insulating? Try to drag the conducting/not conducting tags into the different objects!"
+    - text: "Now that you know some of the basics, would you like to make a first guess which could be conducting or insulating?"
       
-  utter_l12:
-    - text: "Now try to use the objects to complete the circuit! Drag and drop them into the gap to see if theres any changes"
+  utter_l12: 
+    - text: "You know, there is no way around it. You cannot skip this step, so let's get started."
       
   utter_l13:
+    - text: "You can tag the object with the green check if you think it's conducting and with the red cross if you think it's insulating."
+      
+  utter_l21:
+    - text: "Now try to use the objects to complete the circuit! Drag and drop them into the gap to see if theres any changes"
+      
+  utter_l31:
     -  text: "You did a great job! Congratulations"
 
 session_config:
