@@ -62,10 +62,6 @@
                     <img class="ButtonImg" src="assets/Arrow.png"></button>
                 </form>
 
-                <form>
-                    <button class="ButtonDone" formaction="1.html" onclick="sessionStorage.clear()">Done</button>
-                </form>
-
             <div class = "Game">
                 
                 <script type="module" src="/src/mainCircuit.js"></script>
@@ -92,6 +88,8 @@
         $(document).ready(function() {
           $('.ChangeImage').delay(6000).fadeIn(1); 
         });
+        
+        let flagStay = 0;
 
         function InitialSend (message) {
         var session_info = sessionStorage.getItem('chat_session');
@@ -108,7 +106,13 @@
             var imgsrc = src.substring(src.lastIndexOf("/")+1);
             console.log(imgsrc);
             if  (imgsrc == "SimpleCircuit-open.png"){
+                flagStay +=1;
+                if (flagStay == 1){
                 InitialSend("/circuit_close");
+                var DoneButt = document.getElementById('ButtonDone');
+                var displaySetting = DoneButt.style.display;
+                DoneButt.style.display = 'block';
+                }
                 document.getElementById("CircuitImage").src = "assets/SimpleCircuit-closed.png";
                 console.log('if'+document.getElementById("CircuitImage").src);
             } else  {

@@ -156,7 +156,7 @@ html, body {
     background-color: #0ED66A;
     color: white;
 }
-
+@media (min-width: 0px) and (max-width: 1366px){
 #ButtonReTry {
   position: absolute;
   font-family: 'Roboto', sans-serif;
@@ -164,10 +164,25 @@ html, body {
   border-radius: 12px;
   transition-duration: 0.4s;
   margin-left: 15%;
-  margin-top: 44.55%;
+  margin-top: 41.55%;
   width: 33%;
-  height: 6%;
+  height: 7%;
   z-index: 12;
+}
+}
+@media (min-width: 1367px){
+  #ButtonReTry {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 210%;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    margin-left: 15%;
+    margin-top: 44.55%;
+    width: 33%;
+    height: 6%;
+    z-index: 12;
+  }
 }
 
 #ButtonReTry:hover{

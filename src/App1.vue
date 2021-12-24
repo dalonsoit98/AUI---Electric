@@ -1,6 +1,5 @@
 <template>
-
-<button class="botonsend" v-on:click="send"></button>
+<h1 v-if="(flagCheck() && ((getItem(0).tag != 0 || getItem(1).tag != 0) || getItem(2).tag != 0 || getItem(3).tag != 0 || getItem(4).tag != 0 || getItem(5).tag != 0 || getItem(6).tag != 0 || getItem(7).tag != 0 || getItem(8).tag != 0 || getItem(9).tag != 0 || getItem(10).tag != 0 || getItem(11).tag != 0))" v-on="send('/FirstTag')"></h1>
 <div 
   class="drop-zone1-Conducting"
   @dragenter.prevent
@@ -233,6 +232,7 @@
 </template>
 
 <script>
+let flagM = 0;
 
 import { ref } from 'vue' 
  
@@ -306,7 +306,7 @@ export default {
       name: 'send',
       methods:{
         send(message){
-                
+                flagM +=1;
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
@@ -317,6 +317,9 @@ export default {
                 localStorage.setItem('ArrayItems', JSON.stringify(items));
                 sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/2.html?";
+        },
+        flagCheck(){
+          return (flagM == 0)
         }
       }
 }

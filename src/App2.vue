@@ -309,18 +309,31 @@ export default {
     }
 
     const onDrop = (event, id) => {
-      const tagNumber = event.dataTransfer.getData('tagNumber')
-      const item = items.value.find((item) => item.id == id)
-      item.tag = tagNumber
+      const idO = event.dataTransfer.getData('id')
+      console.log(idO)
+      if (idO != 13){
+        return
+      } else {
+        const tagNumber = event.dataTransfer.getData('tagNumber')
+        const item = items.value.find((item) => item.id == id)
+        item.tag = tagNumber
+      }
     }
 
     const onDropBulb = (event, idmat) => {
+      const tagNumber = event.dataTransfer.getData('tagNumber')
       const id = event.dataTransfer.getData('id')
-      const item = items.value.find((item) => item.id == id)
-      const mat = items.value.find((mat) => mat.id == idmat)
-      mat.title = item.title
-      mat.conductivity = item.conductivity
-      console.log(id)
+      if (id == 13){
+        const itemMat = items.value.find((item) => item.id == idmat)
+        const itemReal = items.value.find((item) => item.title == itemMat.title)
+        itemReal.tag = tagNumber
+      } else {
+        const item = items.value.find((item) => item.id == id)
+        const mat = items.value.find((mat) => mat.id == idmat)
+        mat.title = item.title
+        mat.conductivity = item.conductivity
+        console.log(id)
+      }
     }
 
     return {

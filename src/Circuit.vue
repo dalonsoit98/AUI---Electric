@@ -1,14 +1,15 @@
 <template>
 
-<button class="botonsend" v-on:click="send"></button>
 <img class ="CircuitImage" style="display: none" id ="CircuitImage"  src =  "assets/SimpleCircuit-open.png">
 <div class= "ChangeImage" style="display: none" onclick = changeImage()></div>
+
+<button class="ButtonDone" id="ButtonDone" style="display: none;" v-on:click="nextPage">Done</button>
+
 
 <img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
 </template>
 
 <script>
-
 import { ref } from 'vue' 
  
             var Socket = new io('http://localhost:5005/', {
@@ -68,12 +69,15 @@ export default {
       name: 'send',
       methods:{
         send(message){
-                
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
                 Socket.emit("user_uttered",{"message":message,"customData":{"language":"en"},"session_id":session_id});
-            }
+            },
+        nextPage(){
+              sessionStorage.clear();
+              window.location.href="http://localhost:3000/src/1.html?";
+        }
       }   
 }
 </script>
