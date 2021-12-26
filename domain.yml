@@ -21,6 +21,8 @@ intents:
   - atom_correct
   - atom_incorrect
   - circuit_close
+  - first_tag
+  - final_tag
   - why
 
 e2e_actions: []
@@ -98,6 +100,11 @@ responses:
     - text: "Press the 'Done' button when you're ready!"
     - text: "Press 'Done' in order to continue"
     - text: "Press 'Done' when you are ready!"
+
+  utter_good_job_done:
+    - text: "Great job! Press the 'Done' button when you're ready!"
+    - text: "Excellent! Press 'Done' in order to continue"
+    - text: "Good job! Press 'Done' when you are ready!"
       
   utter_t10:
     - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
@@ -136,13 +143,19 @@ responses:
     - text : "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
       
   utter_l11:
-    - text: "Now that you know some of the basics, would you like to make a first guess which could be conducting or insulating?"
+    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating?"
       
   utter_l12: 
     - text: "You know, there is no way around it. You cannot skip this step, so let's get started."
       
   utter_l13:
-    - text: "You can tag the object with the green check if you think it's conducting and with the red cross if you think it's insulating."
+    - text: "You can tag the object with the yellow lighting bolt if you think it's conducting and with the black lighting bolt if you think it's insulating."
+      
+  utter_l14:
+    - text: "Drag the conducting or insulating icon to each object in order to continue"
+      
+  utter_l15:
+    - text: "That's it! Tag the rest of the objects in order to continue!"
       
   utter_l21:
     - text: "Now try to use the objects to complete the circuit! Drag and drop them into the gap to see if theres any changes"

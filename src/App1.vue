@@ -1,5 +1,5 @@
 <template>
-<h1 v-if="(flagCheck() && ((getItem(0).tag != 0 || getItem(1).tag != 0) || getItem(2).tag != 0 || getItem(3).tag != 0 || getItem(4).tag != 0 || getItem(5).tag != 0 || getItem(6).tag != 0 || getItem(7).tag != 0 || getItem(8).tag != 0 || getItem(9).tag != 0 || getItem(10).tag != 0 || getItem(11).tag != 0))" v-on="send('/FirstTag')"></h1>
+<h1 v-if="(flagCheck() && ((getItem(0).tag != 0 || getItem(1).tag != 0) || getItem(2).tag != 0 || getItem(3).tag != 0 || getItem(4).tag != 0 || getItem(5).tag != 0 || getItem(6).tag != 0 || getItem(7).tag != 0 || getItem(8).tag != 0 || getItem(9).tag != 0 || getItem(10).tag != 0 || getItem(11).tag != 0))" v-on="send('/first_tag')"></h1>
 <div 
   class="drop-zone1-Conducting"
   @dragenter.prevent

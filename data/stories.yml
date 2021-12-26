@@ -116,7 +116,7 @@ stories:
   - action: utter_t12
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
 - story: atom deny # deny -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
@@ -125,13 +125,13 @@ stories:
   - action: utter_t12
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
 - story: atom play correct # correct -> affirm -> Done
   steps:
   - checkpoint: atom
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
 - story: atom play correct # incorrect -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
@@ -139,7 +139,7 @@ stories:
   - action: utter_t131
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
 - story: atom affirm mistake # affirm -> incorrect -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
@@ -150,7 +150,7 @@ stories:
   - action: utter_t131
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
 - story: atom deny mistake # deny -> incorrect -> correct
   steps:
   - checkpoint: atom
@@ -161,14 +161,14 @@ stories:
   - action: utter_t131
   - intent: atom_correct
   - action: utter_t13
-  - checkpoint: atom correct
+  - checkpoint: atom_correct
     
 - story: happy path atom 2 # affirm -> Done
   steps:
   - checkpoint: atom correct
   - intent: affirm
   - action: utter_press_done
-  - checkpoint: atom done
+  - checkpoint: atom_done
 - story: atom 2 no # deny -> ready -> Done
   steps:
     - checkpoint: atom correct
@@ -176,34 +176,34 @@ stories:
     - action: utter_t15
     - intent: ready
     - action: utter_press_done
-    - checkpoint: atom done
+    - checkpoint: atom_done
 - story: atom 2 no # why -> ready -> Done
   steps:
     - checkpoint: atom correct
     - intent: why
     - action: utter_t15
-    - checkpoint: atom done
+    - checkpoint: atom_done
       
 - story: done loop atom
   steps:
-    - checkpoint: atom done
+    - checkpoint: atom_done
     - intent: ready
     - action: utter_press_done
 - story: done loop atom 2
   steps:
-    - checkpoint: atom done
+    - checkpoint: atom_done
     - intent: affirm
     - action: utter_press_done
 - story: done loop atom 3
   steps:
-    - checkpoint: atom done
+    - checkpoint: atom_done
     - intent: ready
     - action: utter_press_done
     - intent: ready
     - action: utter_press_done
 - story: done loop atom 4
   steps:
-    - checkpoint: atom done
+    - checkpoint: atom_done
     - intent: affirm
     - action: utter_press_done
     - intent: affirm
@@ -243,6 +243,7 @@ stories:
   - checkpoint: l_sort
   - intent: affirm
   - action: utter_l13
+  - checkpoint: l_sort_mid
 - story: level 1 sort deny
   steps:
   - checkpoint: l_sort
@@ -250,12 +251,67 @@ stories:
   - action: utter_l12
   - intent: ready
   - action: utter_l13
+  - checkpoint: l_sort_mid
+    
+- story: level 1 sort mid happy path
+  steps:
+  - checkpoint: l_sort_mid
+  - intent: first_tag
+  - action: utter_l15
+  - intent: final_tag
+  - action: utter_good_job_done
+  - checkpoint: l_sort_done
+- story: level 1 sort mid ready
+  steps:
+  - checkpoint: l_sort_mid
+  - intent: ready
+  - action: utter_l14
+  - intent: first_tag
+  - action: utter_l15
+  - intent: final_tag
+  - action: utter_good_job_done
+  - checkpoint: l_sort_done
+- story: level 1 sort mid help
+  steps:
+  - checkpoint: l_sort_mid
+  - intent: help
+  - action: utter_l14
+  - intent: first_tag
+  - action: utter_l15
+  - intent: final_tag
+  - action: utter_good_job_done
+  - checkpoint: l_sort_done
+
+- story: done loop level 1 sort
+  steps:
+    - checkpoint: l_sort_done
+    - intent: ready
+    - action: utter_press_done
+- story: done loop atom 2
+  steps:
+    - checkpoint: atom done
+    - intent: affirm
+    - action: utter_press_done
+- story: done loop atom 3
+  steps:
+    - checkpoint: l_sort_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+- story: done loop atom 4
+  steps:
+    - checkpoint: l_sort_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
       
 - story: start level 1 circuit
   steps:
-    - intent: part2
-    - action: utter_l21
-    - checkpoint: l_circuit
+  - intent: part2
+  - action: utter_l21
+  - checkpoint: l_circuit
 
 - story: happy path level 1 circuit
   steps:

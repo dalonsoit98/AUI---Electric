@@ -105,6 +105,7 @@ nlu:
     - I'm lost
     - can you give me a hint?
     - i need a hint
+    - how?
     
 - intent: game_explain
   examples: |
@@ -198,3 +199,5 @@ nlu:
 - intent: atom_correct
 - intent: atom_incorrect
 - intent: circuit_close
+- intent: first_tag
+- intent: final_tag
