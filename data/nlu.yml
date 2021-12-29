@@ -129,6 +129,7 @@ nlu:
     - start
     - done
     - great
+    - nice
     
 - intent: why
   examples: |
