@@ -158,10 +158,19 @@ responses:
     - text: "That's it! Tag the rest of the objects in order to continue!"
       
   utter_l21:
-    - text: "Now try to use the objects to complete the circuit! Drag and drop them into the gap to see if theres any changes"
+    - text: "Now you can try the objects by dragging and dropping them into the open circuit. After having tested them, you can tag them like you did before. Understood?"
+      
+  utter_l22:
+    - text: "If you have any further questions, you can text me anytime!"
       
   utter_l31:
-    -  text: "You did a great job! Congratulations"
+    -  text: "Great! Let's see how good both of your guesses were."
+       
+  utter_l32:
+    - text: "You got them all! Congratulations!"
+       
+  utter_l33:
+    - text: "Would you like to try again or find out why certain objects were conducting resp. insulating?"
 
 session_config:
   session_expiration_time: 60
