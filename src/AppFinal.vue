@@ -459,7 +459,7 @@
   </div>
 
 
-<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
+<img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 <button id="ButtonReTry" v-on:click=datasend(getItems())>Try Again</button>
 </template>
 

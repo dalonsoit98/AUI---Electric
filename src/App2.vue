@@ -260,7 +260,7 @@
 
 <img class ="Circuit" src="assets/Circuit.png"/>
 <button id="ButtonDone" v-if="getItem(12).title != 'assets/Transparent.png'" v-on:click=datasendFinal(getItems())>Done</button>
-<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
+<img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
 <script>

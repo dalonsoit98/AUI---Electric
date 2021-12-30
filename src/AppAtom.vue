@@ -105,7 +105,7 @@
 
 <button id="ButtonDone" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
 
-<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
+<img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
 <script>

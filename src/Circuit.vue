@@ -6,7 +6,7 @@
 <button class="ButtonDone" id="ButtonDone" style="display: none;" v-on:click="nextPage">Done</button>
 
 
-<img class ="imagen" src="assets/Tabletop.jpeg" alt=""/>
+<img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
 <script>
