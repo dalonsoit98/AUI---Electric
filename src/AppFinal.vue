@@ -3,53 +3,53 @@
   <h1 class="FirstAttemp">First Guess</h1>
   <h1 class="SecondAttemp">Second Guess</h1>
 
-  <div v-if="getItem(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.5)" class="backIconPencil"></div>
-  <div v-if="getItem2(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.5)" class="backIconPencil2"></div>
-  <div v-if="((getItem2(3).tag == 1) && getItem(3).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconPencil2"></div>
+  <div v-if="getItem(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.75)" class="backIconPencil"></div>
+  <div v-if="getItem2(3).tag != 1" style="background-color: rgb(255, 0, 0, 0.75)" class="backIconPencil2"></div>
+  <div v-if="((getItem2(3).tag == 1) && getItem(3).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconPencil2"></div>
 
   <div v-if="getItem(2).tag != 2" class="backIconCork"></div>
   <div v-if="getItem2(2).tag != 2" class="backIconCork2"></div>
-  <div v-if="((getItem2(2).tag == 2) && getItem(2).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconCork2"></div>
+  <div v-if="((getItem2(2).tag == 2) && getItem(2).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconCork2"></div>
 
   <div v-if="getItem(0).tag != 1" class="backIconPotato"></div>
   <div v-if="getItem2(0).tag != 1" class="backIconPotato2"></div>
-  <div v-if="((getItem2(0).tag == 1) && getItem(0).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconPotato2"></div>
+  <div v-if="((getItem2(0).tag == 1) && getItem(0).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconPotato2"></div>
 
   <div v-if="getItem(1).tag != 1" class="backIconLemon"></div>
   <div v-if="getItem2(1).tag != 1" class="backIconLemon2"></div>
-  <div v-if="((getItem2(1).tag == 1) && getItem(1).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLemon2"></div>
+  <div v-if="((getItem2(1).tag == 1) && getItem(1).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconLemon2"></div>
 
   <div v-if="getItem(4).tag != 2" class="backIconLego"></div>
   <div v-if="getItem2(4).tag != 2" class="backIconLego2"></div>
-  <div v-if="((getItem2(4).tag == 2) && getItem(4).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLego2"></div>
+  <div v-if="((getItem2(4).tag == 2) && getItem(4).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconLego2"></div>
 
   <div v-if="getItem(5).tag != 2" class="backIconRubberBand"></div>
   <div v-if="getItem2(5).tag != 2" class="backIconRubberBand2"></div>
-  <div v-if="((getItem2(5).tag == 2) && getItem(5).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconRubberBand2"></div>
+  <div v-if="((getItem2(5).tag == 2) && getItem(5).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconRubberBand2"></div>
 
   <div v-if="getItem(6).tag != 2" class="backIcon5Euros"></div>
   <div v-if="getItem2(6).tag != 2" class="backIcon5Euros2"></div>
-  <div v-if="((getItem2(6).tag == 2) && getItem(6).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIcon5Euros2"></div>
+  <div v-if="((getItem2(6).tag == 2) && getItem(6).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIcon5Euros2"></div>
 
   <div v-if="getItem(7).tag != 2" class="backIconLog"></div>
   <div v-if="getItem2(7).tag != 2" class="backIconLog2"></div>
-  <div v-if="((getItem2(7).tag == 2) && getItem(7).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconLog2"></div>
+  <div v-if="((getItem2(7).tag == 2) && getItem(7).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconLog2"></div>
 
   <div v-if="getItem(8).tag != 1" class="backIconClip"></div>
   <div v-if="getItem2(8).tag != 1" class="backIconClip2"></div>
-  <div  v-if="((getItem2(8).tag == 1) && getItem(8).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconClip2"></div>
+  <div  v-if="((getItem2(8).tag == 1) && getItem(8).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconClip2"></div>
 
   <div v-if="getItem(9).tag != 2" class="backIconDiamond"></div>
   <div v-if="getItem2(9).tag != 2" class="backIconDiamond2"></div>
-  <div  v-if="((getItem2(9).tag == 2) && getItem(9).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconDiamond2"></div>
+  <div  v-if="((getItem2(9).tag == 2) && getItem(9).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconDiamond2"></div>
 
   <div v-if="getItem(10).tag != 1" class="backIconGold"></div>
   <div v-if="getItem2(10).tag != 1" class="backIconGold2"></div>
-  <div  v-if="((getItem2(10).tag == 1) && getItem(10).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconGold2"></div>
+  <div  v-if="((getItem2(10).tag == 1) && getItem(10).tag!= 1)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconGold2"></div>
 
   <div v-if="getItem(11).tag != 2" class="backIconGlassBottle"></div>
   <div v-if="getItem2(11).tag != 2" class="backIconGlassBottle2"></div>
-  <div  v-if="((getItem2(11).tag == 2) && getItem(11).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.5)" class="backIconGlassBottle2"></div>
+  <div  v-if="((getItem2(11).tag == 2) && getItem(11).tag!= 2)" style="background-color: rgb(0, 255, 0, 0.75)" class="backIconGlassBottle2"></div>
 
 
 <div 
@@ -598,7 +598,7 @@ export default {
 
 .backIconPencil {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -616,7 +616,7 @@ export default {
 .backIconPencil2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -633,7 +633,7 @@ export default {
 
 .backIconPotato {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -651,7 +651,7 @@ export default {
 .backIconPotato2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -668,7 +668,7 @@ export default {
 
 .backIconLemon {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -686,7 +686,7 @@ export default {
 .backIconLemon2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -703,7 +703,7 @@ export default {
 
 .backIconCork {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -721,7 +721,7 @@ export default {
 .backIconCork2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -738,7 +738,7 @@ export default {
 
 .backIconLego {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -756,7 +756,7 @@ export default {
 .backIconLego2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -773,7 +773,7 @@ export default {
 
 .backIconRubberBand {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -791,7 +791,7 @@ export default {
 .backIconRubberBand2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -808,7 +808,7 @@ export default {
 
 .backIcon5Euros {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -826,7 +826,7 @@ export default {
 .backIcon5Euros2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -843,7 +843,7 @@ export default {
 
 .backIconLog {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -861,7 +861,7 @@ export default {
 .backIconLog2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -878,7 +878,7 @@ export default {
 
 .backIconClip {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -896,7 +896,7 @@ export default {
 .backIconClip2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -913,7 +913,7 @@ export default {
 
 .backIconWater {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -931,7 +931,7 @@ export default {
 .backIconWater2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -948,7 +948,7 @@ export default {
 
 .backIconGold {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -966,7 +966,7 @@ export default {
 .backIconGold2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -983,7 +983,7 @@ export default {
 
 .backIconGlassBottle {
   position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -1001,7 +1001,7 @@ export default {
 .backIconGlassBottle2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;
@@ -1018,7 +1018,7 @@ export default {
 
 .backIconDiamond {
 position: absolute;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   width: 8%;
   height: 6%;
   border-radius: 20px;
@@ -1036,7 +1036,7 @@ position: absolute;
 .backIconDiamond2 {
   position: absolute;
   object-fit: cover;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.75);
   border-radius: 20px;
   width: 8%;
   height: 6%;

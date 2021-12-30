@@ -101,7 +101,7 @@
 
 
 </div>
-<img class ="Atom" style="display: none" src="assets/Atom.png" alt=""/>
+<img class ="Atom" style="display: none" src="assets/AtomB.png" alt=""/>
 
 <button id="ButtonDone" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
 
@@ -474,7 +474,10 @@ export default {
   margin-top: 40%;
   margin-left: 15%;
   width: 5%;
-  background-color: #fb91af;
+  background-color: #d350a1;
+  border-width: 1px;
+  border-style: solid;
+  border-color:black;
   border-radius: 20px;
   height: 8%;
   min-width: 5%;
@@ -493,7 +496,10 @@ export default {
   margin-top: 40%;
   margin-left: 15%;
   width: 5%;
-  background-color: #fb91af;
+  background-color: #d350a1;
+  border-width: 1px;
+  border-style: solid;
+  border-color:black;
   border-radius: 20px;
   height: 6%;
   min-width: 5%;
@@ -512,7 +518,10 @@ export default {
   margin-top: 40%;
   margin-left: 40%;
   width: 5%;
-  background-color: #fb91af;
+  background-color: #d350a1;
+  border-width: 1px;
+  border-style: solid;
+  border-color:black;
   border-radius: 20px;
   height: 8%;
   min-width: 5%;
@@ -530,7 +539,10 @@ export default {
   margin-top: 40%;
   margin-left: 40%;
   width: 5%;
-  background-color: #fb91af;
+  background-color: #d350a1;
+  border-width: 1px;
+  border-style: solid;
+  border-color:black;
   border-radius: 20px;
   height: 6%;
   min-width: 5%;
