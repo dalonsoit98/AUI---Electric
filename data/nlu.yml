@@ -51,6 +51,29 @@ nlu:
     - don't like that
     - no way
     - not really
+    
+- intent: nothing
+  examples: |
+    - nothing
+    - no idea
+    - I don't have a clue
+    - what is that?
+    - I don't know anything about this topic
+    - I only know a little
+    - not much
+    - only a bit
+    - I don't know anything about electricity
+    - about electricity? no idea
+    
+- intent: electricity
+  examples: |
+    - I know a lot of things about it!
+    - I think it's what powers my house
+    - lightbulbs can't work without it!
+    - electricity is an energy source i think
+    - an electric circuit is when electrons can wander in a closed circuit
+    - electrons move from the power source to an energy consumer like a lightbulb
+    - the power source is usually a battery with different potentials at both ends, which creates the voltage required for the conduction
 
 - intent: mood_great
   examples: |
