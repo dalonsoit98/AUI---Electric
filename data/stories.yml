@@ -7,14 +7,14 @@ stories:
   - action: utter_welcome_start
   - checkpoint: start
     
-- story: happy path # affirm -> Start button
+- story: happy path # affirm -> start button
   steps:
   - checkpoint: start
   - intent: affirm
   - action: utter_readyYes
   - action: utter_interface_explanation
   - checkpoint: start 2
-- story: issue path 2 # deny -> call_professor -> ready -> affirm -> Start button
+- story: issue path 2 # deny -> call_professor -> ready -> Start button
   steps:
   - checkpoint: start
   - intent: deny
@@ -25,7 +25,7 @@ stories:
   - action: utter_readyYes
   - action: utter_interface_explanation
   - checkpoint: start 2
-- story: issue path # deny -> game_explain -> ready -> affirm -> Start button
+- story: issue path # deny -> game_explain -> ready -> Start button
   steps:
   - checkpoint: start
   - intent: deny
@@ -42,7 +42,25 @@ stories:
   - checkpoint: start 2
   - intent: ready
   - action: utter_press_start
-  #- checkpoint: start 2
+  - intent: ready
+  - action: utter_press_start
+  - intent: ready
+  - action: utter_press_start
+  - intent: ready
+  - action: utter_press_start
+  - intent: ready
+  - action: utter_press_start
+- story: start loop 2
+  steps:
+    - checkpoint: start 2
+    - intent: affirm
+    - action: utter_press_start
+    - intent: affirm
+    - action: utter_press_start
+    - intent: affirm
+    - action: utter_press_start
+    - intent: affirm
+    - action: utter_press_start
 
 - story: start atom
   steps:
@@ -50,24 +68,52 @@ stories:
   - action: utter_t10
   - checkpoint: atom
 
-- story: happy path atom # affirm -> correct -> affirm -> Done
+- story: happy path atom # electricity -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
-  - intent: affirm
+  - intent: electricity
   - action: utter_t11
+  - action: utter_t111
+  - intent: affirm
   - action: utter_t12
   - intent: atom_correct
   - action: utter_t13
   - checkpoint: atom_correct
-- story: atom deny # deny -> correct -> affirm -> Done
+- story: atom nothing # nothing -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
-  - intent: deny
+  - intent: nothing
   - action: utter_t110
+  - action: utter_t111
+  - intent: affirm
   - action: utter_t12
   - intent: atom_correct
   - action: utter_t13
   - checkpoint: atom_correct
+- story: happy path atom # electricity -> correct -> affirm -> Done
+  steps:
+    - checkpoint: atom
+    - intent: electricity
+    - action: utter_t11
+    - action: utter_t111
+    - intent: deny
+    - action: utter_t120
+    - action: utter_t121
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: atom_correct
+- story: atom nothing # nothing -> correct -> affirm -> Done
+  steps:
+    - checkpoint: atom
+    - intent: nothing
+    - action: utter_t110
+    - action: utter_t111
+    - intent: deny
+    - action: utter_t120
+    - action: utter_t121
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: atom_correct
 - story: atom play correct # correct -> affirm -> Done
   steps:
   - checkpoint: atom
@@ -87,7 +133,7 @@ stories:
   - checkpoint: atom
   - intent: affirm
   - action: utter_t11
-  - action: utter_t12
+  - action: utter_t111
   - intent: atom_incorrect
   - action: utter_t131
   - intent: atom_correct
@@ -126,9 +172,15 @@ stories:
     - action: utter_t15
     - checkpoint: atom_done
       
-- story: done loop atom
+- story: done loop atom 1
   steps:
     - checkpoint: atom_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
     - intent: ready
     - action: utter_press_done
 - story: done loop atom 2
@@ -136,16 +188,8 @@ stories:
     - checkpoint: atom_done
     - intent: affirm
     - action: utter_press_done
-- story: done loop atom 3
-  steps:
-    - checkpoint: atom_done
-    - intent: ready
+    - intent: affirm
     - action: utter_press_done
-    - intent: ready
-    - action: utter_press_done
-- story: done loop atom 4
-  steps:
-    - checkpoint: atom_done
     - intent: affirm
     - action: utter_press_done
     - intent: affirm

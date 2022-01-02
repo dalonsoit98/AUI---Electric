@@ -24,6 +24,8 @@ intents:
   - first_tag
   - final_tag
   - why
+  - nothing
+  - electricity
 
 e2e_actions: []
 
@@ -88,7 +90,7 @@ responses:
   - text: "To fix this you should call your teacher"
     
   utter_interface_explanation:
-  - text: "I will remain here, at the right side of your screen. I will guide you through the game and monitor your progress! Press 'Start' whenever you're ready!"
+  - text: "On the left side you can play the game. On the right side you are able to communicate with me at any time!"
     
   utter_press_start:
   - text: "Press the 'Start' button when you're ready!"
@@ -107,16 +109,25 @@ responses:
     - text: "Good job! Press 'Done' when you are ready!"
       
   utter_t10:
-    - text: "Before we get started, I'll explain to you what an electric circuit is! Do you already have some knowledge about this concept?"
+    - text: "Before we get started, I’ll explain to you what an electric circuit is! What do you already know about it?"
       
   utter_t11:
-    - text: "Alright, let's see what I can further teach you."
+    - text: "Excellent! Let's see what I can teach you."
       
   utter_t110:
-    - text: "No problem, let's see what I can teach you!"
+    - text: "Don't worry, that's what I am here for! Let's see what I can teach you!"
+
+  utter_t111:
+    - text: "Have you ever seen this before?"
       
   utter_t12:
-    - text: "This is a model of an atom. Drag and drop the tags into the different parts of the atom. Try to label the particles correctly!"
+    - text: "Great! This is a model of an atom. Drag and drop the tags into the different parts of the atom. Try to label the particles correctly!"
+
+  utter_t120:
+    - text: "This is a model of the atom. It is almost the smallest component that makes up everything. The atom itself has some smaller particles inside. Neutral particles and positive particles sit in the center (=nucleus). And outside are negative particles (=electrons) that are able to move around freely."
+
+  utter_t121:
+    - text: "Now try to label the particles correctly!"
       
   utter_t13:
     - text: "Good job! The nucleus sits in the center, while the negative electrons are free to move around it. When these electrons move from atom to atom in a certain direction, they create an electric current. Understood?"
