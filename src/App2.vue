@@ -274,8 +274,51 @@ import { ref } from 'vue'
 
 export default {
   setup() {
-  var sessionString = localStorage.getItem('ArrayItems');
-  var Page2Array = JSON.parse(sessionString);
+    // Images of objects to drag
+    const imgCon = new Image();
+    imgCon.src="assets/CheckDrag.png";
+
+    const imgIso = new Image();
+    imgIso.src="assets/CrossDrag.png";
+
+    const imgPot = new Image();
+    imgPot.src="assets/PotatoDrag.png";
+
+    const imgLem = new Image();
+    imgLem.src="assets/LemonDrag.png";
+
+    const imgCork = new Image();
+    imgCork.src="assets/CorkDrag.png";
+
+    const imgPen = new Image();
+    imgPen.src="assets/PencilDrag.png";
+
+    const imgLego = new Image();
+    imgLego.src="assets/LegoDrag.png";
+
+    const imgRub = new Image();
+    imgRub.src="assets/RubberBandDrag.png";
+
+    const img5 = new Image();
+    img5.src="assets/5EurosDrag.png";
+
+    const imgLog = new Image();
+    imgLog.src="assets/LogDrag.png";
+
+    const imgClip = new Image();
+    imgClip.src="assets/Paper ClipDrag.png";
+
+    const imgDiam = new Image();
+    imgDiam.src="assets/DiamondDrag.png";
+
+    const imgGold = new Image();
+    imgGold.src="assets/Gold BarDrag.png";
+    
+    const imgGlass = new Image();
+    imgGlass.src="assets/Glass BottleDrag.png";
+
+    var sessionString = localStorage.getItem('ArrayItems');
+    var Page2Array = JSON.parse(sessionString);
 
     const items = ref(Page2Array)
     
@@ -295,6 +338,14 @@ export default {
 
     const startDrag = (event,tag) => {
       console.log(tag)
+      if(tag==1){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgCon,0,0)
+      }
+      if(tag==2){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgIso,0,0)
+      }
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('tagNumber', tag)
@@ -303,6 +354,55 @@ export default {
 
     const startDragBulb = (event,id) => {
       console.log(id)
+      if(id==0){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgPot,0,0)
+      }
+      if(id==1){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgLem,0,0)
+      }
+      if(id==2){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgCork,0,0)
+      }
+      if(id==3){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgPen,0,0)
+      }
+      if(id==4){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgLego,0,0)
+      }
+      if(id==5){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgRub,0,0)
+      }
+      if(id==6){
+      const drag = event.dataTransfer
+      drag.setDragImage(img5,0,0)
+      }
+      if(id==7){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgLog,0,0)
+      }
+     if(id==8){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgClip,0,0)
+      }
+      if(id==9){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgDiam,0,0)
+      }
+      if(id==10){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgGold,0,0)
+      }
+      if(id==11){
+      const drag = event.dataTransfer
+      drag.setDragImage(imgGlass,0,0)
+      }
+
       event.dataTransfer.dropEffect = 'move'
       event.dataTransfer.effectAllowed = 'move'
       event.dataTransfer.setData('id', id)

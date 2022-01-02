@@ -2,6 +2,7 @@
 
 <img class ="CircuitImage" style="display: none" id ="CircuitImage"  src =  "assets/SimpleCircuit-open.png">
 <div class= "ChangeImage" style="display: none" onclick = changeImage()></div>
+<img class ="CircuitImageGif" style="display: none" id ="CircuitImageGif"  src =  "assets/SimpleCircuit-closed.gif">
 
 <button class="ButtonDone" id="ButtonDone" style="display: none;" v-on:click="nextPage">Done</button>
 
@@ -453,6 +454,21 @@ width: 40%;
 margin-top: 7%;
 margin-left: 10%;
 object-fit: center;
+}
+
+.CircuitImageGif {
+position: absolute;
+z-index: 8;
+width: 41.5%;
+margin-top: 5.7%;
+margin-left: 12.1%;
+object-fit: center;
+user-drag: none;
+-webkit-user-drag: none;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
 }
 
 .ChangeImage {
