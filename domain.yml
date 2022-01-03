@@ -146,7 +146,7 @@ responses:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
   utter_t200:
-    - text: "Can't make it work? Try to click some parts of the circuit, maybe something will change..."
+    - text: "Can't manage to make it work? Try to click some parts of the circuit, maybe something will change..."
       
   utter_t21:
     - text: "Good job! For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables. Understood?"

@@ -100,7 +100,18 @@
         console.log("done");
         }
 
+        const myTimeout = setTimeout(NeedHelp, 20000);
+
+        function NeedHelp() {
+            var session_info = sessionStorage.getItem('chat_session');
+            var index = session_info.indexOf("session_id");
+            let session_id = session_info.substr(index+13, 32);
+            socket.emit("user_uttered",{"message":'/circuitTimer',"customData":{"language":"en"},"session_id":session_id});
+        }
+
+
         function changeImage() {
+            clearTimeout(myTimeout);
             var src = document.getElementById("CircuitImage").src; 
             console.log(src);  
             var imgsrc = src.substring(src.lastIndexOf("/")+1);
@@ -109,9 +120,9 @@
                 flagStay +=1;
                 if (flagStay == 1){
                 InitialSend("/circuit_close");
-                var DoneButt = document.getElementById('ButtonDone');
-                var displaySetting = DoneButt.style.display;
-                DoneButt.style.display = 'block';
+                $(document).ready(function() {
+                    $('.ButtonDone').delay(4500).fadeIn(50); 
+                });
                 }
                 var Gif = document.getElementById('CircuitImageGif');
                 var GifdisplaySetting = Gif.style.display;
