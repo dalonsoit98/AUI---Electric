@@ -153,6 +153,7 @@ nlu:
     - done
     - great
     - nice
+    - great!
     
 - intent: why
   examples: |
@@ -225,3 +226,4 @@ nlu:
 - intent: circuit_close
 - intent: first_tag
 - intent: final_tag
+- intent: circuitTimer

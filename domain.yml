@@ -26,6 +26,7 @@ intents:
   - why
   - nothing
   - electricity
+  - circuitTimer
 
 e2e_actions: []
 
@@ -112,7 +113,7 @@ responses:
     - text: "Before we get started, I’ll explain to you what an electric circuit is! What do you already know about it?"
       
   utter_t11:
-    - text: "Excellent! Let's see what I can teach you."
+    - text: "Excellent! Let's see what I can further teach you."
       
   utter_t110:
     - text: "Don't worry, that's what I am here for! Let's see what I can teach you!"
@@ -121,10 +122,10 @@ responses:
     - text: "Have you ever seen this before?"
       
   utter_t12:
-    - text: "Great! This is a model of an atom. Drag and drop the tags into the different parts of the atom. Try to label the particles correctly!"
+    - text: "Great! Then, as you know, this is a model of an atom. Drag and drop the tags into the different parts of the atom and try to label the particles correctly!"
 
   utter_t120:
-    - text: "This is a model of the atom. It is almost the smallest component that makes up everything. The atom itself has some smaller particles inside. Neutral particles and positive particles sit in the center (=nucleus). And outside are negative particles (=electrons) that are able to move around freely."
+    - text: "This is a model of the atom. It is almost the smallest component that makes up everything. The atom itself has some smaller particles inside. Neutral and positive particles sit in the center (the nucleus). Outside are the negative particles (electrons) that are able to move around more freely."
 
   utter_t121:
     - text: "Now try to label the particles correctly!"
@@ -136,7 +137,7 @@ responses:
     - text: "Almost there! Try again."
 
   utter_t14:
-    - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current"
+    - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current."
       
   utter_t15:
     - text: "The positive (protons) and neutral (neutrons) charges stay in the center, while the negative charges (electrons) are more free to move. Same charges repel each other, different charges attract each other. When these charged particles move into a certain direction, they create an electric current"
@@ -144,17 +145,38 @@ responses:
   utter_t20:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
+  utter_t200:
+    - text: "Can't make it work? Try to click some parts of the circuit, maybe something will change..."
+      
   utter_t21:
     - text: "Good job! For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables. Understood?"
       
   utter_t22:
-    - text: "You saw that only 3 components are enough to create an electric current. Can you tell me what each component is and what is their function?"
+    - text: "You saw that only 3 components are enough to create an electric current. Do you know what they are?"
       
   utter_t23:
-    - text : "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
+    - text: "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
+
+  utter_t24:
+    - text: "The battery generates the flow of electrons that will power the light bulb! The light bulb emits light thanks to the flow of electrons. We can replace it with many different things, as we will see soon! The wire directs the flow of electrons from the battery, through the light bulb and back at the other end of the battery!"
+
+  utter_t25:
+    - text: "Ok! Do you want to skip the explanation then?"
+
+  utter_t26:
+    - text: "Great!"
+
+  utter_t27:
+    - text: "Now, what makes these wires good for conducting? Can we substitute it for something else?"
       
+  utter_t28:
+    - text: "The main requirement for conductivity is the availability of free electrons, either in the outer layer of the atom, or introduced as charged particles (ions). This depends on the (molecular) structure of each material."
+
+  utter_t29:
+    - text: "But lets save the talk for now. It’s time for you to find out about conductivity yourself!"
+
   utter_l11:
-    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating?"
+    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating"
       
   utter_l12: 
     - text: "You know, there is no way around it. You cannot skip this step, so let's get started."

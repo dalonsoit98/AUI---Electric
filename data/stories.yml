@@ -131,9 +131,39 @@ stories:
 - story: atom affirm mistake # affirm -> incorrect -> correct -> affirm -> Done
   steps:
   - checkpoint: atom
-  - intent: affirm
+  - intent: electricity
   - action: utter_t11
   - action: utter_t111
+  - intent: deny
+  - action: utter_t120
+  - action: utter_t121
+  - intent: atom_incorrect
+  - action: utter_t131
+  - intent: atom_correct
+  - action: utter_t13
+  - checkpoint: atom_correct
+- story: atom affirm mistake # affirm -> incorrect -> correct -> affirm -> Done
+  steps:
+    - checkpoint: atom
+    - intent: electricity
+    - action: utter_t11
+    - action: utter_t111
+    - intent: affirm
+    - action: utter_t12
+    - intent: atom_incorrect
+    - action: utter_t131
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: atom_correct
+- story: atom deny mistake # deny -> incorrect -> correct
+  steps:
+  - checkpoint: atom
+  - intent: nothing
+  - action: utter_t110
+  - action: utter_t111
+  - intent: deny
+  - action: utter_t120
+  - action: utter_t121
   - intent: atom_incorrect
   - action: utter_t131
   - intent: atom_correct
@@ -141,15 +171,17 @@ stories:
   - checkpoint: atom_correct
 - story: atom deny mistake # deny -> incorrect -> correct
   steps:
-  - checkpoint: atom
-  - intent: deny
-  - action: utter_t110
-  - action: utter_t12
-  - intent: atom_incorrect
-  - action: utter_t131
-  - intent: atom_correct
-  - action: utter_t13
-  - checkpoint: atom_correct
+    - checkpoint: atom
+    - intent: nothing
+    - action: utter_t110
+    - action: utter_t111
+    - intent: affirm
+    - action: utter_t12
+    - intent: atom_incorrect
+    - action: utter_t131
+    - intent: atom_correct
+    - action: utter_t13
+    - checkpoint: atom_correct
     
 - story: happy path atom 2 # affirm -> Done
   steps:
@@ -200,7 +232,22 @@ stories:
     - intent: partCircuit
     - action: utter_t20
     - checkpoint: circuit
-        
+- story: start circuit 2
+  steps:
+    - intent: partCircuit
+    - action: utter_t20
+    - intent: help
+    - action: utter_t200
+    - checkpoint: circuit
+- story: start circuit 3
+  steps:
+    - intent: partCircuit
+    - action: utter_t20
+    - intent: circuitTimer
+    - action: utter_t200
+    - checkpoint: circuit
+      
+     
 - story: happy path circuit
   steps:
   - checkpoint: circuit
@@ -208,6 +255,7 @@ stories:
   - action: utter_t21
   - intent: affirm
   - action: utter_t22
+  - checkpoint: circuit_2
 - story: circuit deny
   steps:
   - checkpoint: circuit
@@ -217,6 +265,62 @@ stories:
   - action: utter_t23
   - intent: ready
   - action: utter_t22
+  - checkpoint: circuit_2
+    
+- story: happy path circuit 2
+  steps:
+    - checkpoint: circuit_2
+    - intent: deny
+    - action: utter_t24
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
+- story: affirm no circuit 2
+  steps:
+    - checkpoint: circuit_2
+    - intent: affirm
+    - action: utter_t25
+    - intent: deny
+    - action: utter_t24
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
+- story: affirm yes circuit 2
+  steps:
+    - checkpoint: circuit_2
+    - intent: affirm
+    - action: utter_t25
+    - intent: affirm
+    - action: utter_t26
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
+
+- story: done loop circuit 1
+  steps:
+    - checkpoint: circuit_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+- story: done loop circuit 2
+  steps:
+    - checkpoint: circuit_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
 
 - story: start level 1 sort
   steps:
