@@ -229,3 +229,4 @@ nlu:
 - intent: first_tag
 - intent: final_tag
 - intent: circuitTimer
+- intent: first_object

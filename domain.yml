@@ -27,6 +27,19 @@ intents:
   - nothing
   - electricity
   - circuitTimer
+  - first_object
+  - cork
+  - lemon
+  - lego
+  - pencil
+  - bottle
+  - potato
+  - log
+  - rubber
+  - euro
+  - clip
+  - diamond
+  - gold
 
 e2e_actions: []
 
@@ -104,13 +117,8 @@ responses:
     - text: "Press 'Done' in order to continue"
     - text: "Press 'Done' when you are ready!"
     - text: "Press 'Done' to advance to the next step!"
+      
 
-  utter_good_job_done:
-    - text: "Great job! Press the 'Done' button when you're ready to continue!"
-    - text: "Excellent! Press 'Done' in order to continue"
-    - text: "Good job! Press 'Done' when you are ready to go on!"
-      
-      
       
   utter_t10:
     - text: "Before we get started, I’ll explain to you what an electric circuit is! What do you already know about it?"
@@ -210,18 +218,93 @@ responses:
     - text: "Can't manage to do it? Drag the conducting and insulating icons into the objects!"
 
   utter_l13:
-    - text: "Yes, exactly like this. Now let's try the others."
+    - text: "Great job! Try to guess all of them now, you'll be able to experiment with them in the next step."
 
   utter_l130:
     - text: "Tag all the objects in order to continue."
+
+  utter_good_job_done:
+    - text: "You're doing great! You'll be able to check your guess at the end of the game. Press 'Done' in order to carry on with the experiment."
       
       
       
   utter_l21:
     - text: "Now you can try the objects by dragging and dropping them into the open circuit. After having tested them, you can tag them like you did before. Understood?"
-      
+
   utter_l22:
-    - text: "If you have any further questions, you can text me anytime!"
+    - text: "Drag the items into the gap and check if the bulb lights up. You can overwrite the conducting/insulating tags by dragging them into the objects."
+      
+  utter_l23:
+    - text: "Drag the items into the gap and check if the bulb lights up. You can overwrite the conducting/insulating tags by dragging them into the objects."
+
+  utter_l24:
+    - text: "Great! Now you can check if your guesses were correct!"
+
+  utter_l25:
+    - text: "Are you surprised by the results? Do you want information about any object in particular?"
+      buttons:
+      - title: "Cork"
+        payload: "/cork"
+      - title: "Lemon"
+        payload: "/lemon"
+      - title: "Lego"
+        payload: "/lego"
+      - title: "Pencil"
+        payload: "/pencil"
+      - title: "Bottle"
+        payload: "/bottle"
+      - title: "Potato"
+        payload: "/potato"
+      - title: "Wooden Log"
+        payload: "/log"
+      - title: "Rubber Band"
+        payload: "/rubber"
+      - title: "5 Euro Bill"
+        payload: "/euro"
+      - title: "Clip"
+        payload: "/clip"
+      - title: "Diamond"
+        payload: "/diamond"
+      - title: "Gold"
+        payload: "/gold"
+
+  utter_l26:
+    - text: "Are you done?"
+
+  utter_l27:
+    - text: "What object do you want to know more about?"
+      buttons:
+        - title: "Cork"
+          payload: "/cork"
+        - title: "Lemon"
+          payload: "/lemon"
+        - title: "Lego"
+          payload: "/lego"
+        - title: "Pencil"
+          payload: "/pencil"
+        - title: "Bottle"
+          payload: "/bottle"
+        - title: "Potato"
+          payload: "/potato"
+        - title: "Wooden Log"
+          payload: "/log"
+        - title: "Rubber Band"
+          payload: "/rubber"
+        - title: "5 Euro Bill"
+          payload: "/euro"
+        - title: "Clip"
+          payload: "/clip"
+        - title: "Diamond"
+          payload: "/diamond"
+        - title: "Gold"
+          payload: "/gold"
+      
+  utter_gold:
+    - text: "The electrons in gold are bonded rather loosely. There are only free electrons in the outer atom layer."
+
+  utter_diamond:
+    - text: "The atoms in a diamond are bonded very strongly. There are no free electrons in the outer atom layer."
+      
       
   utter_l31:
     -  text: "Great! Let's see how good both of your guesses were."

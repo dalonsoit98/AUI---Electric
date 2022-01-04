@@ -523,6 +523,114 @@ stories:
   - checkpoint: l_circuit
   - intent: affirm
   - action: utter_l22
+  - intent: first_object
+  - action: utter_l24
+  - action: utter_l25
+  - checkpoint: l_circuit_first
+- story: happy path level 1 deny
+  steps:
+    - checkpoint: l_circuit
+    - intent: deny
+    - action: utter_l23
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+- story: happy path level 1 help
+  steps:
+    - checkpoint: l_circuit
+    - intent: help
+    - action: utter_l23
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+- story: happy path level 1 skip
+  steps:
+    - checkpoint: l_circuit
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+
+#- story: object info gold loop
+#  steps:
+#    - checkpoint: l_circuit_first
+#    - intent: gold
+#    - action: utter_gold
+#    - action: utter_l26
+#    - checkpoint: l_circuit_done
+- story: object info gold loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: gold
+    - action: utter_gold
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: gold
+    - action: utter_gold
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: gold
+    - action: utter_gold
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: gold
+    - action: utter_gold
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - checkpoint: l_circuit_done
+- story: object info diamond loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: diamond
+    - action: utter_diamond
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: diamond
+    - action: utter_diamond
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: deny
+    - action: utter_diamond
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - intent: diamond
+    - action: utter_diamond
+    - action: utter_l26
+    - intent: deny
+    - action: utter_l27
+    - checkpoint: l_circuit_done
+
+- story: done loop circuit level 1
+  steps:
+    - checkpoint: l_circuit_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+- story: done loop circuit level 2
+  steps:
+    - checkpoint: l_circuit_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
+    - intent: affirm
+    - action: utter_press_done
       
 - story: start level 1 final
   steps:
