@@ -1,6 +1,5 @@
 <template>
 
-<button class="botonsend" v-on:click="send"></button>
 <div 
   class="drop-zone1-Conducting"
   @dragenter.prevent

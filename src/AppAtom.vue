@@ -103,7 +103,8 @@
 </div>
 <img class ="Atom" style="display: none" src="assets/AtomB.png" alt=""/>
 
-<button id="ButtonDone" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
+
+<button id="ButtonDone" class="ButtonDone" style="display: none;" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
 
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
@@ -190,6 +191,9 @@ export default {
             },
             flagStayM(){
               flagStay = 1;
+               $(document).ready(function() {
+                $('.ButtonDone').delay(5000).fadeIn(50); 
+                });
             },
             flagCheck(){
               return (flagStay==1)
