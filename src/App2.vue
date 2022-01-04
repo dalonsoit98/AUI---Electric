@@ -258,6 +258,7 @@
   </div>
 
 <img class ="Circuit" src="assets/Circuit.png"/>
+<h1 v-if="getItem(12).title != 'assets/Transparent.png'" v-on= "send('/first_object')" ></h1>
 <button id="ButtonDone" v-if="getItem(12).title != 'assets/Transparent.png'" v-on:click=datasendFinal(getItems())>Done</button>
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
