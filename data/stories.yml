@@ -246,6 +246,12 @@ stories:
     - intent: circuitTimer
     - action: utter_t200
     - checkpoint: circuit
+- story: start circuit 4
+  steps:
+    - intent: partCircuit
+    - action: utter_t20
+    - intent: ready
+    - checkpoint: circuit
       
      
 - story: happy path circuit
@@ -332,22 +338,98 @@ stories:
   steps:
   - checkpoint: l_sort
   - intent: affirm
-  - action: utter_l13
-  - checkpoint: l_sort_mid
-- story: level 1 sort deny
-  steps:
-  - checkpoint: l_sort
-  - intent: deny
   - action: utter_l12
-  - intent: ready
-  - action: utter_l13
   - checkpoint: l_sort_mid
+- story: happy path level 1 sort 2
+  steps:
+    - checkpoint: l_sort
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: happy path level 1 sort 3
+  steps:
+    - checkpoint: l_sort
+    - intent: help
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: level 1 sort deny 1
+  steps:
+    - checkpoint: l_sort
+    - intent: deny
+    - action: utter_l110
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: level 1 sort deny 2
+  steps:
+    - checkpoint: l_sort
+    - intent: deny
+    - action: utter_l110
+    - intent: deny
+    - action: utter_l111
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: level 1 sort deny 3
+  steps:
+    - checkpoint: l_sort
+    - intent: deny
+    - action: utter_l110
+    - intent: deny
+    - action: utter_l111
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: level 1 sort deny all
+  steps:
+    - checkpoint: l_sort
+    - intent: deny
+    - action: utter_l110
+    - intent: deny
+    - action: utter_l111
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
+- story: level 1 sort deny all loop
+  steps:
+    - checkpoint: l_sort
+    - intent: deny
+    - action: utter_l110
+    - intent: deny
+    - action: utter_l111
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: deny
+    - action: utter_l112
+    - intent: call_professor
+    - action: utter_l113
+    - intent: ready
+    - action: utter_l12
+    - checkpoint: l_sort_mid
     
 - story: level 1 sort mid happy path
   steps:
   - checkpoint: l_sort_mid
   - intent: first_tag
-  - action: utter_l15
+  - action: utter_l13
   - intent: final_tag
   - action: utter_good_job_done
   - checkpoint: l_sort_done
@@ -355,9 +437,9 @@ stories:
   steps:
   - checkpoint: l_sort_mid
   - intent: ready
-  - action: utter_l14
+  - action: utter_l120
   - intent: first_tag
-  - action: utter_l15
+  - action: utter_l13
   - intent: final_tag
   - action: utter_good_job_done
   - checkpoint: l_sort_done
@@ -365,33 +447,66 @@ stories:
   steps:
   - checkpoint: l_sort_mid
   - intent: help
-  - action: utter_l14
+  - action: utter_l121
   - intent: first_tag
-  - action: utter_l15
+  - action: utter_l13
   - intent: final_tag
   - action: utter_good_job_done
   - checkpoint: l_sort_done
 
-- story: done loop level 1 sort
+- story: level 1 sort mid happy path 2
+  steps:
+    - checkpoint: l_sort_mid
+    - intent: first_tag
+    - action: utter_l13
+    - intent: ready
+    - action: utter_l130
+    - intent: final_tag
+    - action: utter_good_job_done
+    - checkpoint: l_sort_done
+- story: level 1 sort mid ready 2
+  steps:
+    - checkpoint: l_sort_mid
+    - intent: ready
+    - action: utter_l120
+    - intent: first_tag
+    - action: utter_l13
+    - intent: ready
+    - action: utter_l130
+    - intent: final_tag
+    - action: utter_good_job_done
+    - checkpoint: l_sort_done
+- story: level 1 sort mid help 2
+  steps:
+    - checkpoint: l_sort_mid
+    - intent: help
+    - action: utter_l121
+    - intent: first_tag
+    - action: utter_l13
+    - intent: ready
+    - action: utter_l130
+    - intent: final_tag
+    - action: utter_good_job_done
+    - checkpoint: l_sort_done
+
+- story: done loop sort 1help
   steps:
     - checkpoint: l_sort_done
     - intent: ready
     - action: utter_press_done
-- story: done loop atom 2
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+- story: done loop sort 2
   steps:
-    - checkpoint: atom_done
+    - checkpoint: l_sort_done
     - intent: affirm
     - action: utter_press_done
-- story: done loop atom 3
-  steps:
-    - checkpoint: l_sort_done
-    - intent: ready
+    - intent: affirm
     - action: utter_press_done
-    - intent: ready
-    - action: utter_press_done
-- story: done loop atom 4
-  steps:
-    - checkpoint: l_sort_done
     - intent: affirm
     - action: utter_press_done
     - intent: affirm

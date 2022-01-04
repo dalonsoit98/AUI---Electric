@@ -51,6 +51,7 @@ nlu:
     - don't like that
     - no way
     - not really
+    - I don't want to
     
 - intent: nothing
   examples: |
@@ -154,6 +155,7 @@ nlu:
     - great
     - nice
     - great!
+    - I'm done
     
 - intent: why
   examples: |

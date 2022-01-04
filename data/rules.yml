@@ -22,7 +22,7 @@ rules:
   - intent: game_explain
   - action: utter_game_explain
 
-- rule: Call professor
-  steps:
-  - intent: call_professor
-  - action: utter_call_professor
+#- rule: Call professor
+#  steps:
+#  - intent: call_professor
+#  - action: utter_call_professor

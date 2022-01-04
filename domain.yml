@@ -103,11 +103,14 @@ responses:
     - text: "Press the 'Done' button when you're ready!"
     - text: "Press 'Done' in order to continue"
     - text: "Press 'Done' when you are ready!"
+    - text: "Press 'Done' to advance to the next step!"
 
   utter_good_job_done:
-    - text: "Great job! Press the 'Done' button when you're ready!"
+    - text: "Great job! Press the 'Done' button when you're ready to continue!"
     - text: "Excellent! Press 'Done' in order to continue"
-    - text: "Good job! Press 'Done' when you are ready!"
+    - text: "Good job! Press 'Done' when you are ready to go on!"
+      
+      
       
   utter_t10:
     - text: "Before we get started, I’ll explain to you what an electric circuit is! What do you already know about it?"
@@ -142,6 +145,8 @@ responses:
   utter_t15:
     - text: "The positive (protons) and neutral (neutrons) charges stay in the center, while the negative charges (electrons) are more free to move. Same charges repel each other, different charges attract each other. When these charged particles move into a certain direction, they create an electric current"
       
+      
+      
   utter_t20:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
@@ -158,7 +163,7 @@ responses:
     - text: "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
 
   utter_t24:
-    - text: "The battery generates the flow of electrons that will power the light bulb! The light bulb emits light thanks to the flow of electrons. We can replace it with many different things, as we will see soon! The wire directs the flow of electrons from the battery, through the light bulb and back at the other end of the battery!"
+    - text: "The battery generates the flow of electrons that will power the light bulb. The light bulb emits light thanks to the flow of electrons. The wire directs the flow of electrons from the battery, through the light bulb and back at the other end of the battery!"
 
   utter_t25:
     - text: "Ok! Do you want to skip the explanation then?"
@@ -173,22 +178,44 @@ responses:
     - text: "The main requirement for conductivity is the availability of free electrons, either in the outer layer of the atom, or introduced as charged particles (ions). This depends on the (molecular) structure of each material."
 
   utter_t29:
-    - text: "But lets save the talk for now. It’s time for you to find out about conductivity yourself!"
+    - text: "But let's save the talk for now. It’s time for you to find out about conductivity yourself!"
+
+
 
   utter_l11:
-    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating"
+    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating?"
       
-  utter_l12: 
-    - text: "You know, there is no way around it. You cannot skip this step, so let's get started."
+  utter_l110: 
+    - text: "Come on, it won't take long. Otherwise you won't be able to play the game."
       
+  utter_l111:
+    - text: "You know, I can't help you if you don't want to. Don't you want to test how good your knowledge is?"
+      
+  utter_l112:
+    - text: "Please call your teacher."
+      buttons:
+        - title: "Professor is here"
+          payload: "/call_professor"
+      
+  utter_l113:
+    - text: "Welcome back. Are you ready to play?"
+      
+  utter_l12:
+    - text: "You can tag the object by dragging the yellow lightning bolt if you think it's conducting. The black lightning bolt means it's insulating instead."
+
+  utter_l120:
+    - text: "Go on! Drag the conducting and insulating icons into the objects!"
+
+  utter_l121:
+    - text: "Can't manage to do it? Drag the conducting and insulating icons into the objects!"
+
   utter_l13:
-    - text: "You can tag the object with the yellow lighting bolt if you think it's conducting and with the black lighting bolt if you think it's insulating."
+    - text: "Yes, exactly like this. Now let's try the others."
+
+  utter_l130:
+    - text: "Tag all the objects in order to continue."
       
-  utter_l14:
-    - text: "Drag the conducting or insulating icon to each object in order to continue"
       
-  utter_l15:
-    - text: "That's it! Tag the rest of the objects in order to continue!"
       
   utter_l21:
     - text: "Now you can try the objects by dragging and dropping them into the open circuit. After having tested them, you can tag them like you did before. Understood?"
