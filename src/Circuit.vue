@@ -459,9 +459,9 @@ object-fit: center;
 .CircuitImageGif {
 position: absolute;
 z-index: 8;
-width: 41.5%;
-margin-top: 5.7%;
-margin-left: 12.1%;
+width: 40%;
+margin-top: 6.5%;
+margin-left: 11.5%;
 object-fit: center;
 user-drag: none;
 -webkit-user-drag: none;
