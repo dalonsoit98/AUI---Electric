@@ -269,7 +269,7 @@ responses:
         payload: "/gold"
 
   utter_l26:
-    - text: "Are you done?"
+    - text: "Do you need more information?"
 
   utter_l27:
     - text: "What object do you want to know more about?"
@@ -304,13 +304,50 @@ responses:
 
   utter_diamond:
     - text: "The atoms in a diamond are bonded very strongly. There are no free electrons in the outer atom layer."
-      
-      
+
+  utter_cork:
+    - text: "The atoms in cork are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_lemon:
+    - text: "The juice inside the lemon provides charged particles (ions) that can move freely."
+
+  utter_lego:
+    - text: "The atoms in a Lego are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_pencil:
+    - text: "Graphite is an exceptional material. It consists of carbon, but in this structure not all the electrons are bonded, and some remain free in the outer atom layer."
+
+  utter_bottle:
+    - text: "The atoms in glass are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_potato:
+    - text: "The liquids inside the potato provides charged particles (ions) that can move freely."
+
+  utter_log:
+    - text: "The atoms in dry wood are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_rubber:
+    - text: "The atoms in rubber are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_euro:
+    - text: "The atoms in paper are bonded very strongly. There are no free electrons in the outer atom layer."
+
+  utter_clip:
+    - text: "The electrons in steel are bonded rather loosely. There are only free electrons in the outer atom layer."
+
+
+
   utter_l31:
     -  text: "Great! Let's see how good both of your guesses were."
        
-  utter_l32:
-    - text: "You got them all! Congratulations!"
+  utter_all_correct:
+    - text: "Perfect score! Congratulations!"
+
+  utter_most_correct:
+    - text: "You almost got them all! Congratulations!"
+
+  utter_few_correct:
+    - text: "Nice try! I'm sure you can improve your results the next time!"
        
   utter_l33:
     - text: "Would you like to try again or find out why certain objects were conducting resp. insulating?"

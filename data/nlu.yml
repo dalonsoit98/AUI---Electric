@@ -137,8 +137,6 @@ nlu:
     - what is this?
     - is this a game?
     - what are we going to learn?
-    
-- intent: call_professor
 
 - intent: ready
   examples: |
@@ -193,40 +191,3 @@ nlu:
     - [Hector], nice to meet you{"entity":"name","value":"Hector"}
     - My name is [Fabio], Owly{"entity":"name","value":"Fabio"}
     
-- intent: partStart
-  examples: |
-    - N^2-:p~4TG]Wu^hb
-    - ?sLA)$d6p)z^*H8S
-
-- intent: partAtom
-  examples: |
-    - UnP=e~x9J@,!tU=h
-    - 3f3/N>5.;Ctc3\FV
-
-- intent: partCircuit
-  examples: |
-    - ,{J'f8MU@G#ny/g(
-    - (sfV,Gb4X.khC+78
-
-- intent: part1
-  examples: |
-    - C54pr2V=[h(<`$Vr
-    - TVpy5)K9;f"=kB4,
-
-- intent: part2
-  examples: |
-    - =&[gZ<xw_M>3hb6-
-    - ]!X^hA^h]h7^Ca3e
-
-- intent: partFinal
-  examples: |
-    - R#7asM{'9"#hb%pd
-    - cDj2N^J5]CD.H8ap
-
-- intent: atom_correct
-- intent: atom_incorrect
-- intent: circuit_close
-- intent: first_tag
-- intent: final_tag
-- intent: circuitTimer
-- intent: first_object

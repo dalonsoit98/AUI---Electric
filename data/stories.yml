@@ -553,36 +553,22 @@ stories:
     - action: utter_l25
     - checkpoint: l_circuit_first
 
-#- story: object info gold loop
-#  steps:
-#    - checkpoint: l_circuit_first
-#    - intent: gold
-#    - action: utter_gold
-#    - action: utter_l26
-#    - checkpoint: l_circuit_done
 - story: object info gold loop
   steps:
     - checkpoint: l_circuit_first
     - intent: gold
     - action: utter_gold
     - action: utter_l26
-    - intent: deny
+    - intent: affirm
     - action: utter_l27
     - intent: gold
     - action: utter_gold
     - action: utter_l26
-    - intent: deny
+    - intent: affirm
     - action: utter_l27
     - intent: gold
     - action: utter_gold
     - action: utter_l26
-    - intent: deny
-    - action: utter_l27
-    - intent: gold
-    - action: utter_gold
-    - action: utter_l26
-    - intent: deny
-    - action: utter_l27
     - checkpoint: l_circuit_done
 - story: object info diamond loop
   steps:
@@ -590,29 +576,192 @@ stories:
     - intent: diamond
     - action: utter_diamond
     - action: utter_l26
-    - intent: deny
+    - intent: affirm
     - action: utter_l27
     - intent: diamond
     - action: utter_diamond
     - action: utter_l26
-    - intent: deny
-    - action: utter_l27
-    - intent: deny
-    - action: utter_diamond
-    - action: utter_l26
-    - intent: deny
+    - intent: affirm
     - action: utter_l27
     - intent: diamond
     - action: utter_diamond
     - action: utter_l26
-    - intent: deny
+    - checkpoint: l_circuit_done
+- story: object info cork loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: cork
+    - action: utter_cork
+    - action: utter_l26
+    - intent: affirm
     - action: utter_l27
+    - intent: cork
+    - action: utter_cork
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: cork
+    - action: utter_cork
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info lemon loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: lemon
+    - action: utter_lemon
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: lemon
+    - action: utter_lemon
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: lemon
+    - action: utter_lemon
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info lego loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: lego
+    - action: utter_lego
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: lego
+    - action: utter_lego
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: lego
+    - action: utter_lego
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info pencil loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: pencil
+    - action: utter_pencil
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: pencil
+    - action: utter_pencil
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: pencil
+    - action: utter_pencil
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info bottle loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: bottle
+    - action: utter_bottle
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: bottle
+    - action: utter_bottle
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: bottle
+    - action: utter_bottle
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info potato loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: potato
+    - action: utter_potato
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: potato
+    - action: utter_potato
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: potato
+    - action: utter_potato
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info log loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: log
+    - action: utter_log
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: log
+    - action: utter_log
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: log
+    - action: utter_log
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info rubber loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: rubber
+    - action: utter_rubber
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: rubber
+    - action: utter_rubber
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: rubber
+    - action: utter_rubber
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info euro loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: euro
+    - action: utter_euro
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: euro
+    - action: utter_euro
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: euro
+    - action: utter_euro
+    - action: utter_l26
+    - checkpoint: l_circuit_done
+- story: object info clip loop
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: clip
+    - action: utter_clip
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: affirm
+    - action: utter_clip
+    - action: utter_l26
+    - intent: affirm
+    - action: utter_l27
+    - intent: clip
+    - action: utter_clip
+    - action: utter_l26
     - checkpoint: l_circuit_done
 
 - story: done loop circuit level 1
   steps:
     - checkpoint: l_circuit_done
-    - intent: ready
+    - intent: deny
     - action: utter_press_done
     - intent: ready
     - action: utter_press_done
@@ -623,7 +772,7 @@ stories:
 - story: done loop circuit level 2
   steps:
     - checkpoint: l_circuit_done
-    - intent: affirm
+    - intent: deny
     - action: utter_press_done
     - intent: affirm
     - action: utter_press_done
@@ -634,16 +783,16 @@ stories:
       
 - story: start level 1 final
   steps:
-  - intent: partFinal
+  - intent: partFinalPerfect
   - action: utter_l31
-  - action: utter_l32
+  - action: utter_all_correct
   - checkpoint: l_final
     
 - story: happy path level 1 final
   steps:
   - checkpoint: l_final
   - intent: ready
-  - action: utter_l33
+  - action: utter_all
 
 
 
