@@ -190,4 +190,24 @@ nlu:
     - They call me [Elsa]{"entity":"name","value":"Elsa"}
     - [Hector], nice to meet you{"entity":"name","value":"Hector"}
     - My name is [Fabio], Owly{"entity":"name","value":"Fabio"}
+
+- intent: battery
+  examples: |
+    - The battery gives power to the circuit
+    - The battery generates electrons
+    - The battery is the power source
+    - A battery gives electricity
+
+- intent: lightbulb
+  examples: |
+    - The light bulb receives the electricity
+    - The lightbulb receives the electrons
+    - Light bulb consumes the energy from the battery
+    - The light bulb lights up when it receives electricity
+
+- intent: wire
+  examples: |
+    - The wires conduct electricity
+    - The wire is what transports electricity
+    - The wire allows electrons to flow in a certain direction
     

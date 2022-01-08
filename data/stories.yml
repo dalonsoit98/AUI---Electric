@@ -304,6 +304,36 @@ stories:
     - action: utter_t28
     - action: utter_t29
     - checkpoint: circuit_done
+- story: battery
+  steps:
+    - checkpoint: circuit_2
+    - intent: battery
+    - action: utter_t250
+    - action: utter_t24
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
+- story: lightbulb
+  steps:
+    - checkpoint: circuit_2
+    - intent: lightbulb
+    - action: utter_t250
+    - action: utter_t24
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
+- story: wire
+  steps:
+    - checkpoint: circuit_2
+    - intent: wire
+    - action: utter_t250
+    - action: utter_t24
+    - action: utter_t27
+    - action: utter_t28
+    - action: utter_t29
+    - checkpoint: circuit_done
 
 - story: done loop circuit 1
   steps:
@@ -781,18 +811,31 @@ stories:
     - intent: affirm
     - action: utter_press_done
       
-- story: start level 1 final
+- story: start level 1 final perfect
   steps:
   - intent: partFinalPerfect
   - action: utter_l31
   - action: utter_all_correct
+  - action: utter_l33
   - checkpoint: l_final
+- story: start level 1 final two
+  steps:
+    - intent: partFinalTwo
+    - action: utter_l31
+    - action: utter_most_correct
+    - action: utter_l330
+    - checkpoint: l_final
+- story: start level 1 final fail
+  steps:
+    - intent: partFinalFail
+    - action: utter_l31
+    - action: utter_few_correct
+    - action: utter_l330
+    - checkpoint: l_final
     
 - story: happy path level 1 final
   steps:
   - checkpoint: l_final
-  - intent: ready
-  - action: utter_all
 
 
 

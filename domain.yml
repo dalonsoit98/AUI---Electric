@@ -16,7 +16,9 @@ intents:
   - partCircuit
   - part1
   - part2
-  - partFinal
+  - partFinalPerfect
+  - partFinalTwo
+  - partFinalFail
   - ready
   - atom_correct
   - atom_incorrect
@@ -40,6 +42,9 @@ intents:
   - clip
   - diamond
   - gold
+  - battery
+  - lightbulb
+  - wire
 
 e2e_actions: []
 
@@ -113,9 +118,9 @@ responses:
   - text: "Press 'Start' when you are ready!"
 
   utter_press_done:
-    - text: "Press the 'Done' button when you're ready!"
-    - text: "Press 'Done' in order to continue"
-    - text: "Press 'Done' when you are ready!"
+    - text: "Press the 'Done' button when you're ready to continue!"
+    - text: "Press 'Done' in order to continue!"
+    - text: "Press 'Done' to continue!"
     - text: "Press 'Done' to advance to the next step!"
       
 
@@ -159,7 +164,7 @@ responses:
     - text: "The simplest circuit can be created with a battery, wires and a light bulb. Try to make it work!"
       
   utter_t200:
-    - text: "Can't manage to make it work? Try to click some parts of the circuit, maybe something will change..."
+    - text: "Can't manage to make it work? Try clicking some parts of the circuit, maybe something will change..."
       
   utter_t21:
     - text: "Good job! For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables. Understood?"
@@ -176,6 +181,9 @@ responses:
   utter_t25:
     - text: "Ok! Do you want to skip the explanation then?"
 
+  utter_t250:
+    - text: "Not bad at all!"
+
   utter_t26:
     - text: "Great!"
 
@@ -191,7 +199,7 @@ responses:
 
 
   utter_l11:
-    - text: "Now that you know some of the basics, would you like to make a first guess on which could be conducting or insulating?"
+    - text: "Now that you know some of the basics, would you like to make a first guess on which item could be conducting or insulating?"
       
   utter_l110: 
     - text: "Come on, it won't take long. Otherwise you won't be able to play the game."
@@ -350,7 +358,10 @@ responses:
     - text: "Nice try! I'm sure you can improve your results the next time!"
        
   utter_l33:
-    - text: "Would you like to try again or find out why certain objects were conducting resp. insulating?"
+    - text: "Would you like to find out why certain objects were conducting and others insulating?"
+
+  utter_l330:
+    - text: "Would you like to try again or find out why certain objects were conducting and others insulating?"
 
 session_config:
   session_expiration_time: 60
