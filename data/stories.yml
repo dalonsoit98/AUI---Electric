@@ -599,6 +599,8 @@ stories:
     - intent: gold
     - action: utter_gold
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info diamond loop
   steps:
@@ -616,6 +618,8 @@ stories:
     - intent: diamond
     - action: utter_diamond
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info cork loop
   steps:
@@ -633,6 +637,8 @@ stories:
     - intent: cork
     - action: utter_cork
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info lemon loop
   steps:
@@ -650,6 +656,8 @@ stories:
     - intent: lemon
     - action: utter_lemon
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info lego loop
   steps:
@@ -667,6 +675,8 @@ stories:
     - intent: lego
     - action: utter_lego
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info pencil loop
   steps:
@@ -684,6 +694,8 @@ stories:
     - intent: pencil
     - action: utter_pencil
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info bottle loop
   steps:
@@ -701,6 +713,8 @@ stories:
     - intent: bottle
     - action: utter_bottle
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info potato loop
   steps:
@@ -718,6 +732,8 @@ stories:
     - intent: potato
     - action: utter_potato
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info log loop
   steps:
@@ -735,6 +751,8 @@ stories:
     - intent: log
     - action: utter_log
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info rubber loop
   steps:
@@ -752,6 +770,8 @@ stories:
     - intent: rubber
     - action: utter_rubber
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info euro loop
   steps:
@@ -769,6 +789,8 @@ stories:
     - intent: euro
     - action: utter_euro
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 - story: object info clip loop
   steps:
@@ -786,12 +808,14 @@ stories:
     - intent: clip
     - action: utter_clip
     - action: utter_l26
+    - intent: deny
+    - action: utter_whendone
     - checkpoint: l_circuit_done
 
 - story: done loop circuit level 1
   steps:
     - checkpoint: l_circuit_done
-    - intent: deny
+    - intent: ready
     - action: utter_press_done
     - intent: ready
     - action: utter_press_done
@@ -802,7 +826,7 @@ stories:
 - story: done loop circuit level 2
   steps:
     - checkpoint: l_circuit_done
-    - intent: deny
+    - intent: affirm
     - action: utter_press_done
     - intent: affirm
     - action: utter_press_done

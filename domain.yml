@@ -275,6 +275,8 @@ responses:
         payload: "/diamond"
       - title: "Gold"
         payload: "/gold"
+      - title: "No"
+        payload: "/deny"
 
   utter_l26:
     - text: "Do you need more information?"
@@ -290,17 +292,17 @@ responses:
           payload: "/lego"
         - title: "Pencil"
           payload: "/pencil"
-        - title: "Bottle"
+        - title: "Glass"
           payload: "/bottle"
         - title: "Potato"
           payload: "/potato"
-        - title: "Wooden Log"
+        - title: "Dry Wood"
           payload: "/log"
         - title: "Rubber Band"
           payload: "/rubber"
         - title: "5 Euro Bill"
           payload: "/euro"
-        - title: "Clip"
+        - title: "Paper Clip"
           payload: "/clip"
         - title: "Diamond"
           payload: "/diamond"
@@ -323,7 +325,7 @@ responses:
     - text: "The atoms in a Lego are bonded very strongly. There are no free electrons in the outer atom layer."
 
   utter_pencil:
-    - text: "Graphite is an exceptional material. It consists of carbon, but in this structure not all the electrons are bonded, and some remain free in the outer atom layer."
+    - text: "The graphite inside the pencil is an exceptional material. It consists of carbon, but in this structure not all the electrons are bonded, and some remain free in the outer atom layer."
 
   utter_bottle:
     - text: "The atoms in glass are bonded very strongly. There are no free electrons in the outer atom layer."
@@ -342,6 +344,10 @@ responses:
 
   utter_clip:
     - text: "The electrons in steel are bonded rather loosely. There are only free electrons in the outer atom layer."
+
+  utter_whendone:
+    - text: "Press 'Done' when you are sure of all your tags! Remember you can change the tags by dragging and dropping the lighting bolt stickers into the objects"
+      
 
 
 
