@@ -894,7 +894,7 @@ stories:
 - story: level 1 final yes
   steps:
     - checkpoint: l_final
-    - intent: yes
+    - intent: affirm
     - action: utter_l34
 
 

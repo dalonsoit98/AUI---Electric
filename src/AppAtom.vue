@@ -192,7 +192,7 @@ export default {
             flagStayM(){
               flagStay = 1;
                $(document).ready(function() {
-                $('.ButtonDone').delay(5000).fadeIn(50); 
+                $('.ButtonDone').delay(10000).fadeIn(50); 
                 });
             },
             flagCheck(){

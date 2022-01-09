@@ -258,12 +258,14 @@
   </div>
 
 <img class ="Circuit" src="assets/Circuit.png"/>
-<h1 v-if="getItem(12).title != 'assets/Transparent.png'" v-on= "send('/first_object')" ></h1>
+<h1 v-if=" (flagCheck() && (getItem(12).title != 'assets/Transparent.png'))" v-on= "send('/first_object')" ></h1>
 <button id="ButtonDone" v-if="getItem(12).title != 'assets/Transparent.png'" v-on:click=datasendFinal(getItems())>Done</button>
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
 <script>
+
+let flagFirst = 0;
 
 import { ref } from 'vue' 
  
@@ -450,7 +452,7 @@ export default {
       name: 'send',
       methods:{
         send(message){
-                
+                flagFirst +=1;
                 var session_info = sessionStorage.getItem('chat_session');
                 var index = session_info.indexOf("session_id");
                 let session_id = session_info.substr(index+13, 32);
@@ -464,6 +466,9 @@ export default {
                 localStorage.setItem('ArrayItems2', JSON.stringify(items));
                 sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/Final.html?";
+        },
+        flagCheck(){
+          return (flagFirst == 0)
         }
       }
 }
