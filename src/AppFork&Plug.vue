@@ -1,111 +1,7 @@
 <template>
 
-<div class="Delay" style="display: none">
-
-<div 
-  class="drop-zone1-Nucleus"
-  @drop = "onDrop($event,0)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div 
-  class="drag-elConducting"
-  draggable="false"
-  @dragstart="startDrag($event, 1)"
-  >
-  <h1 v-if="getItem(0).tag == 2" class="nucelustitle"></h1>
-  <h1 v-if="getItem(0).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1))" v-on="send('/atom_correct')"></h1>
-  <h1 v-if="(!flagCheck() && ((getItem(0).tag != 2) && (getItem(1).tag != 2) && (getItem(2).tag != 2) && (getItem(3).tag != 2) && ((getItem(0).tag == 1) || (getItem(1).tag == 0) || (getItem(2).tag == 0) || (getItem(3).tag == 0))))" v-on="send('/atom_incorrect')"></h1>
-  <h1 v-if="getItem(0).tag == 1" class="electrontitle">Electron</h1>
-  </div>
-</div>
-<div 
-  class="drop-zone2-Electron"
-  @drop = "onDrop($event,1)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div 
-  class="drag-elInsulating"
-  draggable="false"
-  @dragstart="startDrag($event, 2)"
-  >
-  <h1 v-if="getItem(1).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="getItem(1).tag == 1" class="electrontitle" >Electron</h1>
-  </div>
-</div>
-<div 
-  class="drop-zone-Electron2"
-  @drop = "onDrop($event,2)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div 
-  v-on="item in getItem(3)" 
-  class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
-  >
-  <h1 v-if="getItem(2).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="getItem(2).tag == 1" class="electrontitle">Electron</h1>
-  </div>
-</div>
-
-<div 
-  class="drop-zone-Electron3"
-  @drop = "onDrop($event,3)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div 
-  v-on="item in getItem(2)" 
-  class="drag-el"
-  draggable="false"
-  @dragstart="startDrag($event, item)"
-  >
-  <h1 v-if="getItem(3).tag == 0" class="nucelustitle">Nucleus</h1>
-  <h1 v-if="getItem(3).tag == 1" class="electrontitle">Electron</h1>
-  </div>
-</div>
-
-<div 
-  class="drop-zone-TitleNucleus"
-  @drop = "onDrop($event,4)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div  
-  class="drag-el"
-  draggable="true"
-  @dragstart="startDrag($event, 0)"
-  >
-  <h1 class="nucelustitle">Nucleus</h1>
-  </div>
-</div>
-
-<div 
-  class="drop-zone-TitleElectron"
-  @drop = "onDrop($event,4)"
-  @dragenter.prevent
-  @dragover.prevent
->
-  <div   
-  class="drag-el"
-  draggable="true"
-  @dragstart="startDrag($event, 1)"
-  >
-  <h1 class="electrontitle">Electron</h1> 
-  </div>
-</div>
-
-
-</div>
-<img class ="Atom" style="display: none" src="assets/AtomB.png" alt=""/>
-<img class ="AtomGif" style="display: none" src="assets/Atom.gif" alt=""/>
-
-<button id="ButtonDone" class="ButtonDone" style="display: none;" v-if="(flagCheck() || ((getItem(0).tag == 0) && (getItem(1).tag == 1) && (getItem(2).tag == 1) && (getItem(3).tag == 1)))" v-on="flagStayM()" v-on:click=nextPage>Done</button>
-
+<button id="ButtonDone" class="ButtonDone" style="display: none;" v-on:click=nextPage>Done</button>
+<img class ="ForkPlug" src="assets/ForkPlug.png" alt=""/>
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
@@ -115,12 +11,9 @@ let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
 
 $(document).ready(function() {
-  $('.Atom').delay(5000).fadeIn(2000); 
+  $('.ButtonDone').delay(4000).fadeIn(10); 
 });
 
-$(document).ready(function() {
-  $('.Delay').delay(7500).fadeIn(0); 
-});
 
 import { ref } from 'vue' 
  
@@ -208,7 +101,7 @@ export default {
             },
             nextPage() {
               sessionStorage.clear();
-              window.location.href="http://localhost:3000/src/Circuit.html?";
+              window.location.href="http://localhost:3000/src/Fork&Plug.html?";
             },
             flagStayM(){
               flagStay = 1;
@@ -655,5 +548,20 @@ padding-left: 46%;
   background-repeat: no-repeat;
   height: 100%;
   z-index: 8;
+}
+
+.ForkPlug {
+  width: 40%;
+  margin-left: 10%;
+  margin-top: 5%;
+  position: fixed;
+  z-index: 2;
+  object-fit: fill;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 </style>

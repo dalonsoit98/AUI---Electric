@@ -6,6 +6,7 @@
         <title>Game Chat</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
         <link rel="stylesheet" href="./1.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
     </head>
@@ -42,7 +43,7 @@
                     (e.onload = () => {
                         window.WebChat.default(
                         {
-                            initPayload: '/partFinal',
+                            initPayload: '/partBoots',
                             customData: { language: "en" },
                             socketUrl: "http://localhost:5005",
                             socketPath: "/socket.io/",
@@ -56,7 +57,7 @@
                     t.insertBefore(e, t.firstChild);
                 })();
                 </script>
-                <form>
+               <form>
                     
                 <button class="Button" formaction="../index.html" onclick="sessionStorage.clear()">
                     <img class="ButtonImg" src="assets/Arrow.png"></button>
@@ -64,7 +65,7 @@
 
             <div class = "Game">
                 
-                <script type="module" src="/src/mainFinal.js"></script>
+                <script type="module" src="/src/mainBoots.js"></script>
             </div>
            
             <div class = "Title">
@@ -81,77 +82,21 @@
                     transports: ['websocket'],
         });
 
-        $(document).ready(function() {
-         $('.ButtonDoneFinal').delay(5000).fadeIn(50); 
-        });
-
-        const myTimeout = setTimeout(InitialSend, 3000);
-
         function InitialSend (message) {
         var session_info = sessionStorage.getItem('chat_session');
         var index = session_info.indexOf("session_id");
         let session_id = session_info.substr(index+13, 32);
-        socket.emit("user_uttered",{"message":"/partFinal","customData":{"language":"en"},"session_id":session_id});
+        socket.emit("user_uttered", {
+                    "message": "/partBoots",
+                    "customData": {"language": "en"},
+                    "session_id": session_id
+                });
         console.log(session_id);
         console.log("done");
-        var sessionString2 = localStorage.getItem('ArrayItems2');
-        var Page2Array = JSON.parse(sessionString2);
-
-        const items2 = (Page2Array);
-        var count = 0;
-
-        if (items2[0].tag == 1){
-              count +=1;
-            }
-            if (items2[1].tag == 1){
-              count +=1;
-            }
-            if (items2[2].tag == 2){
-              count +=1;
-            }
-            if (items2[3].tag == 1){
-              count +=1;
-            }
-            if (items2[4].tag == 2){
-              count +=1;
-            }
-            if (items2[5].tag == 2){
-              count +=1;
-            }
-            if (items2[6].tag == 2){
-              count +=1;
-            }
-            if (items2[7].tag == 2){
-              count +=1;
-            }
-            if (items2[8].tag == 1){
-              count +=1;
-            }
-            if (items2[9].tag == 2){
-              count +=1;
-            }
-            if (items2[10].tag == 1){
-              count +=1;
-            }
-            if (items2[11].tag == 2){
-              count +=1;
-            }
-            console.log(count);
-            if (count==12){
-            socket.emit("user_uttered",{"message":'/partFinalPerfect',"customData":{"language":"en"},"session_id":session_id});
-            }
-            if (count < 2){
-            socket.emit("user_uttered",{"message":'/partFinalTwo',"customData":{"language":"en"},"session_id":session_id});
-            }
-            if ((count > 2) && (count < 12)){
-            socket.emit("user_uttered",{"message":'/partFinalFail',"customData":{"language":"en"},"session_id":session_id});
-            }
         }
-
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
-
     </body>
     
   </html>

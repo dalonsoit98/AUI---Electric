@@ -459,6 +459,7 @@
 
 
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
+<button class="ButtonDoneFinal" id="ButtonDoneFinal" style="display: none;" v-on:click="nextPage">Done</button>
 <button id="ButtonReTry" v-on:click=datasend(getItems())>Try Again</button>
 </template>
 
@@ -580,6 +581,10 @@ export default {
             if ((count > 2) && (count < 12)){
             Socket.emit("user_uttered",{"message":'/partFinalFail',"customData":{"language":"en"},"session_id":session_id});
             }
+        },
+        nextPage(){
+              sessionStorage.clear();
+              window.location.href="http://localhost:3000/src/Faraday.html?";
         }
       }
 }
