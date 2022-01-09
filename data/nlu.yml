@@ -76,6 +76,20 @@ nlu:
     - electrons move from the power source to an energy consumer like a lightbulb
     - the power source is usually a battery with different potentials at both ends, which creates the voltage required for the conduction
 
+- intent: tryagain
+  examples: |
+    - I'd like to try again
+    - I would like to do another try
+    - Let's try it one more time
+
+- intent: solution
+  examples: |
+    - I want to know the solution
+    - I would like to know the solution
+    - I want the solution
+    - Tell me the solution
+    - 
+
 - intent: mood_great
   examples: |
     - perfect

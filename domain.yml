@@ -45,6 +45,8 @@ intents:
   - battery
   - lightbulb
   - wire
+  - tryagain
+  - solution
 
 e2e_actions: []
 
@@ -246,7 +248,7 @@ responses:
     - text: "Drag the items into the gap and check if the bulb lights up. You can overwrite the conducting/insulating tags by dragging them into the objects."
 
   utter_l24:
-    - text: "Great! Now you can check if your guesses were correct!"
+    - text: "Great! By placing the items inside the gap you can check if your guesses were correct! Remember that you can replace the conducting/insulating tags if you change your mind"
 
   utter_l25:
     - text: "Are you surprised by the results? Do you want information about any object in particular?"
@@ -368,6 +370,39 @@ responses:
 
   utter_l330:
     - text: "Would you like to try again or find out why certain objects were conducting and others insulating?"
+      
+  utter_l35:
+    - text: "Press the 'Try Again' button."
+
+  utter_l34:
+    - text: "Which object would you like to know more about?"
+      buttons:
+        - title: "Cork"
+          payload: "/cork"
+        - title: "Lemon"
+          payload: "/lemon"
+        - title: "Lego"
+          payload: "/lego"
+        - title: "Pencil"
+          payload: "/pencil"
+        - title: "Bottle"
+          payload: "/bottle"
+        - title: "Potato"
+          payload: "/potato"
+        - title: "Wooden Log"
+          payload: "/log"
+        - title: "Rubber Band"
+          payload: "/rubber"
+        - title: "5 Euro Bill"
+          payload: "/euro"
+        - title: "Clip"
+          payload: "/clip"
+        - title: "Diamond"
+          payload: "/diamond"
+        - title: "Gold"
+          payload: "/gold"
+        - title: "No"
+          payload: "/deny"
 
 session_config:
   session_expiration_time: 60

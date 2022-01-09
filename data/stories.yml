@@ -811,6 +811,12 @@ stories:
     - intent: deny
     - action: utter_whendone
     - checkpoint: l_circuit_done
+- story: object info deny
+  steps:
+    - checkpoint: l_circuit_first
+    - intent: deny
+    - action: utter_whendone
+    - checkpoint: l_circuit_done
 
 - story: done loop circuit level 1
   steps:
@@ -856,10 +862,40 @@ stories:
     - action: utter_few_correct
     - action: utter_l330
     - checkpoint: l_final
+
+- story: try again loop
+  steps:
+    - checkpoint: l_final
+    - intent: tryagain
+    - action: utter_l35
+    - intent: ready
+    - action: utter_l35
+    - intent: ready
+    - action: utter_l35
+    - intent: ready
+    - action: utter_l35
+- story: try again loop 2
+  steps:
+    - checkpoint: l_final
+    - intent: tryagain
+    - action: utter_l35
+    - intent: affirm
+    - action: utter_l35
+    - intent: affirm
+    - action: utter_l35
+    - intent: affirm
+    - action: utter_l35
     
 - story: happy path level 1 final
   steps:
   - checkpoint: l_final
+  - intent: solution
+  - action: utter_l34
+- story: level 1 final yes
+  steps:
+    - checkpoint: l_final
+    - intent: yes
+    - action: utter_l34
 
 
 
