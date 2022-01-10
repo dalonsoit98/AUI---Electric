@@ -19,6 +19,7 @@ intents:
   - partFinalPerfect
   - partFinalTwo
   - partFinalFail
+  - partFaraday
   - ready
   - atom_correct
   - atom_incorrect
@@ -172,7 +173,7 @@ responses:
     - text: "Good job! For an electric current, you need to have a complete path for the electrons to flow. This is why you needed to join the cables. Understood?"
       
   utter_t22:
-    - text: "You saw that only 3 components are enough to create an electric current. Do you know what they are?"
+    - text: "You saw that only 3 components are enough to create an electric current. Do you know what they do?"
       
   utter_t23:
     - text: "The electrons can only advance if they have an atom to move to. If the cable is not completely connected, they can not move!"
@@ -228,7 +229,7 @@ responses:
     - text: "Can't manage to do it? Drag the conducting and insulating icons into the objects!"
 
   utter_l13:
-    - text: "Great job! Try to guess all of them now, you'll be able to experiment with them in the next step."
+    - text: "Great job! You need to tag all of them now, but don't worry. You can change your mind later on. In the next step you'll be able to experiment with the objects."
 
   utter_l130:
     - text: "Tag all the objects in order to continue."
@@ -312,7 +313,7 @@ responses:
           payload: "/gold"
       
   utter_gold:
-    - text: "The electrons in gold are bonded rather loosely. There are only free electrons in the outer atom layer."
+    - text: "The electrons in gold are bonded rather loosely. There are free electrons in the outer atom layer."
 
   utter_diamond:
     - text: "The atoms in a diamond are bonded very strongly. There are no free electrons in the outer atom layer."
@@ -345,7 +346,7 @@ responses:
     - text: "The atoms in paper are bonded very strongly. There are no free electrons in the outer atom layer."
 
   utter_clip:
-    - text: "The electrons in steel are bonded rather loosely. There are only free electrons in the outer atom layer."
+    - text: "The electrons in steel are bonded rather loosely. There are free electrons in the outer atom layer."
 
   utter_whendone:
     - text: "Press 'Done' when you are sure of all your tags! Remember you can change the tags by dragging and dropping the lighting bolt stickers into the objects"
@@ -403,6 +404,46 @@ responses:
           payload: "/gold"
         - title: "No"
           payload: "/deny"
+
+  utter_gold2:
+    - text: "Gold is a conductor because its electrics are loosely bound and “free” to move around. This is typical for all metals."
+
+  utter_diamond2:
+    - text: "Diamond is, just like Graphite, carbon but in a special arrangement. The atoms are strongly bond in all directions, which makes the material also very hard. Because of these strong bonds, there are no free electrons that can conduct electricity. This is why diamond is an insulator."
+
+  utter_cork2:
+    - text: "Cork is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
+
+  utter_lemon2:
+    - text: "The lemon is a non-metal, but the juice (namely the citric acid) inside is a liquid that can conduct electricity (=electrolyte). Inside the juice are positive and negative charged particles (ions), which can conduct electricity."
+
+  utter_lego2:
+    - text: "Lego is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
+
+  utter_pencil2:
+    - text: "The graphite inside the pencil is, just like diamond, carbon but in a special arrangement. Even though it’s not a metal, it conducts electricity like one, which makes it a big exception. This is because it’s arranged in planar sheets where not all of the outer electrons are bonded. They are free and have high mobility. Graphite has a very low resistance and high conductivity, which is why it heats up a lot compared to other conductors. A double sharped pencil could start to burn and the graphite could glow up, which is why this is not recommended as an at-home experiment!"
+
+  utter_bottle2:
+    - text: "Glass is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
+
+  utter_potato2:
+    - text: "The potato is a non-metal, but the liquids inside can conduct electricity (=electrolyte). Inside this liquids are positive and negative charged particles (ions), which can conduct electricity."
+
+  utter_log2:
+    - text: "Dry Wood is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity. However, wet wood would be able to conduct electricity due to the presence of charged particles (ions)."
+
+  utter_rubber2:
+    - text: "Rubber is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
+
+  utter_euro2:
+    - text: "Paper is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
+
+  utter_clip2:
+    - text: "A paper-clip is a conductor because its electrics are loosely bound and “free” to move around. This is typical for all metals."
+      
+  utter_l36:
+    - text: "Great! Let’s see how well you understood the concepts. In your own words, what is an electrical current? What is necessary to create one?"
+
 
 session_config:
   session_expiration_time: 60
