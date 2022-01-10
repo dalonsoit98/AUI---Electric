@@ -52,6 +52,8 @@ nlu:
     - no way
     - not really
     - I don't want to
+    - no thank you
+    - no thanks
     
 - intent: nothing
   examples: |
@@ -87,8 +89,11 @@ nlu:
     - I want to know the solution
     - I would like to know the solution
     - I want the solution
-    - Tell me the solution
-    - 
+    - tell me the solution
+    - I want to find out about the objects
+    - I want to know about the objects
+    - let's find out
+    - let me find out
 
 - intent: mood_great
   examples: |
