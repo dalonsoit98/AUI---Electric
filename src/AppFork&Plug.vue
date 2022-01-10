@@ -9,11 +9,11 @@
 let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
-
+/*
 $(document).ready(function() {
   $('.ButtonDone').delay(4000).fadeIn(10); 
 });
-
+*/
 
 import { ref } from 'vue' 
  
