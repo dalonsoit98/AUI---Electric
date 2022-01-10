@@ -9,11 +9,11 @@
 let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
-/*
+
 $(document).ready(function() {
   $('.ButtonDone').delay(4000).fadeIn(10); 
 });
-*/
+
 
 import { ref } from 'vue' 
  
@@ -101,7 +101,7 @@ export default {
             },
             nextPage() {
               sessionStorage.clear();
-              window.location.href="http://localhost:3000/src/Fork&Plug.html?";
+              window.location.href="http://localhost:3000/src/Boots.html?";
             },
             flagStayM(){
               flagStay = 1;
