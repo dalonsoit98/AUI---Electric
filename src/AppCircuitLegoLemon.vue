@@ -1,7 +1,8 @@
 <template>
 
 <button id="ButtonDone" class="ButtonDone" style="display: none;" v-on:click=nextPage>Done</button>
-<img class ="Faraday" src="assets/Faraday.png" alt=""/>
+<img class ="LegoCirc" src="assets/Simple Circuit - Lego.png" alt=""/>
+<img class ="LemonCirc" src="assets/Simple Circuit - Lemon.png" alt=""/>
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 </template>
 
@@ -9,7 +10,6 @@
 let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
-
 
 $(document).ready(function() {
   $('.ButtonDone').delay(4000).fadeIn(10); 
@@ -102,7 +102,7 @@ export default {
             },
             nextPage() {
               sessionStorage.clear();
-              window.location.href="http://localhost:3000/src/Bye.html?";
+              window.location.href="http://localhost:3000/src/Fork&Plug.html?";
             },
             flagStayM(){
               flagStay = 1;
@@ -551,10 +551,25 @@ padding-left: 46%;
   z-index: 8;
 }
 
-.Faraday {
-  width: 40%;
-  margin-left: 10%;
-  margin-top: 5%;
+.LemonCirc {
+  width: 20%;
+  margin-left: 8%;
+  margin-top: 12%;
+  position: fixed;
+  z-index: 2;
+  object-fit: fill;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.LegoCirc {
+  width: 20%;
+  margin-left: 30%;
+  margin-top: 13%;
   position: fixed;
   z-index: 2;
   object-fit: fill;

@@ -1,8 +1,8 @@
 <template>
 
 <button id="ButtonDone" class="ButtonDone" style="display: none;" v-on:click=nextPage>Done</button>
-<img class ="Faraday" src="assets/Faraday.png" alt=""/>
-<img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
+
+<img class ="imagen" src="assets/Final Goodbye - cut.png" alt=""/>
 </template>
 
 <script>
@@ -10,11 +10,11 @@ let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
 
-
+/*
 $(document).ready(function() {
   $('.ButtonDone').delay(4000).fadeIn(10); 
 });
-
+*/
 
 import { ref } from 'vue' 
  
@@ -102,7 +102,7 @@ export default {
             },
             nextPage() {
               sessionStorage.clear();
-              window.location.href="http://localhost:3000/src/Bye.html?";
+              window.location.href="http://localhost:3000/src/Boots.html?";
             },
             flagStayM(){
               flagStay = 1;
@@ -551,7 +551,7 @@ padding-left: 46%;
   z-index: 8;
 }
 
-.Faraday {
+.ForkPlug {
   width: 40%;
   margin-left: 10%;
   margin-top: 5%;

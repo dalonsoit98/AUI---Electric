@@ -319,11 +319,17 @@ export default {
     const imgGlass = new Image();
     imgGlass.src="assets/Glass BottleDrag.png";
 
+    if (localStorage.getItem('ArrayItemsBak') == null){
     var sessionString = localStorage.getItem('ArrayItems');
     var Page2Array = JSON.parse(sessionString);
+    } else {
+    var sessionString = localStorage.getItem('ArrayItems');
+    var Page2Array = JSON.parse(sessionString);
+    }
 
-    const items = ref(Page2Array)
-    
+    const items = ref(Page2Array);
+    items.value.find((item) => item.id == 12).title = 'assets/Transparent.png';
+
     var material = {id: null, title: 'assets/Lego.png', conductivity: 0, tag: null} 
 
     const getItem = (id) => {
@@ -460,10 +466,17 @@ export default {
             },
         datasendFinal(items){
                 console.log(items);
+                if (localStorage.getItem('ArrayItemsBak') == null){
                 var sessionString = localStorage.getItem('ArrayItems');
                 var Page2Array = JSON.parse(sessionString);
                 localStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
                 localStorage.setItem('ArrayItems2', JSON.stringify(items));
+                } else {
+                var sessionString = localStorage.getItem('ArrayItemsBak');
+                var Page2Array = JSON.parse(sessionString);
+                localStorage.setItem('ArrayItems1', JSON.stringify(Page2Array));
+                localStorage.setItem('ArrayItems2', JSON.stringify(items));
+                }
                 sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/Final.html?";
         },

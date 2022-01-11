@@ -460,7 +460,7 @@
 
 <img class ="imagen" src="assets/Tabletop-new.png" alt=""/>
 <button class="ButtonDoneFinal" id="ButtonDoneFinal" style="display: none;" v-on:click="nextPage">Done</button>
-<button id="ButtonReTry" v-on:click=datasend(getItems())>Try Again</button>
+<button id="ButtonReTry" v-on:click=datasend(getItems(),getItems2())>Try Again</button>
 </template>
 
 <script>
@@ -480,10 +480,11 @@ export default {
      var sessionString2 = localStorage.getItem('ArrayItems2');
      var Page2Array = JSON.parse(sessionString2);
 
-    const items = ref(Page1Array)
+    const items = ref(Page1Array);
 
-    const items2 = ref(Page2Array)
+    const items2 = ref(Page2Array);
 
+console.log(items);
     const getItem = (id) => {
       return items.value.find((item) => item.id == id)
     }
@@ -524,9 +525,10 @@ export default {
   },
       name: 'send',
       methods:{
-        datasend(items){
-                console.log(items);
-                localStorage.setItem('ArrayItems', JSON.stringify(items));
+        datasend(items,items2){
+                console.log(items,items2);
+                localStorage.setItem('ArrayItemsBak', JSON.stringify(items));
+                localStorage.setItem('ArrayItems', JSON.stringify(items2));
                 sessionStorage.clear();
                 window.location.href="http://localhost:3000/src/2.html?";
         },
@@ -584,7 +586,7 @@ export default {
         },
         nextPage(){
               sessionStorage.clear();
-              window.location.href="http://localhost:3000/src/Fork&Plug.html?";
+              window.location.href="http://localhost:3000/src/CircuitLegoLemon.html?";
         }
       }
 }

@@ -43,7 +43,7 @@
                     (e.onload = () => {
                         window.WebChat.default(
                         {
-                            initPayload: '/partBoots',
+                            initPayload: '/partForkPlug',
                             customData: { language: "en" },
                             socketUrl: "http://localhost:5005",
                             socketPath: "/socket.io/",
@@ -65,7 +65,7 @@
 
             <div class = "Game">
                 
-                <script type="module" src="/src/mainBoots.js"></script>
+                <script type="module" src="/src/mainCircuitLegoLemon.js"></script>
             </div>
            
             <div class = "Title">
@@ -87,7 +87,7 @@
         var index = session_info.indexOf("session_id");
         let session_id = session_info.substr(index+13, 32);
         socket.emit("user_uttered", {
-                    "message": "/partBoots",
+                    "message": "/partFork&Plug",
                     "customData": {"language": "en"},
                     "session_id": session_id
                 });
