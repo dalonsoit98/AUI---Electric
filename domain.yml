@@ -62,6 +62,8 @@ intents:
   - partForkPlug
   - partBoots
   - partFaraday
+  - partLemon
+  - partBye
 
 e2e_actions: []
 
@@ -459,6 +461,9 @@ responses:
     - text: "Great! Let’s see how well you understood the concepts. In your own words, what is an electrical current? What is necessary to create one?"
       
   
+  utter_lemons:
+    - text: "Why is a lemon conducting, but a piece of lego not?"
+  
   utter_forkplug:
     - text: "Why shouldn’t you put a fork in a socket?"
       
@@ -476,6 +481,13 @@ responses:
   utter_faraday:
     - text: "When a thunderstorm is happening, you should ALWAYS go inside immediately! If it's not possible, you should enter your car (if it's not a convertible and you can close the windows). You are safe inside because the car is a Faraday cage. This means that the electricity (electrons) stay outside of the car, because they want to be as far away from each other as possible."
       
+      
+      
+  utter_bye:
+    - text: "Thank you for playing! I hope that you've learned a lot and that you solidified your previous knowledge about the subject!"
+      
+  utter_bye2:
+    - text: "It's been a pleasure to guide you through this game. See you next time!"
 
 session_config:
   session_expiration_time: 60

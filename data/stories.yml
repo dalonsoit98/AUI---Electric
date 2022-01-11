@@ -1109,6 +1109,17 @@ stories:
     - intent: ready
     - action: utter_press_done
 
+- story: lemons
+  steps:
+    - intent: partLemon
+    - action: utter_lemons
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+
 - story: forkplug
   steps:
     - intent: partForkPlug
@@ -1116,7 +1127,6 @@ stories:
     - intent: electricity
     - action: utter_forkplug2
     - action: utter_forkplug3
-    - action: utter_press_done
     - intent: ready
     - action: utter_press_done
     - intent: ready
@@ -1130,7 +1140,6 @@ stories:
     - intent: nothing
     - action: utter_forkplug2
     - action: utter_forkplug3
-    - action: utter_press_done
     - intent: ready
     - action: utter_press_done
     - intent: ready
@@ -1142,7 +1151,6 @@ stories:
   steps:
     - intent: partBoots
     - action: utter_boots
-    - action: utter_press_done
     - intent: ready
     - action: utter_press_done
     - intent: ready
@@ -1154,13 +1162,18 @@ stories:
   steps:
       - intent: partFaraday
       - action: utter_faraday
-      - action: utter_press_done
       - intent: ready
       - action: utter_press_done
       - intent: ready
       - action: utter_press_done
       - intent: ready
       - action: utter_press_done
+
+- story: bye
+  steps:
+    - intent: partBye
+    - action: utter_bye
+    - action: utter_bye2
       
       
   
