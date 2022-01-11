@@ -572,13 +572,13 @@ export default {
               count +=1;
             }
             console.log(count);
-            if (count==12){
+            if (count>11){
             Socket.emit("user_uttered",{"message":'/partFinalPerfect',"customData":{"language":"en"},"session_id":session_id});
             }
-            if (count < 2){
+            if (count < 10){
             Socket.emit("user_uttered",{"message":'/partFinalTwo',"customData":{"language":"en"},"session_id":session_id});
             }
-            if ((count > 2) && (count < 12)){
+            if ((count > 9) && (count < 12)){
             Socket.emit("user_uttered",{"message":'/partFinalFail',"customData":{"language":"en"},"session_id":session_id});
             }
         },

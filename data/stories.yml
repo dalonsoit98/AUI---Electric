@@ -902,13 +902,13 @@ stories:
 - story: object info gold loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: gold
+    - intent: gold2
     - action: utter_gold2
     - action: utter_l34
-    - intent: gold
+    - intent: gold2
     - action: utter_gold2
     - action: utter_l34
-    - intent: gold
+    - intent: gold2
     - action: utter_gold2
     - action: utter_l34
     - intent: deny
@@ -917,13 +917,13 @@ stories:
 - story: object info diamond loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: diamond
+    - intent: diamond2
     - action: utter_diamond2
     - action: utter_l34
-    - intent: diamond
+    - intent: diamond2
     - action: utter_diamond2
     - action: utter_l34
-    - intent: diamond
+    - intent: diamond2
     - action: utter_diamond2
     - action: utter_l34
     - intent: deny
@@ -932,13 +932,13 @@ stories:
 - story: object info cork loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: cork
+    - intent: cork2
     - action: utter_cork2
     - action: utter_l34
-    - intent: cork
+    - intent: cork2
     - action: utter_cork2
     - action: utter_l34
-    - intent: cork
+    - intent: cork2
     - action: utter_cork2
     - action: utter_l34
     - intent: deny
@@ -947,13 +947,13 @@ stories:
 - story: object info lemon loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: lemon
+    - intent: lemon2
     - action: utter_lemon2
     - action: utter_l34
-    - intent: lemon
+    - intent: lemon2
     - action: utter_lemon2
     - action: utter_l34
-    - intent: lemon
+    - intent: lemon2
     - action: utter_lemon2
     - action: utter_l34
     - intent: deny
@@ -962,13 +962,13 @@ stories:
 - story: object info lego loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: lego
+    - intent: lego2
     - action: utter_lego2
     - action: utter_l34
-    - intent: lego
+    - intent: lego2
     - action: utter_lego2
     - action: utter_l34
-    - intent: lego
+    - intent: lego2
     - action: utter_lego2
     - action: utter_l34
     - intent: deny
@@ -977,13 +977,13 @@ stories:
 - story: object info pencil loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: pencil
+    - intent: pencil2
     - action: utter_pencil2
     - action: utter_l34
-    - intent: pencil
+    - intent: pencil2
     - action: utter_pencil2
     - action: utter_l34
-    - intent: pencil
+    - intent: pencil2
     - action: utter_pencil2
     - action: utter_l34
     - intent: deny
@@ -992,13 +992,13 @@ stories:
 - story: object info bottle loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: bottle
+    - intent: bottle2
     - action: utter_bottle2
     - action: utter_l34
-    - intent: bottle
+    - intent: bottle2
     - action: utter_bottle2
     - action: utter_l34
-    - intent: bottle
+    - intent: bottle2
     - action: utter_bottle2
     - action: utter_l34
     - intent: deny
@@ -1007,13 +1007,13 @@ stories:
 - story: object info potato loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: potato
+    - intent: potato2
     - action: utter_potato2
     - action: utter_l34
-    - intent: potato
+    - intent: potato2
     - action: utter_potato2
     - action: utter_l34
-    - intent: potato
+    - intent: potato2
     - action: utter_potato2
     - action: utter_l34
     - intent: deny
@@ -1022,13 +1022,13 @@ stories:
 - story: object info log loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: log
+    - intent: log2
     - action: utter_log2
     - action: utter_l34
-    - intent: log
+    - intent: log2
     - action: utter_log2
     - action: utter_l34
-    - intent: log
+    - intent: log2
     - action: utter_log2
     - action: utter_l34
     - intent: deny
@@ -1037,13 +1037,13 @@ stories:
 - story: object info rubber loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: rubber
+    - intent: rubber2
     - action: utter_rubber2
     - action: utter_l34
-    - intent: rubber
+    - intent: rubber2
     - action: utter_rubber2
     - action: utter_l34
-    - intent: rubber
+    - intent: rubber2
     - action: utter_rubber2
     - action: utter_l34
     - intent: deny
@@ -1052,13 +1052,13 @@ stories:
 - story: object info euro loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: euro
+    - intent: euro2
     - action: utter_euro2
     - action: utter_l34
-    - intent: euro
+    - intent: euro2
     - action: utter_euro2
     - action: utter_l34
-    - intent: euro
+    - intent: euro2
     - action: utter_euro2
     - action: utter_l34
     - intent: deny
@@ -1067,13 +1067,13 @@ stories:
 - story: object info clip loop 2
   steps:
     - checkpoint: l_final_objects
-    - intent: clip
+    - intent: clip2
     - action: utter_clip2
     - action: utter_l34
-    - intent: clip
+    - intent: clip2
     - action: utter_clip2
     - action: utter_l34
-    - intent: clip
+    - intent: clip2
     - action: utter_clip2
     - action: utter_l34
     - intent: deny
@@ -1109,5 +1109,59 @@ stories:
     - intent: ready
     - action: utter_press_done
 
+- story: forkplug
+  steps:
+    - intent: partForkPlug
+    - action: utter_forkplug
+    - intent: electricity
+    - action: utter_forkplug2
+    - action: utter_forkplug3
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+- story: forkplug2
+  steps:
+    - intent: partForkPlug
+    - action: utter_forkplug
+    - intent: nothing
+    - action: utter_forkplug2
+    - action: utter_forkplug3
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+      
+- story: rubberBoots
+  steps:
+    - intent: partBoots
+    - action: utter_boots
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
 
+- story: faraday
+  steps:
+      - intent: partFaraday
+      - action: utter_faraday
+      - action: utter_press_done
+      - intent: ready
+      - action: utter_press_done
+      - intent: ready
+      - action: utter_press_done
+      - intent: ready
+      - action: utter_press_done
+      
+      
+  
 

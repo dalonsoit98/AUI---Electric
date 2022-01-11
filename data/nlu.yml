@@ -67,6 +67,8 @@ nlu:
     - only a bit
     - I don't know anything about electricity
     - about electricity? no idea
+    - I don't know
+    - idk
     
 - intent: electricity
   examples: |
@@ -94,6 +96,9 @@ nlu:
     - I want to know about the objects
     - let's find out
     - let me find out
+    - find out
+    - tell me about the objects
+    - objects
 
 - intent: mood_great
   examples: |

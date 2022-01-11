@@ -19,7 +19,6 @@ intents:
   - partFinalPerfect
   - partFinalTwo
   - partFinalFail
-  - partFaraday
   - ready
   - atom_correct
   - atom_incorrect
@@ -48,6 +47,21 @@ intents:
   - wire
   - tryagain
   - solution
+  - cork2
+  - lemon2
+  - lego2
+  - pencil2
+  - bottle2
+  - potato2
+  - log2
+  - rubber2
+  - euro2
+  - clip2
+  - diamond2
+  - gold2
+  - partForkPlug
+  - partBoots
+  - partFaraday
 
 e2e_actions: []
 
@@ -112,7 +126,7 @@ responses:
   - text: "To fix this you should call your teacher"
     
   utter_interface_explanation:
-  - text: "On the left side you can play the game. On the right side you are able to communicate with me at any time!"
+  - text: "On the left side you can play the game. On the right side you are able to communicate with me at any time! I will guide you through the different steps of the game."
     
   utter_press_start:
   - text: "Press the 'Start' button when you're ready!"
@@ -159,7 +173,7 @@ responses:
     - text: "The nucleus is fixed in the center of the atom, while the electrons can move freely, even to other atoms! This relocation of electrons between atoms results in the electric current."
       
   utter_t15:
-    - text: "The positive (protons) and neutral (neutrons) charges stay in the center, while the negative charges (electrons) are more free to move. Same charges repel each other, different charges attract each other. When these charged particles move into a certain direction, they create an electric current"
+    - text: "The positive (protons) and neutral (neutrons) charges stay in the center, while the negative charges (electrons) are more free to move. Same charges repel each other, different charges attract each other. When these charged particles move into a certain direction, they create an electric current."
       
       
       
@@ -349,7 +363,7 @@ responses:
     - text: "The electrons in steel are bonded rather loosely. There are free electrons in the outer atom layer."
 
   utter_whendone:
-    - text: "Press 'Done' when you are sure of all your tags! Remember you can change the tags by dragging and dropping the lighting bolt stickers into the objects"
+    - text: "Press 'Done' when you are sure of all your tags! Remember you can change the tags by dragging and dropping the lighting bolt stickers into the objects."
       
 
 
@@ -379,30 +393,30 @@ responses:
     - text: "Which object would you like to know more about?"
       buttons:
         - title: "Cork"
-          payload: "/cork"
+          payload: "/cork2"
         - title: "Lemon"
-          payload: "/lemon"
+          payload: "/lemon2"
         - title: "Lego"
-          payload: "/lego"
+          payload: "/lego2"
         - title: "Pencil"
-          payload: "/pencil"
+          payload: "/pencil2"
         - title: "Bottle"
-          payload: "/bottle"
+          payload: "/bottle2"
         - title: "Potato"
-          payload: "/potato"
+          payload: "/potato2"
         - title: "Wooden Log"
-          payload: "/log"
+          payload: "/log2"
         - title: "Rubber Band"
-          payload: "/rubber"
+          payload: "/rubber2"
         - title: "5 Euro Bill"
-          payload: "/euro"
+          payload: "/euro2"
         - title: "Clip"
-          payload: "/clip"
+          payload: "/clip2"
         - title: "Diamond"
-          payload: "/diamond"
+          payload: "/diamond2"
         - title: "Gold"
-          payload: "/gold"
-        - title: "No"
+          payload: "/gold2"
+        - title: "None"
           payload: "/deny"
 
   utter_gold2:
@@ -415,7 +429,7 @@ responses:
     - text: "Cork is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
 
   utter_lemon2:
-    - text: "The lemon is a non-metal, but the juice (namely the citric acid) inside is a liquid that can conduct electricity (=electrolyte). Inside the juice are positive and negative charged particles (ions), which can conduct electricity."
+    - text: "The lemon is a non-metal, but the juice (namely the citric acid) inside is a liquid that can conduct electricity (electrolyte). Inside the juice are positive and negative charged particles (ions), which can conduct electricity."
 
   utter_lego2:
     - text: "Lego is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
@@ -427,7 +441,7 @@ responses:
     - text: "Glass is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity."
 
   utter_potato2:
-    - text: "The potato is a non-metal, but the liquids inside can conduct electricity (=electrolyte). Inside this liquids are positive and negative charged particles (ions), which can conduct electricity."
+    - text: "The potato is a non-metal, but the liquids inside can conduct electricity (electrolytes). Inside this liquids are positive and negative charged particles (ions), which can conduct electricity."
 
   utter_log2:
     - text: "Dry Wood is an insulator because all of its outer electrons are bound, which is the usual case for non-metals. There are no free electrons that can conduct electricity. However, wet wood would be able to conduct electricity due to the presence of charged particles (ions)."
@@ -443,7 +457,25 @@ responses:
       
   utter_l36:
     - text: "Great! Let’s see how well you understood the concepts. In your own words, what is an electrical current? What is necessary to create one?"
+      
+  
+  utter_forkplug:
+    - text: "Why shouldn’t you put a fork in a socket?"
+      
+  utter_forkplug2:
+    - text: "When you stick something in the socket, you will get an electric shock. The left slot is connected to the neutral wire (green), the right one to the hot wire (red). Electricity flows from hot to neutral. By bridging those two with an object like a fork, you create a short circuit with increased electric current & voltage. Because you are touching this object, you will feel it as an electric shock. The object will most likely start to burn. Never ever do this at home or anywhere else!"
 
+  utter_forkplug3:
+    - text: "To help you with memorizing these concepts, I’d like to give you some daily life examples."
+
+
+  utter_boots:
+    - text: "As you saw before, rubber is an excellent insulator. Solid rubber boots can help you avoid being shocked, because it avoids a closed circuit. That's why electricians always wear them."
+
+
+  utter_faraday:
+    - text: "When a thunderstorm is happening, you should ALWAYS go inside immediately! If it's not possible, you should enter your car (if it's not a convertible and you can close the windows). You are safe inside because the car is a Faraday cage. This means that the electricity (electrons) stay outside of the car, because they want to be as far away from each other as possible."
+      
 
 session_config:
   session_expiration_time: 60
