@@ -137,13 +137,13 @@
               count +=1;
             }
             console.log(count);
-            if ((count<=12) && (count >= 10)){
+            if (count==12){
             socket.emit("user_uttered",{"message":'/partFinalPerfect',"customData":{"language":"en"},"session_id":session_id});
             }
-            if (count <= 2){
+            if ((count < 12) && (count > 9)){
             socket.emit("user_uttered",{"message":'/partFinalTwo',"customData":{"language":"en"},"session_id":session_id});
             }
-            if ((count > 2) && (count < 10)){
+            if (count < 10){
             socket.emit("user_uttered",{"message":'/partFinalFail',"customData":{"language":"en"},"session_id":session_id});
             }
         }
