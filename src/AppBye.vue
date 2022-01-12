@@ -2,10 +2,16 @@
 
 <button id="ButtonDone" class="ButtonDone" style="display: none;" v-on:click=nextPage>Done</button>
 
-<img class ="imagen" src="assets/Final Goodbye - cut.png" alt=""/>
+<img class ="imagen" src="assets/Final Goodbye - cut.gif" alt=""/>
+<img class ="imagen2" src="assets/Final GoodbyeFrame.png" style="display: none;" alt=""/>
 </template>
 
 <script>
+
+$(document).ready(function() {
+  $('.imagen2').delay(3900).fadeIn(100); 
+});
+
 let flagStay = 0;
 let atomCorrectFlag = 0;
 let atomInCorrectFlag = 0;
@@ -128,6 +134,14 @@ export default {
   width: 60%;
   position: fixed;
   z-index: 0;
+  object-fit: fill;
+}
+
+.imagen2 {
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  z-index: 4;
   object-fit: fill;
 }
 
