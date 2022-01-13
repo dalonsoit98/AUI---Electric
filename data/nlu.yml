@@ -79,6 +79,7 @@ nlu:
     - an electric circuit is when electrons can wander in a closed circuit
     - electrons move from the power source to an energy consumer like a lightbulb
     - the power source is usually a battery with different potentials at both ends, which creates the voltage required for the conduction
+    - everything
 
 - intent: tryagain
   examples: |

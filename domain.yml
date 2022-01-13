@@ -260,9 +260,9 @@ responses:
 
   utter_l22:
     - text: "Drag the items into the gap and check if the bulb lights up. You can overwrite the conducting/insulating tags by dragging them into the objects."
-      
+
   utter_l23:
-    - text: "Drag the items into the gap and check if the bulb lights up. You can overwrite the conducting/insulating tags by dragging them into the objects."
+    - text: "C'mon! I don't have all day!"
 
   utter_l24:
     - text: "Great! By placing the items inside the gap you can check if your guesses were correct! Remember that you can replace the conducting/insulating tags if you change your mind"
@@ -471,7 +471,7 @@ responses:
     - text: "When you stick something in the socket, you will get an electric shock. The left slot is connected to the neutral wire (green), the right one to the hot wire (red). Electricity flows from hot to neutral. By bridging those two with an object like a fork, you create a short circuit with increased electric current & voltage. Because you are touching this object, you will feel it as an electric shock. The object will most likely start to burn. Never ever do this at home or anywhere else!"
 
   utter_forkplug3:
-    - text: "To help you with memorizing these concepts, I’d like to give you some daily life examples."
+    - text: "To help you with memorizing these concepts, I’d like to give you some daily life examples. Press 'Done' in order to continue."
 
 
   utter_boots:

@@ -561,7 +561,7 @@ stories:
   steps:
     - checkpoint: l_circuit
     - intent: deny
-    - action: utter_l23
+    - action: utter_l22
     - intent: first_object
     - action: utter_l24
     - action: utter_l25
@@ -570,11 +570,46 @@ stories:
   steps:
     - checkpoint: l_circuit
     - intent: help
+    - action: utter_l22
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+
+- story: happy path level 1 circuit 2
+  steps:
+    - checkpoint: l_circuit
+    - intent: affirm
+    - action: utter_l22
+    - intent: ready
     - action: utter_l23
     - intent: first_object
     - action: utter_l24
     - action: utter_l25
     - checkpoint: l_circuit_first
+- story: happy path level 1 deny 2
+  steps:
+    - checkpoint: l_circuit
+    - intent: deny
+    - action: utter_l22
+    - intent: ready
+    - action: utter_l23
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+- story: happy path level 1 help 2
+  steps:
+    - checkpoint: l_circuit
+    - intent: help
+    - action: utter_l22
+    - intent: ready
+    - action: utter_l23
+    - intent: first_object
+    - action: utter_l24
+    - action: utter_l25
+    - checkpoint: l_circuit_first
+      
 - story: happy path level 1 skip
   steps:
     - checkpoint: l_circuit
@@ -1114,6 +1149,17 @@ stories:
     - intent: partLemon
     - action: utter_lemons
     - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+    - intent: ready
+    - action: utter_press_done
+
+- story: lemons 2
+  steps:
+    - intent: partLemon
+    - action: utter_lemons
+    - intent: nothing
     - action: utter_press_done
     - intent: ready
     - action: utter_press_done
