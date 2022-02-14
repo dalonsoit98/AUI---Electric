@@ -17,7 +17,6 @@ import { ref } from 'vue'
                     pathname: '/socket.io',
                     transports: ['websocket'],
         });      
-
 export default {
   setup() {
     var src = new Vue({
@@ -26,14 +25,11 @@ export default {
         b: 0
       }
       })
-
     var srcaux = ['assets/Simple Circuit - open.png','assets/Simple Circuit - closed.png'];
     let currentSrc = 0;
-
     var getNumber = () => {
       return currentSrc
     }
-
     const changeImage = (number) => {
               if(number == 0){
                 let aux = 1
@@ -48,7 +44,6 @@ export default {
       console.log(src.b)
       src.b +=1
         }
-
     return {
    src,
    currentSrc,
@@ -66,7 +61,6 @@ export default {
           this.componentKey +=1;
         }
       },
-
       name: 'send',
       methods:{
         send(message){
@@ -96,7 +90,6 @@ export default {
   z-index: 1;
   object-fit: fill;
 }
-
 .imageIcon {
   object-fit: cover;
   width: 15%;
@@ -110,7 +103,6 @@ export default {
   color: rgb(85, 186, 71);
   z-index: 3;
 }
-
 .Insulating-Title {
   position:absolute;
   margin-top: 15%;
@@ -137,7 +129,6 @@ export default {
   background-color: transparent;
   padding:1em;
   }
-
 .drop-zone1 > div:nth-child(odd){
   background-color: transparent;
 }
@@ -159,7 +150,6 @@ export default {
   background-color: transparent;
   padding:1em;
   }
-
 .drop-zone2 > div:nth-child(odd){
   background-color: transparent;
 }
@@ -183,11 +173,9 @@ export default {
   background-color: transparent;
   padding:1em;
   }
-
 .drop-zone3 > div:nth-child(odd){
   background-color: transparent;
 }
-
 .drop-zone-Cork {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -205,7 +193,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Lego {
   position:absolute;
   display:grid;
@@ -223,7 +210,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Lemon {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -240,7 +226,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Potato {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -258,7 +243,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Rubber {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -275,7 +259,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-5Euros {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -292,7 +275,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Log {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -309,7 +291,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Clip {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -326,7 +307,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Water {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -343,7 +323,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-GoldBar {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -360,7 +339,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-GlassBottle {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -377,7 +355,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drop-zone-Diamond {
   display:grid;
   grid-template-columns:33% 33% 33%;
@@ -394,7 +371,6 @@ export default {
   min-width: 5%;
   z-index: 4;
 }
-
 .drag-el {
   position: relative;
   
@@ -403,7 +379,6 @@ export default {
   min-width:  30%;
   z-index: 8;
 }
-
 .drag.el:nth-last-of-type(1){
   margin-bottom: 0%;
 }
@@ -422,13 +397,11 @@ font-family: Avenir, Helvetica, Arial, sans-serif;
 font-size: 120%;
 padding-left: 46%;
 }
-
 .botonsend {
   position: absolute;
   margin-left: 30%;
   z-index: 10;
 }
-
 .drag-elConducting {
   position:absolute;
   width: 100%;
@@ -437,7 +410,6 @@ padding-left: 46%;
   height: 100%;
   z-index: 8;
 }
-
 .drag-elInsulating {
   position:absolute;
   width: 100%;
@@ -446,7 +418,6 @@ padding-left: 46%;
   height: 100%;
   z-index: 8;
 }
-
 .CircuitImage {
 position: absolute;
 z-index: 2;
@@ -455,7 +426,6 @@ margin-top: 7%;
 margin-left: 10%;
 object-fit: center;
 }
-
 .CircuitImageGif {
 position: absolute;
 z-index: 8;
@@ -470,7 +440,6 @@ user-select: none;
 -webkit-user-select: none;
 -ms-user-select: none;
 }
-
 .ChangeImage {
   position: absolute;
   width: 9%;
